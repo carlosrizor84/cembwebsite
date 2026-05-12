@@ -1,0 +1,203 @@
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: "MS Sans Serif";
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+a
+{
+   color: #2B579A;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+input:focus, textarea:focus, select:focus
+{
+   outline: none;
+}
+#wb_LayoutThanks
+{
+   clear: both;
+   position: relative;
+   table-layout: fixed;
+   display: table;
+   text-align: center;
+   width: 100%;
+   background-color: transparent;
+   background-image: url('images/office-blur.jpg');
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-attachment: fixed;
+   background-size: cover;
+   border: 0px solid #CCCCCC;
+   box-sizing: border-box;
+   margin: 0;
+}
+#LayoutThanks
+{
+   box-sizing: border-box;
+   padding: 150px 15px 190px 15px;
+   margin-right: auto;
+   margin-left: auto;
+}
+#LayoutThanks > .row
+{
+   margin-right: -15px;
+   margin-left: -15px;
+}
+#LayoutThanks > .row > .col-1
+{
+   box-sizing: border-box;
+   font-size: 0px;
+   min-height: 1px;
+   padding-right: 15px;
+   padding-left: 15px;
+   position: relative;
+}
+#LayoutThanks > .row > .col-1
+{
+   float: left;
+   height: 288px;
+}
+#LayoutThanks > .row > .col-1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   width: 100%;
+   text-align: center;
+}
+#LayoutThanks:before,
+#LayoutThanks:after,
+#LayoutThanks .row:before,
+#LayoutThanks .row:after
+{
+   display: table;
+   content: " ";
+}
+#LayoutThanks:after,
+#LayoutThanks .row:after
+{
+   clear: both;
+}
+@media (max-width: 480px)
+{
+#LayoutThanks > .row > .col-1
+{
+   float: none;
+   width: 100% !important;
+   height: auto;
+}
+}
+#wb_Heading2
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   box-sizing: border-box;
+   vertical-align: top;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+#Heading2
+{
+   color: #3C3C3C;
+   font-family: Arial;
+   font-weight: bold;
+   font-style: normal;
+   font-size: 37px;
+   margin: 0;
+   text-align: center;
+}
+#wb_Heading3
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   box-sizing: border-box;
+   vertical-align: top;
+   margin: 0;
+   padding: 25px 0px 25px 0px;
+   text-align: center;
+}
+#Heading3
+{
+   color: #3C3C3C;
+   font-family: Arial;
+   font-weight: bold;
+   font-style: normal;
+   font-size: 21px;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text1 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text1 div
+{
+   text-align: center;
+}
+#wb_Text1
+{
+   display: block;
+   margin: 0;
+   box-sizing: border-box;
+   width: 100%;
+}
+#Button1
+{
+   box-sizing: border-box;
+   line-height: 36px;
+   text-decoration: none;
+   vertical-align: top;
+   border: 1px solid #2E6DA4;
+   border-radius: 10px;
+   background-color: #3370B7;
+   background-image: none;
+   color: #FFFFFF;
+   font-family: "MS Sans Serif";
+   font-weight: normal;
+   font-style: normal;
+   font-size: 13px;
+   padding: 1px 6px 1px 6px;
+   text-align: center;
+   -webkit-appearance: none;
+   margin: 0;
+}
+#Button1:hover
+{
+   -webkit-transform: rotateX(0deg) scale3d(1.2,1.2,1.2);
+   transform: rotateX(0deg) scale3d(1.2,1.2,1.2);
+   -webkit-transition: -webkit-transform 500ms linear 0ms;
+   transition: transform 500ms linear 0ms;
+}
+#Button1
+{
+   -webkit-transform: rotateX(0deg) ;
+   transform: rotateX(0deg) ;
+   -webkit-transition: -webkit-transform 500ms linear 0ms;
+   transition: transform 500ms linear 0ms;
+}

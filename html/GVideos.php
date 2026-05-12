@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="es-ni">
+<head>
+<meta charset="utf-8">
+<title>CEMB</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="insignia2_small.png" rel="icon" sizes="150x150" type="image/png">
+<link href="font-awesome.min.css" rel="stylesheet">
+<link href="CEMB.css" rel="stylesheet">
+<link href="GVideos.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="wb.lazyload.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="popper.min.js"></script>
+<script src="util.min.js"></script>
+<script src="collapse.min.js"></script>
+<script src="dropdown.min.js"></script>
+<link rel="stylesheet" href="fancybox/jquery.fancybox-1.3.4.css">
+<script src="fancybox/jquery.easing-1.3.pack.js"></script>
+<script src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<script src="fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script src="wwb16.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $('#wb_FontAwesomeIcon3').addClass('visibility-hidden');
+   $('#wb_FontAwesomeIcon11').addClass('visibility-hidden');
+   $('#wb_IconFont1').addClass('visibility-hidden');
+   function onScrollPageHeaderDividerTop()
+   {
+      var $obj = $('#PageHeader-divider-top');
+      if (!$obj.hasClass('show') && $obj.inViewPort(false))
+      {
+         $obj.addClass('show');
+      }
+   }
+   onScrollPageHeaderDividerTop();
+   $(window).scroll(function(event)
+   {
+      onScrollPageHeaderDividerTop();
+   });
+   $("a[href*='#header']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutSine');
+   });
+   $("a[href*='#infoBlock1']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_infoBlock1').offset().top }, 600, 'easeOutSine');
+   });
+   $('#ThemeableMenu1 .dropdown-toggle').dropdown({popperConfig:{placement:'bottom-start',modifiers:{computeStyle:{gpuAcceleration:false}}}});
+   $(document).on('click','.ThemeableMenu1-navbar-collapse.show',function(e)
+   {
+      if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+      {
+         $(this).collapse('hide');
+      }
+   });
+   function onScrollFontAwesomeIcon3()
+   {
+      var $obj = $("#wb_FontAwesomeIcon3");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_FontAwesomeIcon3', 'transform-lightspeed-in', 100, 1000);
+      }
+   }
+   onScrollFontAwesomeIcon3();
+   $(window).scroll(function(event)
+   {
+      onScrollFontAwesomeIcon3();
+   });
+   function onScrollFontAwesomeIcon11()
+   {
+      var $obj = $("#wb_FontAwesomeIcon11");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_FontAwesomeIcon11', 'transform-lightspeed-in', 400, 1000);
+      }
+   }
+   onScrollFontAwesomeIcon11();
+   $(window).scroll(function(event)
+   {
+      onScrollFontAwesomeIcon11();
+   });
+   function onScrollIconFont1()
+   {
+      var $obj = $("#wb_IconFont1");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_IconFont1', 'transform-lightspeed-in', 400, 1000);
+      }
+   }
+   onScrollIconFont1();
+   $(window).scroll(function(event)
+   {
+      onScrollIconFont1();
+   });
+   $("a[data-rel='PhotoGallery3']").attr('rel', 'PhotoGallery3');
+   $("a[rel^='PhotoGallery3']").fancybox({});
+   $("a[data-rel='PhotoGallery1']").attr('rel', 'PhotoGallery1');
+   $("a[rel^='PhotoGallery1']").fancybox({});
+   $("a[data-rel='PhotoGallery2']").attr('rel', 'PhotoGallery2');
+   $("a[rel^='PhotoGallery2']").fancybox({});
+   $('img[data-src]').lazyload();
+});
+</script>
+</head>
+<body>
+
+
+<div id="wb_PageHeader">
+<div id="PageHeader-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+<path class="divider-fill" d="M66.709,62.141C63.674,62.141 62.115,50.388 60.619,37.105C62.048,29.579 63.814,24.051 66.352,24.051C69.374,24.051 71.362,33.025 73.031,44.299C71.577,51.437 70.374,62.141 66.709,62.141ZM41.114,57.818C40.604,57.416 40.051,57.19 39.441,57.19C33.91,57.19 32.305,76.639 28.938,82.663C30.102,85.32 31.71,87.871 33.333,87.871C36.993,87.87 39.088,73.872 41.114,57.818z" style="fill-opacity:0.3;"/>
+<path class="divider-fill" d="M51.832,78.336C46.587,78.336 45.555,61.319 41.114,57.818C44.303,32.539 46.669,0 52.006,0C56.839,0 58.676,19.844 60.619,37.105C57.568,53.167 56.051,78.336 51.832,78.336ZM17.005,67.259C21.378,67.259 21.89,84.421 26.875,84.421C27.646,84.421 28.321,83.766 28.938,82.663C24.471,72.464 22.587,44.705 18.018,44.705C11.998,44.705 10.296,82.492 6.25,82.492C3.124,82.492 1.562,73.774 -0.001,61.416L-0.001,73.421C1.562,81.2 3.342,90.679 6.468,90.679C12.718,90.679 12.39,67.259 17.005,67.259ZM94.15,31.54C89.658,31.54 89.31,66.348 84.772,66.348C80.584,66.348 80.104,38.746 75.741,38.746C74.548,38.746 73.758,40.729 73.031,44.299C75.851,63.352 77.758,88.979 82.198,88.979C87.608,88.979 88.132,57.865 93.758,57.865C96.867,57.865 98.444,65.681 99.999,73.42L99.999,61.416C98.444,49.122 97.26,31.54 94.15,31.54z" style="fill-opacity:0.5;"/>
+<path class="divider-fill" d="M82.198,88.979C77.757,88.979 75.851,63.353 73.031,44.299C71.577,51.437 70.374,62.141 66.709,62.141C63.674,62.141 62.115,50.388 60.619,37.105C57.568,53.167 56.05,78.336 51.832,78.336C46.587,78.336 45.555,61.319 41.113,57.818C39.088,73.871 36.862,87.87 33.202,87.87C31.578,87.87 30.102,85.32 28.938,82.662C28.321,83.766 27.645,84.42 26.875,84.42C21.89,84.42 21.378,67.259 17.005,67.259C12.39,67.259 12.674,90.634 6.424,90.634C3.298,90.634 1.562,81.199 -0.001,73.419L-0.001,100L99.999,100L99.999,73.42C98.444,65.681 96.867,57.865 93.758,57.865C88.132,57.865 87.608,88.979 82.198,88.979z"/>
+</svg></div>
+<div id="PageHeader">
+<div class="row">
+<div class="col-1">
+<div id="wb_CEMB-INSIGNIA" style="display:inline-block;width:44px;height:45px;z-index:0;">
+<a href="./index.html" onmouseover="AnimateCss('wb_CEMB-INSIGNIA', 'animate-flash', 0, 500);return false;"><img src="images/placeholder.gif" data-src="images/INSIGNIA2.png" id="CEMB-INSIGNIA" alt=""></a>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_ThemeableMenu1" style="display:inline-block;width:100%;text-align:center;z-index:1;">
+<div id="ThemeableMenu1" class="ThemeableMenu1" style="width:100%;height:auto !important;">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ThemeableMenu1-navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="ThemeableMenu1-navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="nav-item">
+<a href="./index.html" class="nav-link">Inicio</a>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Nosotros<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Bienvenida.html" class="nav-link">Bienvenida</a></li>
+<li class="nav-item"><a href="./Quienes-Somos.html" class="nav-link">Quienes Somos</a></li>
+<li class="nav-item"><a href="./Nuestra-Historia.html" class="nav-link">Nuestra Historia</a></li>
+<li class="nav-item"><a href="./School-Profile.html" class="nav-link">School Profile</a></li>
+<li class="nav-item"><a href="./Escudo.html" class="nav-link">Escudo</a></li>
+<li class="nav-item"><a href="./Mision-y-Vision.html" class="nav-link">Misión y Visión</a></li>
+<li class="nav-item"><a href="./Valores.html" class="nav-link">Valores</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Organización<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Estamentos.html" class="nav-link">Estamentos</a></li>
+<li class="nav-item"><a href="./Comite-Ejecutivo.html" class="nav-link">Comité Ejecutivo</a></li>
+<li class="nav-item"><a href="./Equipo-Direccion.html" class="nav-link">Equipo de Dirección</a></li>
+<li class="nav-item"><a href="./Administracion.html" class="nav-link">Administración</a></li>
+<li class="nav-item"><a href="./Directiva-Docente.html" class="nav-link">Directiva Docente</a></li>
+<li class="nav-item"><a href="./Docentes.html" class="nav-link">Personal Docente</a></li>
+<li class="nav-item"><a href="./PersonalApoyo.html" class="nav-link">Personal de Apoyo</a></li>
+<li class="nav-item"><a href="./Organigrama.html" class="nav-link">Organigrama</a></li>
+<li class="nav-item"><a href="./C-Emergencia-CEMB.html" class="nav-link">Cadena de Emergencia</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Doc. Académicos<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Crono-Acti-Evaluativas.html" class="nav-link">Cronogramas AE</a></li>
+<li class="nav-item"><a href="./Desempe-Academico.html" class="nav-link">Desempeño Académico</a></li>
+<li class="nav-item"><a href="./Modalidad-Ensenanzas.html" class="nav-link">Modalidad de Enseñanza</a></li>
+<li class="nav-item"><a href="./TemariosExamenes.html" class="nav-link">Temarios de Exámenes</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Doc. Reglamentarios<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Manual-Convivencia.html" class="nav-link">Manual de Convivencia</a></li>
+<li class="nav-item"><a href="./PAD.html" class="nav-link">PAD</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="./Circulares.html" class="nav-link">Circulares</a>
+</li>
+<li class="nav-item">
+<a href="./Noticias.html" class="nav-link">Noticias</a>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Admisión<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Proceso-Admision.html" class="nav-link">Proceso Admisión</a></li>
+<li class="nav-item"><a href="./SolicitudAdmision.html" class="nav-link">Solicitud de Admisión</a></li>
+<li class="nav-item"><a href="./Preceso-AdmisionEI.html" class="nav-link">Proceso Admisión Educación Inicial</a></li>
+<li class="nav-item"><a href="./Temarios-Admision.html" class="nav-link">Temarios de Admisión</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Comunidad CEMB<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Consejo-Estudiantil.html" class="nav-link">Consejo Estudiantil</a></li>
+<!---
+<li class="nav-item"><a href="./Operacion-Sonrisa.html" class="nav-link">Club Operación Sonrisa</a></li>  --->
+
+<li class="nav-item"><a href="./Club-Mun.html" class="nav-link">Club MUN</a></li>
+<li class="nav-item"><a href="./Stop-Bullying.html" class="nav-link">Stop Bullying</a></li>
+<li class="nav-item"><a href="./Capacitaciones.html" class="nav-link">Capacitaciones</a></li>
+<li class="nav-item"><a href="./ProyectoPASS.html" class="nav-link">Proyecto PASS</a></li>
+<li class="nav-item"><a href="./Universidades.html" class="nav-link">Universidades</a></li>
+<li class="nav-item"><a href="./Exalumnos.html" class="nav-link">Ex-Alumnos</a></li>
+<li class="nav-item"><a href="./CoachingEstudiantil.html" class="nav-link">Coaching Estudiantil</a></li>
+<li class="nav-item"><a href="./OrgulloCEMB.html" class="nav-link">Orgullo CEMB</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Actividades Relevantes por Áreas<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Matematica.html" class="nav-link">Matemática</a></li>
+<li class="nav-item"><a href="./LeguayLiteratura.html" class="nav-link">Lengua y Literatura</a></li>
+<li class="nav-item"><a href="./CCNN.html" class="nav-link">CCNN</a></li>
+<li class="nav-item"><a href="./CCSS.html" class="nav-link">CCSS</a></li>
+<li class="nav-item"><a href="./Ingles.html" class="nav-link">Inglés</a></li>
+<li class="nav-item"><a href="./Pastoral.html" class="nav-link">Pastoral</a></li>
+<li class="nav-item"><a href="./DeptoOrientacion.html" class="nav-link">Dpto. Orientación</a></li>
+<li class="nav-item"><a href="./DanzaDeportes.html" class="nav-link">Danza y Deportes</a></li>
+<li class="nav-item"><a href="./PPFF.html" class="nav-link">PPFF</a></li>
+<li class="nav-item"><a href="./Teleton.html" class="nav-link">Teleton</a></li>
+<li class="nav-item"><a href="./Fisica.html" class="nav-link">Inglés</a></li>
+<li class="nav-item"><a href="./Informatica.html" class="nav-link">Informatica</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Asociación PPMMFF<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./FuncionPMF.html" class="nav-link">Función</a></li>
+<li class="nav-item"><a href="./DirectivaPMF.html" class="nav-link">Directiva</a></li>
+<li class="nav-item"><a href="./RG-PMF.html" class="nav-link">Representantes de Grado</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Galería<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Campus.php" class="nav-link">Campus</a></li>
+<li class="nav-item"><a href="./GEducaxcionInicial.php" class="nav-link">Educación Inicial</a></li>
+<li class="nav-item"><a href="./GPrimaria.php" class="nav-link active">Primaria</a></li>
+<li class="nav-item"><a href="./GSecundaria.php" class="nav-link">Secundaria</a></li>
+<li class="nav-item"><a href="./GPApoyo.php" class="nav-link">Personal de Apoyo</a></li>
+<li class="nav-item"><a href="./GPadresFamilia.php" class="nav-link">Padres de Familia</a></li>
+<li class="nav-item"><a href="./GVideos.php" class="nav-link">Videos</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="./Contactanos.php" class="nav-link">Contáctanos</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_header">
+<div id="header">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading1" style="display:inline-block;width:100%;z-index:2;">
+<h1 id="Heading1">Centro Educacional Mantica Berio</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_infoBlock1">
+<div id="infoBlock1-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 24" preserveAspectRatio="none">
+<defs>
+   <path id="wave-animated" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="wave-animated">
+   <use xlink:href="#wave-animated" x="48" y="0" class="divider-fill" style="opacity:0.7" />
+   <use xlink:href="#wave-animated" x="48" y="3" class="divider-fill" style="opacity:0.5" />
+   <use xlink:href="#wave-animated" x="48" y="5" class="divider-fill" style="opacity:0.3" />
+   <use xlink:href="#wave-animated" x="48" y="7" class="divider-fill"  />
+</g>
+</svg>
+</div>
+<div id="infoBlock1">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:3;">
+<h1 id="Heading2">Videos</h1>
+</div>
+</div>
+</div>
+</div>
+
+<!--INICIO 10/11/2023-->
+	<div id="wb_LayoutGrid4">
+		<div id="LayoutGrid2-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 138" preserveAspectRatio="none">
+<polygon class="divider-fill" style="opacity:0.2" points="0,136.28 0,36.28 1000,36.28 1000,136.28 500,46.28"  />
+<polygon class="divider-fill" style="opacity:0.4" points="0,104.43 0,36.28 1000,36.28 1000,104.43 500,44.43" />
+<polygon class="divider-fill" style="opacity:0.6" points="0,72.57 0,36.28 1000,36.28 1000,72.57 500,42.57" />
+<rect class="divider-fill" width="1000" height="36.290001" x="0" y="0" />
+</svg></div>
+<div id="LayoutGrid14">
+<div class="row">
+<div class="col-1">
+<div id="Article3" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject" style="color:#ffffff;">Último día Seniors 2023</span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, October 01, 2021<br></div>
+   <span style="color:#000000;"><br>10/11/2023</span><br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Trajes%20Tipicos">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:7;">
+<div id="PhotoGallery16">
+   <div class="thumbnails">
+	   <iframe width="560" height="315" src="https://www.youtube.com/embed/Jb8tJZGa8XA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      
+	   
+      <div class="clearfix visible-col3"></div>
+	   
+	    
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+		<!--FIN-->
+
+<!--INICIO 27/10/2023-->
+	<div id="wb_LayoutGrid4">
+		<div id="LayoutGrid2-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 138" preserveAspectRatio="none">
+<polygon class="divider-fill" style="opacity:0.2" points="0,136.28 0,36.28 1000,36.28 1000,136.28 500,46.28"  />
+<polygon class="divider-fill" style="opacity:0.4" points="0,104.43 0,36.28 1000,36.28 1000,104.43 500,44.43" />
+<polygon class="divider-fill" style="opacity:0.6" points="0,72.57 0,36.28 1000,36.28 1000,72.57 500,42.57" />
+<rect class="divider-fill" width="1000" height="36.290001" x="0" y="0" />
+</svg></div>
+<div id="LayoutGrid14">
+<div class="row">
+<div class="col-1">
+<div id="Article3" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject" style="color:#ffffff;">Mitos y Leyendas CEMB 2023</span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, October 01, 2021<br></div>
+   <span style="color:#000000;"><br>27/10/2023</span><br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Trajes%20Tipicos">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:7;">
+<div id="PhotoGallery16">
+   <div class="thumbnails">
+	   <iframe width="560" height="315" src="https://www.youtube.com/embed/XmTGPwostRU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      
+	   
+      <div class="clearfix visible-col3"></div>
+	   
+	    
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+		<!--FIN-->
+<!--INICIO 23/10/2023-->
+	<div id="wb_LayoutGrid4">
+		<div id="LayoutGrid2-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 138" preserveAspectRatio="none">
+<polygon class="divider-fill" style="opacity:0.2" points="0,136.28 0,36.28 1000,36.28 1000,136.28 500,46.28"  />
+<polygon class="divider-fill" style="opacity:0.4" points="0,104.43 0,36.28 1000,36.28 1000,104.43 500,44.43" />
+<polygon class="divider-fill" style="opacity:0.6" points="0,72.57 0,36.28 1000,36.28 1000,72.57 500,42.57" />
+<rect class="divider-fill" width="1000" height="36.290001" x="0" y="0" />
+</svg></div>
+<div id="LayoutGrid14">
+<div class="row">
+<div class="col-1">
+<div id="Article3" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject" style="color:#ffffff;">Feria AEP 2023</span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, October 01, 2021<br></div>
+   <span style="color:#000000;"><br>23/10/2023</span><br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Trajes%20Tipicos">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:7;">
+<div id="PhotoGallery16">
+   <div class="thumbnails">
+	   <iframe width="560" height="315" src="https://www.youtube.com/embed/wh3jjQJ_aIg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      
+	   
+      <div class="clearfix visible-col3"></div>
+	   
+	    
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+		<!--FIN-->
+
+	<!--INICIO-->
+	<div id="wb_LayoutGrid4">
+		<div id="LayoutGrid2-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 138" preserveAspectRatio="none">
+<polygon class="divider-fill" style="opacity:0.2" points="0,136.28 0,36.28 1000,36.28 1000,136.28 500,46.28"  />
+<polygon class="divider-fill" style="opacity:0.4" points="0,104.43 0,36.28 1000,36.28 1000,104.43 500,44.43" />
+<polygon class="divider-fill" style="opacity:0.6" points="0,72.57 0,36.28 1000,36.28 1000,72.57 500,42.57" />
+<rect class="divider-fill" width="1000" height="36.290001" x="0" y="0" />
+</svg></div>
+<div id="LayoutGrid14">
+<div class="row">
+<div class="col-1">
+<div id="Article3" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject" style="color:#ffffff;">Actividades que hacemos en el CEMB</span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, October 01, 2021<br></div>
+   <span style="color:#000000;"><br>22/09/2023</span><br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Trajes%20Tipicos">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:7;">
+<div id="PhotoGallery16">
+   <div class="thumbnails">
+	   <iframe width="560" height="315" src="https://www.youtube.com/embed/TFV3QWRol38" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      
+	   
+      <div class="clearfix visible-col3"></div>
+	   
+	    
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+		<!--FIN-->
+
+	<!--INICIO-->
+	<div id="wb_LayoutGrid4">
+		<div id="LayoutGrid2-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 138" preserveAspectRatio="none">
+<polygon class="divider-fill" style="opacity:0.2" points="0,136.28 0,36.28 1000,36.28 1000,136.28 500,46.28"  />
+<polygon class="divider-fill" style="opacity:0.4" points="0,104.43 0,36.28 1000,36.28 1000,104.43 500,44.43" />
+<polygon class="divider-fill" style="opacity:0.6" points="0,72.57 0,36.28 1000,36.28 1000,72.57 500,42.57" />
+<rect class="divider-fill" width="1000" height="36.290001" x="0" y="0" />
+</svg></div>
+<div id="LayoutGrid14">
+<div class="row">
+<div class="col-1">
+<div id="Article3" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject" style="color:#ffffff;">Actividades que hacemos en Educación Inicial</span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, October 01, 2021<br></div>
+   <span style="color:#000000;"><br>22/09/2023</span><br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Trajes%20Tipicos">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:7;">
+<div id="PhotoGallery16">
+   <div class="thumbnails">
+	   <iframe width="560" height="315" src="https://www.youtube.com/embed/qgtEXR4Ialg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      
+	   
+      <div class="clearfix visible-col3"></div>
+	   
+	    
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+		<!--FIN-->
+
+	<!--INICIO-->
+	<div id="wb_LayoutGrid4">
+		<div id="LayoutGrid2-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 138" preserveAspectRatio="none">
+<polygon class="divider-fill" style="opacity:0.2" points="0,136.28 0,36.28 1000,36.28 1000,136.28 500,46.28"  />
+<polygon class="divider-fill" style="opacity:0.4" points="0,104.43 0,36.28 1000,36.28 1000,104.43 500,44.43" />
+<polygon class="divider-fill" style="opacity:0.6" points="0,72.57 0,36.28 1000,36.28 1000,72.57 500,42.57" />
+<rect class="divider-fill" width="1000" height="36.290001" x="0" y="0" />
+</svg></div>
+<div id="LayoutGrid14">
+<div class="row">
+<div class="col-1">
+<div id="Article3" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject" style="color:#ffffff;">Feria Intercultural por alumnos de primaria CEMB 2023</span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, October 01, 2021<br></div>
+   <span style="color:#000000;"><br>25/08/2023</span><br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Trajes%20Tipicos">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:7;">
+<div id="PhotoGallery16">
+   <div class="thumbnails">
+	   <iframe width="560" height="315" src="https://www.youtube.com/embed/XSe4Xf38_1U?si=riwmtFPqD27JGhqG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/_tUszQbGVjg?si=J4NeGLa0DEs_i175" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	   <iframe width="560" height="315" src="https://www.youtube.com/embed/C1ORNFnLARA?si=csrOp_GKeAGGPJH1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	   
+      <div class="clearfix visible-col3"></div>
+	   
+	    
+   </div>
+</div>
+</div>
+<!--<a id="Button2" href="./GEFeriaInovadora2022.php" style="display:inline-block;width:96px;height:25px;z-index:8;">Mas..</a>-->
+</div>
+</div>
+</div>
+</div>
+		<!--FIN-->
+	
+
+
+<div id="wb_Footer">
+<div id="Footer">
+<div class="row">
+<div class="col-1">
+<div id="wb_FontAwesomeIcon3" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:17;">
+<a href="https://www.facebook.com/cemanticaberio" target="_blank"><div id="FontAwesomeIcon3"><i class="fa fa-facebook"></i></div></a>
+</div>
+<div id="wb_FontAwesomeIcon11" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:18;">
+<a href="https://www.youtube.com/channel/UCAhJcrp_RsEv7Kz6uIQGPhg" target="_blank" title="Canal CEMB"><div id="FontAwesomeIcon11"><i class="fa fa-youtube"></i></div></a>
+</div>
+<div id="wb_IconFont1" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:19;">
+<a href="https://www.youtube.com/channel/UCwOuGJLlY5TBDs2xTcmWMPw" target="_blank" title="Canal Educacion Inicial"><div id="IconFont1"><i class="fa fa-youtube-play"></i></div></a>
+</div>
+<div id="wb_Text17">
+<span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:20px;">Dirección:<br></span><span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:15px;">Km 132 Carretera a Somotillo. Chinandega.<br></span><span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:20px;">Teléfono:<br>505-2341-2923<br>E-mail:<br></span><span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:15px;">m.callejas@manticaberio.edu.ni</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_copyright">
+<div id="copyright">
+<div class="row">
+<div class="col-1">
+<div id="wb_Text12">
+<span style="color:#FFFFFF;font-family:Arial;font-size:13px;">Copyright © CEMB 2021. All right reserved. </span>
+</div>
+<!-- POPUP -->
+<div id="Html2" style="display:none;width:35px;height:24px;z-index:22">
+<div class="modal" id="window-notice">
+    <div class="content">
+        <div class="content-text"><a href="https://youtu.be/d_hLZyJt48E">
+<img src="http://www.manticaberio.edu.ni/assets/avisomatricula2021-640x480.jpg" width="100%"/></a>
+          </div>
+        <button class="btncerrar">
+        <span>Cerrar</span>
+        </button>
+    </div>
+</div>
+
+
+
+<script>
+    $(document).ready(function(){
+	
+	$(".modal").fadeIn();
+	
+	$(".btncerrar").click(function(){
+		
+		$(".modal").fadeOut(300);
+		
+	});
+
+});
+</script></div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

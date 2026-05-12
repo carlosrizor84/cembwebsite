@@ -1,0 +1,1389 @@
+
+<!doctype html>
+<html lang="es-ni">
+<head>
+<meta charset="utf-8">
+<title>CEMB</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="insignia2_small.png" rel="icon" sizes="150x150" type="image/png">
+<link href="font-awesome.min.css" rel="stylesheet">
+<link href="CEMB.css" rel="stylesheet">
+<link href="PersonalSecundaria.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="wb.lazyload.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="owl.carousel.min.js"></script>
+<script src="popper.min.js"></script>
+<script src="util.min.js"></script>
+<script src="collapse.min.js"></script>
+<script src="dropdown.min.js"></script>
+<script src="wwb16.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $('#wb_FontAwesomeIcon3').addClass('visibility-hidden');
+   $('#wb_FontAwesomeIcon11').addClass('visibility-hidden');
+   $('#wb_IconFont1').addClass('visibility-hidden');
+   function onScrollPageHeaderDividerTop()
+   {
+      var $obj = $('#PageHeader-divider-top');
+      if (!$obj.hasClass('show') && $obj.inViewPort(false))
+      {
+         $obj.addClass('show');
+      }
+   }
+   onScrollPageHeaderDividerTop();
+   $(window).scroll(function(event)
+   {
+      onScrollPageHeaderDividerTop();
+   });
+   $("a[href*='#header']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutSine');
+   });
+   $("a[href*='#infoBlock1']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_infoBlock1').offset().top }, 600, 'easeOutSine');
+   });
+   $("a[href*='#LayoutGrid2']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid2').offset().top }, 600, 'easeOutSine');
+   });
+   $("a[href*='#LayoutGrid4']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid4').offset().top }, 600, 'easeOutSine');
+   });
+   $("a[href*='#LayoutGrid6']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid6').offset().top }, 600, 'easeOutSine');
+   });
+   $("a[href*='#LayoutGrid8']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid8').offset().top }, 600, 'easeOutSine');
+   });
+   $("a[href*='#LayoutGrid10']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid10').offset().top }, 600, 'easeOutSine');
+   });
+   $("a[href*='#LayoutGrid12']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid12').offset().top }, 600, 'easeOutSine');
+   });
+   $("#RollOverLayer2").click(function(e)
+   {
+      if (!$(this).hasClass('active'))
+      {
+         $(this).addClass('active');
+         $('.default, .hover', this).removeClass('animate reverse').width();
+         $('.default, .hover', this).addClass('animate');
+      }
+      else
+      {
+         $(this).removeClass('active');
+         $('.default, .hover', this).removeClass('animate').width();
+         $('.default, .hover', this).addClass('animate reverse');
+      }
+   });
+   $("#RollOverLayer1").click(function(e)
+   {
+      if (!$(this).hasClass('active'))
+      {
+         $(this).addClass('active');
+         $('.default, .hover', this).removeClass('animate reverse').width();
+         $('.default, .hover', this).addClass('animate');
+      }
+      else
+      {
+         $(this).removeClass('active');
+         $('.default, .hover', this).removeClass('animate').width();
+         $('.default, .hover', this).addClass('animate reverse');
+      }
+   });
+   $("#RollOverLayer3").click(function(e)
+   {
+      if (!$(this).hasClass('active'))
+      {
+         $(this).addClass('active');
+         $('.default, .hover', this).removeClass('animate reverse').width();
+         $('.default, .hover', this).addClass('animate');
+      }
+      else
+      {
+         $(this).removeClass('active');
+         $('.default, .hover', this).removeClass('animate').width();
+         $('.default, .hover', this).addClass('animate reverse');
+      }
+   });
+   $("#RollOverLayer5").click(function(e)
+   {
+      if (!$(this).hasClass('active'))
+      {
+         $(this).addClass('active');
+         $('.default, .hover', this).removeClass('animate reverse').width();
+         $('.default, .hover', this).addClass('animate');
+      }
+      else
+      {
+         $(this).removeClass('active');
+         $('.default, .hover', this).removeClass('animate').width();
+         $('.default, .hover', this).addClass('animate reverse');
+      }
+   });
+   $("#RollOverLayer6").click(function(e)
+   {
+      if (!$(this).hasClass('active'))
+      {
+         $(this).addClass('active');
+         $('.default, .hover', this).removeClass('animate reverse').width();
+         $('.default, .hover', this).addClass('animate');
+      }
+      else
+      {
+         $(this).removeClass('active');
+         $('.default, .hover', this).removeClass('animate').width();
+         $('.default, .hover', this).addClass('animate reverse');
+      }
+   });
+   $('#ThemeableMenu1 .dropdown-toggle').dropdown({popperConfig:{placement:'bottom-start',modifiers:{computeStyle:{gpuAcceleration:false}}}});
+   $(document).on('click','.ThemeableMenu1-navbar-collapse.show',function(e)
+   {
+      if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+      {
+         $(this).collapse('hide');
+      }
+   });
+   $("#RollOverLayer8").click(function(e)
+   {
+      if (!$(this).hasClass('active'))
+      {
+         $(this).addClass('active');
+         $('.default, .hover', this).removeClass('animate reverse').width();
+         $('.default, .hover', this).addClass('animate');
+      }
+      else
+      {
+         $(this).removeClass('active');
+         $('.default, .hover', this).removeClass('animate').width();
+         $('.default, .hover', this).addClass('animate reverse');
+      }
+   });
+   $("#RollOverLayer9").click(function(e)
+   {
+      if (!$(this).hasClass('active'))
+      {
+         $(this).addClass('active');
+         $('.default, .hover', this).removeClass('animate reverse').width();
+         $('.default, .hover', this).addClass('animate');
+      }
+      else
+      {
+         $(this).removeClass('active');
+         $('.default, .hover', this).removeClass('animate').width();
+         $('.default, .hover', this).addClass('animate reverse');
+      }
+   });
+   $("#RollOverLayer10").click(function(e)
+   {
+      if (!$(this).hasClass('active'))
+      {
+         $(this).addClass('active');
+         $('.default, .hover', this).removeClass('animate reverse').width();
+         $('.default, .hover', this).addClass('animate');
+      }
+      else
+      {
+         $(this).removeClass('active');
+         $('.default, .hover', this).removeClass('animate').width();
+         $('.default, .hover', this).addClass('animate reverse');
+      }
+   });
+   $("#RollOverLayer11").click(function(e)
+   {
+      if (!$(this).hasClass('active'))
+      {
+         $(this).addClass('active');
+         $('.default, .hover', this).removeClass('animate reverse').width();
+         $('.default, .hover', this).addClass('animate');
+      }
+      else
+      {
+         $(this).removeClass('active');
+         $('.default, .hover', this).removeClass('animate').width();
+         $('.default, .hover', this).addClass('animate reverse');
+      }
+   });
+   $("#RollOverLayer12").click(function(e)
+   {
+      if (!$(this).hasClass('active'))
+      {
+         $(this).addClass('active');
+         $('.default, .hover', this).removeClass('animate reverse').width();
+         $('.default, .hover', this).addClass('animate');
+      }
+      else
+      {
+         $(this).removeClass('active');
+         $('.default, .hover', this).removeClass('animate').width();
+         $('.default, .hover', this).addClass('animate reverse');
+      }
+   });
+   $("#RollOverLayer13").click(function(e)
+   {
+      if (!$(this).hasClass('active'))
+      {
+         $(this).addClass('active');
+         $('.default, .hover', this).removeClass('animate reverse').width();
+         $('.default, .hover', this).addClass('animate');
+      }
+      else
+      {
+         $(this).removeClass('active');
+         $('.default, .hover', this).removeClass('animate').width();
+         $('.default, .hover', this).addClass('animate reverse');
+      }
+   });
+   $("#RollOverLayer14").click(function(e)
+   {
+      if (!$(this).hasClass('active'))
+      {
+         $(this).addClass('active');
+         $('.default, .hover', this).removeClass('animate reverse').width();
+         $('.default, .hover', this).addClass('animate');
+      }
+      else
+      {
+         $(this).removeClass('active');
+         $('.default, .hover', this).removeClass('animate').width();
+         $('.default, .hover', this).addClass('animate reverse');
+      }
+   });
+   $("#RollOverLayer15").click(function(e)
+   {
+      if (!$(this).hasClass('active'))
+      {
+         $(this).addClass('active');
+         $('.default, .hover', this).removeClass('animate reverse').width();
+         $('.default, .hover', this).addClass('animate');
+      }
+      else
+      {
+         $(this).removeClass('active');
+         $('.default, .hover', this).removeClass('animate').width();
+         $('.default, .hover', this).addClass('animate reverse');
+      }
+   });
+   $("#RollOverLayer16").click(function(e)
+   {
+      if (!$(this).hasClass('active'))
+      {
+         $(this).addClass('active');
+         $('.default, .hover', this).removeClass('animate reverse').width();
+         $('.default, .hover', this).addClass('animate');
+      }
+      else
+      {
+         $(this).removeClass('active');
+         $('.default, .hover', this).removeClass('animate').width();
+         $('.default, .hover', this).addClass('animate reverse');
+      }
+   });
+   $("#RollOverLayer17").click(function(e)
+   {
+      if (!$(this).hasClass('active'))
+      {
+         $(this).addClass('active');
+         $('.default, .hover', this).removeClass('animate reverse').width();
+         $('.default, .hover', this).addClass('animate');
+      }
+      else
+      {
+         $(this).removeClass('active');
+         $('.default, .hover', this).removeClass('animate').width();
+         $('.default, .hover', this).addClass('animate reverse');
+      }
+   });
+   $("#RollOverLayer18").click(function(e)
+   {
+      if (!$(this).hasClass('active'))
+      {
+         $(this).addClass('active');
+         $('.default, .hover', this).removeClass('animate reverse').width();
+         $('.default, .hover', this).addClass('animate');
+      }
+      else
+      {
+         $(this).removeClass('active');
+         $('.default, .hover', this).removeClass('animate').width();
+         $('.default, .hover', this).addClass('animate reverse');
+      }
+   });
+   $("#RollOverLayer19").click(function(e)
+   {
+      if (!$(this).hasClass('active'))
+      {
+         $(this).addClass('active');
+         $('.default, .hover', this).removeClass('animate reverse').width();
+         $('.default, .hover', this).addClass('animate');
+      }
+      else
+      {
+         $(this).removeClass('active');
+         $('.default, .hover', this).removeClass('animate').width();
+         $('.default, .hover', this).addClass('animate reverse');
+      }
+   });
+   $("#RollOverLayer4").click(function(e)
+   {
+      if (!$(this).hasClass('active'))
+      {
+         $(this).addClass('active');
+         $('.default, .hover', this).removeClass('animate reverse').width();
+         $('.default, .hover', this).addClass('animate');
+      }
+      else
+      {
+         $(this).removeClass('active');
+         $('.default, .hover', this).removeClass('animate').width();
+         $('.default, .hover', this).addClass('animate reverse');
+      }
+   });
+   $("#RollOverLayer7").click(function(e)
+   {
+      if (!$(this).hasClass('active'))
+      {
+         $(this).addClass('active');
+         $('.default, .hover', this).removeClass('animate reverse').width();
+         $('.default, .hover', this).addClass('animate');
+      }
+      else
+      {
+         $(this).removeClass('active');
+         $('.default, .hover', this).removeClass('animate').width();
+         $('.default, .hover', this).addClass('animate reverse');
+      }
+   });
+   function onScrollFontAwesomeIcon3()
+   {
+      var $obj = $("#wb_FontAwesomeIcon3");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_FontAwesomeIcon3', 'transform-lightspeed-in', 100, 1000);
+      }
+   }
+   onScrollFontAwesomeIcon3();
+   $(window).scroll(function(event)
+   {
+      onScrollFontAwesomeIcon3();
+   });
+   function onScrollFontAwesomeIcon11()
+   {
+      var $obj = $("#wb_FontAwesomeIcon11");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_FontAwesomeIcon11', 'transform-lightspeed-in', 400, 1000);
+      }
+   }
+   onScrollFontAwesomeIcon11();
+   $(window).scroll(function(event)
+   {
+      onScrollFontAwesomeIcon11();
+   });
+   function onScrollIconFont1()
+   {
+      var $obj = $("#wb_IconFont1");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_IconFont1', 'transform-lightspeed-in', 400, 1000);
+      }
+   }
+   onScrollIconFont1();
+   $(window).scroll(function(event)
+   {
+      onScrollIconFont1();
+   });
+   $('img[data-src]').lazyload();
+});
+</script>
+
+<script>
+$(document).ready(function()
+{
+  $('#wb_Carousel2').owlCarousel( { margin: 10, stagePadding: 10, autoplay: true, rewind: true, dotsEach: true, responsive : { 0: { items : 1 }, 480: { items : 3}, 768: { items : 4}, 970: { items : 5}}});
+});
+</script>
+
+
+</head>
+<body>
+
+
+<div id="wb_PageHeader">
+<div id="PageHeader-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+<path class="divider-fill" d="M66.709,62.141C63.674,62.141 62.115,50.388 60.619,37.105C62.048,29.579 63.814,24.051 66.352,24.051C69.374,24.051 71.362,33.025 73.031,44.299C71.577,51.437 70.374,62.141 66.709,62.141ZM41.114,57.818C40.604,57.416 40.051,57.19 39.441,57.19C33.91,57.19 32.305,76.639 28.938,82.663C30.102,85.32 31.71,87.871 33.333,87.871C36.993,87.87 39.088,73.872 41.114,57.818z" style="fill-opacity:0.3;"/>
+<path class="divider-fill" d="M51.832,78.336C46.587,78.336 45.555,61.319 41.114,57.818C44.303,32.539 46.669,0 52.006,0C56.839,0 58.676,19.844 60.619,37.105C57.568,53.167 56.051,78.336 51.832,78.336ZM17.005,67.259C21.378,67.259 21.89,84.421 26.875,84.421C27.646,84.421 28.321,83.766 28.938,82.663C24.471,72.464 22.587,44.705 18.018,44.705C11.998,44.705 10.296,82.492 6.25,82.492C3.124,82.492 1.562,73.774 -0.001,61.416L-0.001,73.421C1.562,81.2 3.342,90.679 6.468,90.679C12.718,90.679 12.39,67.259 17.005,67.259ZM94.15,31.54C89.658,31.54 89.31,66.348 84.772,66.348C80.584,66.348 80.104,38.746 75.741,38.746C74.548,38.746 73.758,40.729 73.031,44.299C75.851,63.352 77.758,88.979 82.198,88.979C87.608,88.979 88.132,57.865 93.758,57.865C96.867,57.865 98.444,65.681 99.999,73.42L99.999,61.416C98.444,49.122 97.26,31.54 94.15,31.54z" style="fill-opacity:0.5;"/>
+<path class="divider-fill" d="M82.198,88.979C77.757,88.979 75.851,63.353 73.031,44.299C71.577,51.437 70.374,62.141 66.709,62.141C63.674,62.141 62.115,50.388 60.619,37.105C57.568,53.167 56.05,78.336 51.832,78.336C46.587,78.336 45.555,61.319 41.113,57.818C39.088,73.871 36.862,87.87 33.202,87.87C31.578,87.87 30.102,85.32 28.938,82.662C28.321,83.766 27.645,84.42 26.875,84.42C21.89,84.42 21.378,67.259 17.005,67.259C12.39,67.259 12.674,90.634 6.424,90.634C3.298,90.634 1.562,81.199 -0.001,73.419L-0.001,100L99.999,100L99.999,73.42C98.444,65.681 96.867,57.865 93.758,57.865C88.132,57.865 87.608,88.979 82.198,88.979z"/>
+</svg></div>
+<div id="PageHeader">
+<div class="row">
+<div class="col-1">
+<div id="wb_CEMB-INSIGNIA" style="display:inline-block;width:44px;height:45px;z-index:0;">
+<a href="./index.html" onmouseover="AnimateCss('wb_CEMB-INSIGNIA', 'animate-flash', 0, 500);return false;"><img src="images/placeholder.gif" data-src="images/INSIGNIA2.png" id="CEMB-INSIGNIA" alt=""></a>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_ThemeableMenu1" style="display:inline-block;width:100%;text-align:center;z-index:1;">
+<div id="ThemeableMenu1" class="ThemeableMenu1" style="width:100%;height:auto !important;">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ThemeableMenu1-navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="ThemeableMenu1-navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="nav-item">
+<a href="./index.html" class="nav-link">Inicio</a>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Nosotros<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Bienvenida.html" class="nav-link">Bienvenida</a></li>
+<li class="nav-item"><a href="./Quienes-Somos.html" class="nav-link">Quienes Somos</a></li>
+<li class="nav-item"><a href="./Nuestra-Historia.html" class="nav-link">Nuestra Historia</a></li>
+<li class="nav-item"><a href="./School-Profile.html" class="nav-link">School Profile</a></li>
+<li class="nav-item"><a href="./Escudo.html" class="nav-link">Escudo</a></li>
+<li class="nav-item"><a href="./Mision-y-Vision.html" class="nav-link">Misión y Visión</a></li>
+<li class="nav-item"><a href="./Valores.html" class="nav-link">Valores</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Organización<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Estamentos.html" class="nav-link">Estamentos</a></li>
+<li class="nav-item"><a href="./Comite-Ejecutivo.html" class="nav-link">Comité Ejecutivo</a></li>
+<li class="nav-item"><a href="./Equipo-Direccion.html" class="nav-link">Equipo de Dirección</a></li>
+<li class="nav-item"><a href="./Administracion.html" class="nav-link">Administración</a></li>
+<li class="nav-item"><a href="./Directiva-Docente.html" class="nav-link">Directiva Docente</a></li>
+<li class="nav-item"><a href="./Docentes.html" class="nav-link">Personal Docente</a></li>
+<li class="nav-item"><a href="./PersonalApoyo.html" class="nav-link">Personal de Apoyo</a></li>
+<li class="nav-item"><a href="./Organigrama.html" class="nav-link">Organigrama</a></li>
+<li class="nav-item"><a href="./C-Emergencia-CEMB.html" class="nav-link">Cadena de Emergencia</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Doc. Académicos<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Crono-Acti-Evaluativas.html" class="nav-link">Cronogramas AE</a></li>
+<li class="nav-item"><a href="./Desempe-Academico.html" class="nav-link">Desempeño Académico</a></li>
+<li class="nav-item"><a href="./Modalidad-Ensenanzas.html" class="nav-link">Modalidad de Enseñanza</a></li>
+<li class="nav-item"><a href="./TemariosExamenes.html" class="nav-link">Temarios de Exámenes</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Doc. Reglamentarios<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Manual-Convivencia.html" class="nav-link">Manual de Convivencia</a></li>
+<li class="nav-item"><a href="./PAD.html" class="nav-link">PAD</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="./Circulares.html" class="nav-link">Circulares</a>
+</li>
+<li class="nav-item">
+<a href="./Noticias.html" class="nav-link">Noticias</a>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Admisión<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Proceso-Admision.html" class="nav-link">Proceso Admisión</a></li>
+<li class="nav-item"><a href="./SolicitudAdmision.html" class="nav-link">Solicitud de Admisión</a></li>
+<li class="nav-item"><a href="./Preceso-AdmisionEI.html" class="nav-link">Proceso Admisión Educación Inicial</a></li>
+<li class="nav-item"><a href="./Temarios-Admision.html" class="nav-link">Temarios de Admisión</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Comunidad CEMB<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Consejo-Estudiantil.html" class="nav-link">Consejo Estudiantil</a></li>
+
+<!---
+<li class="nav-item"><a href="./Operacion-Sonrisa.html" class="nav-link">Club Operación Sonrisa</a></li> --->
+
+<li class="nav-item"><a href="./Club-Mun.html" class="nav-link">Club MUN</a></li>
+<li class="nav-item"><a href="./Stop-Bullying.html" class="nav-link">Stop Bullying</a></li>
+<li class="nav-item"><a href="./Capacitaciones.html" class="nav-link">Capacitaciones</a></li>
+<li class="nav-item"><a href="./ProyectoPASS.html" class="nav-link">Proyecto PASS</a></li>
+<li class="nav-item"><a href="./Universidades.html" class="nav-link">Universidades</a></li>
+<li class="nav-item"><a href="./Exalumnos.html" class="nav-link">Ex-Alumnos</a></li>
+<li class="nav-item"><a href="./CoachingEstudiantil.html" class="nav-link">Coaching Estudiantil</a></li>
+<li class="nav-item"><a href="./OrgulloCEMB.html" class="nav-link">Orgullo CEMB</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Actividades Relevantes por Áreas<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Matematica.html" class="nav-link">Matemática</a></li>
+<li class="nav-item"><a href="./LeguayLiteratura.html" class="nav-link">Lengua y Literatura</a></li>
+<li class="nav-item"><a href="./CCNN.html" class="nav-link">CCNN</a></li>
+<li class="nav-item"><a href="./CCSS.html" class="nav-link">CCSS</a></li>
+<li class="nav-item"><a href="./Ingles.html" class="nav-link">Inglés</a></li>
+<li class="nav-item"><a href="./Pastoral.html" class="nav-link">Pastoral</a></li>
+<li class="nav-item"><a href="./DeptoOrientacion.html" class="nav-link">Dpto. Orientación</a></li>
+<li class="nav-item"><a href="./DanzaDeportes.html" class="nav-link">Danza y Deportes</a></li>
+<li class="nav-item"><a href="./PPFF.html" class="nav-link">PPFF</a></li>
+<li class="nav-item"><a href="./Teleton.html" class="nav-link">Teleton</a></li>
+<li class="nav-item"><a href="./Fisica.html" class="nav-link">Inglés</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Asociación PPMMFF<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./FuncionPMF.html" class="nav-link">Función</a></li>
+<li class="nav-item"><a href="./DirectivaPMF.html" class="nav-link">Directiva</a></li>
+<li class="nav-item"><a href="./RG-PMF.html" class="nav-link">Representantes de Grado</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Galería<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Campus.php" class="nav-link">Campus</a></li>
+<li class="nav-item"><a href="./GEducaxcionInicial.php" class="nav-link">Educación Inicial</a></li>
+<li class="nav-item"><a href="./GPrimaria.php" class="nav-link">Primaria</a></li>
+<li class="nav-item"><a href="./GSecundaria.php" class="nav-link">Secundaria</a></li>
+<li class="nav-item"><a href="./GPApoyo.php" class="nav-link">Personal de Apoyo</a></li>
+<li class="nav-item"><a href="./GPadresFamilia.php" class="nav-link">Padres de Familia</a></li>
+	<li class="nav-item"><a href="./promociones/index.html" class="nav-link">Promociones</a></li>
+<li class="nav-item"><a href="./GVideos.php" class="nav-link">Videos</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="./Contactanos.php" class="nav-link">Contáctanos</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_header">
+<div id="header">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading1" style="display:inline-block;width:100%;z-index:2;">
+<h1 id="Heading1">Centro Educacional Mantica Berio</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_infoBlock1">
+<div id="infoBlock1-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 24" preserveAspectRatio="none">
+<defs>
+   <path id="wave-animated" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="wave-animated">
+   <use xlink:href="#wave-animated" x="48" y="0" class="divider-fill" style="opacity:0.7" />
+   <use xlink:href="#wave-animated" x="48" y="3" class="divider-fill" style="opacity:0.5" />
+   <use xlink:href="#wave-animated" x="48" y="5" class="divider-fill" style="opacity:0.3" />
+   <use xlink:href="#wave-animated" x="48" y="7" class="divider-fill"  />
+</g>
+</svg>
+</div>
+<div id="infoBlock1">
+<div class="col-1">
+<div id="wb_LayoutGrid1">
+<div id="LayoutGrid1">
+<div class="row">
+<div class="col-1">
+<div id="RollOverLayer2" style="overflow:hidden;z-index:5">
+<div class="hover">
+<div id="wb_Card12" style="display:flex;width:100%;text-align:center;z-index:3;">
+   <div id="Card12-card-body">
+      <div id="Card12-card-item0">Información</div>
+      <hr id="Card12-card-item1">
+      <div id="Card12-card-item2">Correo: judith.castillo@manticaberio.edu.ni<br><br>Horario de Atención: Lune 10:00 AM - 1:00 PM / Jueves 10:00 AM - 1:00 PM</div>
+      <hr id="Card12-card-item3">
+      <div id="Card12-card-item4"><i class="fa fa-undo"></i>Click here to rotate back</div>
+   </div>
+</div>
+</div>
+<div class="default">
+<div id="wb_Card1" style="display:flex;width:100%;text-align:center;z-index:4;">
+   <div id="Card1-card-body">
+      <div id="Card1-card-item0"></div>
+      <img id="Card1-card-item1" src="images/Judith Betulia Castillo Rodriguez (Coordinadora).jpg" alt="" title="">
+      <div id="Card1-card-item2">Judith Castillo Rodríguez </div>
+      <div id="Card1-card-item3">Coordinadora</div>
+      <div id="Card1-card-item4"><i class="fa fa-undo"></i>Click here to rotate</div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div id="RollOverLayer1" style="overflow:hidden;z-index:8">
+<div class="hover">
+<div id="wb_Card3" style="display:flex;width:100%;text-align:center;z-index:6;">
+   <div id="Card3-card-body">
+      <div id="Card3-card-item0">Información</div>
+      <hr id="Card3-card-item1">
+      <div id="Card3-card-item2">Correo: brenda.martinez@manticaberio.edu.ni<br><!---<br>Horario de Atención: Martes 11:30 AM - 1 PM--->
+		  <br><br>17 años de Experiencia
+		  <br>Lic. Lengua y Literatura
+	   </div>
+      <hr id="Card3-card-item3">
+      <div id="Card3-card-item4"><i class="fa fa-undo"></i>Click here to rotate back</div>
+   </div>
+</div>
+</div>
+<div class="default">
+<div id="wb_Card2" style="display:flex;width:100%;text-align:center;z-index:7;">
+   <div id="Card2-card-body">
+      <div id="Card2-card-item0"></div>
+      <img id="Card2-card-item1" src="images/Brenda Denissa Martinez Espinoza.jpg" alt="" title="">
+      <div id="Card2-card-item2">Brenda Martínez Espinoza</div>
+      <div id="Card2-card-item3">Docente Secundaria</div>
+      <div id="Card2-card-item4"><i class="fa fa-undo"></i>Click here to rotate</div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+	<div class="col-3">
+<div id="RollOverLayer19" style="overflow:hidden;z-index:65">
+<div class="hover">
+<div id="wb_Card38" style="display:flex;width:100%;text-align:center;z-index:63;">
+   <div id="Card38-card-body">
+      <div id="Card38-card-item0">Información</div>
+      <hr id="Card38-card-item1">
+      <div id="Card38-card-item2">Correo: oscar.paredes@manticaberio.edu.ni<br><!---<br>Horario de Atención: Martes 11:30 AM - 1 PM---><br> 16 años de experiencia
+	   <br>Lic. en Derecho.
+		<br>Profesor en Educación Media Filosofía y profesor de Vida y Fe.
+	   </div>
+      <hr id="Card38-card-item3">
+      <div id="Card38-card-item4"><i class="fa fa-undo"></i>Click here to rotate back</div>
+   </div>
+</div>
+</div>
+<div class="default">
+<div id="wb_Card37" style="display:flex;width:100%;text-align:center;z-index:64;">
+   <div id="Card37-card-body">
+      <div id="Card37-card-item0"></div>
+      <img id="Card37-card-item1" src="images/Oscar Enrique Paredes Medina.jpg" alt="" title="">
+      <div id="Card37-card-item2">Oscar Enrique Paredes Medina</div>
+      <div id="Card37-card-item3">Ed en la Fe<br>Filosofía</div>
+      <div id="Card37-card-item4"><i class="fa fa-undo"></i>Click here to rotate</div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+<!--<div class="col-3">
+<div id="RollOverLayer3" style="overflow:hidden;z-index:11">
+<div class="hover">
+<div id="wb_Card5" style="display:flex;width:100%;text-align:center;z-index:9;">
+   <div id="Card5-card-body">
+      <div id="Card5-card-item0">Información</div>
+      <hr id="Card5-card-item1">
+      <div id="Card5-card-item2">Correo: marlon.ibarra@manticaberio.edu.ni<br><br>Horario de Atención: Lunes 10:00 AM -11:30 AM</div>
+      <hr id="Card5-card-item3">
+      <div id="Card5-card-item4"><i class="fa fa-undo"></i>Click here to rotate back</div>
+   </div>
+</div>
+</div>
+<div class="default">
+<div id="wb_Card4" style="display:flex;width:100%;text-align:center;z-index:10;">
+   <div id="Card4-card-body">
+      <div id="Card4-card-item0"></div>
+      <img id="Card4-card-item1" src="images/Marlon Giovanny Ibarra Paladino.jpg" alt="" title="">
+      <div id="Card4-card-item2">Marlon Ibarra P</div>
+      <div id="Card4-card-item3">Guía 7° B</div>
+      <div id="Card4-card-item4"><i class="fa fa-undo"></i>Click here to rotate</div>
+   </div>
+</div>
+</div>
+</div>
+</div>-->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!------Columna 1------>
+<div id="wb_LayoutGrid2">
+<div id="LayoutGrid2">
+<div class="col-1">
+<div id="wb_LayoutGrid3">
+<div id="LayoutGrid3">
+<div class="row">
+<div class="col-1">
+<div id="RollOverLayer7" style="overflow:hidden;z-index:15">
+<div class="hover">
+<div id="wb_Card14" style="display:flex;width:100%;text-align:center;z-index:13;">
+    <div id="Card28-card-body">
+      <div id="Card28-card-item0">Información</div>
+      <hr id="Card28-card-item1">
+      <div id="Card28-card-item2">Correo: dania.hernandez@manticaberio.edu.ni<br><!---<br>Horario de Atención: Martes 11:30 AM - 1 PM---><br>19 años de experiencia
+		  <br>Licenciada en ciencias de la educación con mención en Matemática Educativa y Computación
+		  
+	   </div>
+      <hr id="Card28-card-item3">
+      <div id="Card28-card-item4"><i class="fa fa-undo"></i>Click here to rotate back</div>
+   </div>
+</div>
+</div>
+<div class="default">
+<div id="wb_Card27" style="display:flex;width:100%;text-align:center;z-index:47;">
+   <div id="Card27-card-body">
+      <div id="Card27-card-item0"></div>
+      <img id="Card27-card-item1" src="images/Dania del Carmen Hernandez Bustamante.jpg" alt="" title="">
+      <div id="Card27-card-item2">Dania Hernández </div>
+      <div id="Card27-card-item3">Docente Matemática</div>
+      <div id="Card27-card-item4"><i class="fa fa-undo"></i>Click here to rotate</div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+
+<!------Columna 2------>
+<div class="col-2">
+<div id="RollOverLayer5" style="overflow:hidden;z-index:18">
+<div class="hover">
+<div id="wb_Card9" style="display:flex;width:100%;text-align:center;z-index:16;">
+   <div id="Card9-card-body">
+      <div id="Card9-card-item0">Información</div>
+      <hr id="Card9-card-item1">
+      <div id="Card9-card-item2">Correo: debon.soto@manticaberio.edu.ni<br><!---<br>Horario de Atención: Martes 11:30 AM - 1 PM---><br>9 años de experiencia
+	   <br>Lic. educación física y deporte
+	   <br>Docente de deporte Secundaria</div>
+      <hr id="Card9-card-item3">
+      <div id="Card9-card-item4"><i class="fa fa-undo"></i>Click here to rotate back</div>
+   </div>
+</div>
+</div>
+<div class="default">
+<div id="wb_Card8" style="display:flex;width:100%;text-align:center;z-index:17;">
+   <div id="Card8-card-body">
+      <div id="Card8-card-item0"></div>
+      <img id="Card8-card-item1" src="images/Debon Magdalena Soto Gonzalez.jpg" alt="" title="">
+      <div id="Card8-card-item2">Debon  M. Soto González.</div>
+      <div id="Card8-card-item3">Docente de deporte Secundaria</div>
+      <div id="Card8-card-item4"><i class="fa fa-undo"></i>Click here to rotate</div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-3">
+<div id="RollOverLayer16" style="overflow:hidden;z-index:55">
+<div class="hover">
+<div id="wb_Card32" style="display:flex;width:100%;text-align:center;z-index:53;">
+   <div id="Card32-card-body">
+      <div id="Card32-card-item0">Información</div>
+      <hr id="Card32-card-item1">
+      <div id="Card32-card-item2">Correo:samir.guardado@manticaberio.edu.ni <br><!---<br>Horario de Atención: Martes 11:30 AM - 1 PM---><br>5 años de experiencia
+	   <br>Lic. Ciencias de la Educación y Humanidades mención Lengua y Literatura.</div>
+      <hr id="Card32-card-item3">
+      <div id="Card32-card-item4"><i class="fa fa-undo"></i>Click here to rotate back</div>
+   </div>
+</div>
+</div>
+<div class="default">
+<div id="wb_Card31" style="display:flex;width:100%;text-align:center;z-index:54;">
+   <div id="Card31-card-body">
+      <div id="Card31-card-item0"></div>
+      <img id="Card31-card-item1" src="images/Samir Enrique Guardado.jpg" alt="" title="">
+      <div id="Card31-card-item2">Samir Enrique Guardado</div>
+      <div id="Card31-card-item3">Docente de lengua y literatura</div>
+      <div id="Card31-card-item4"><i class="fa fa-undo"></i>Click here to rotate</div>
+   </div>
+<!---
+<div class="col-3">
+<div id="RollOverLayer6" style="overflow:hidden;z-index:21">
+<div class="hover">
+<div id="wb_Card11" style="display:flex;width:100%;text-align:center;z-index:19;">
+   <div id="Card11-card-body">
+      <div id="Card11-card-item0">Información</div>
+      <hr id="Card11-card-item1">
+      <div id="Card11-card-item2">Correo: doris.blanco@manticaberio.edu.ni<br><br>Horario de Atención: Jueves 9:00 AM- 11:00 AM
+		<br><br>20 años de experiencia
+		  <br>Licenciatura en Educación primaria <br>Licenciatura en CCNN<br>Maestra de CCNN 7mo y 8vo
+		  <br>Maestra de Biología de 11mo
+	   </div>
+      <hr id="Card11-card-item3">
+      <div id="Card11-card-item4"><i class="fa fa-undo"></i>Click here to rotate back</div>
+   </div>
+</div>
+</div>
+<div class="default">
+<div id="wb_Card10" style="display:flex;width:100%;text-align:center;z-index:20;">
+   <div id="Card10-card-body">
+      <div id="Card10-card-item0"></div>
+      <img id="Card10-card-item1" src="images/Doris Elizabeth Blanco Quiroz.jpg" alt="" title="">
+      <div id="Card10-card-item2">Doris Blanco Quiroz</div>
+      <div id="Card10-card-item3">Docente Secundaria</div>
+      <div id="Card10-card-item4"><i class="fa fa-undo"></i>Click here to rotate</div>
+   </div>
+   --->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid4">
+<div id="LayoutGrid4">
+<div class="col-1">
+<div id="wb_LayoutGrid5">
+<div id="LayoutGrid5">
+<div class="row">
+<div class="col-1">
+<div id="RollOverLayer4" style="overflow:hidden;z-index:25">
+<div class="hover">
+<div id="wb_Card7" style="display:flex;width:100%;text-align:center;z-index:23;">
+   <div id="Card7-card-body">
+      <div id="Card7-card-item0">Información</div>
+      <hr id="Card7-card-item1">
+      <div id="Card7-card-item2">Correo: heysa.salmeron@manticaberio.edu.ni<br><!---<br>Horario de Atención: Martes 11:30 AM - 1 PM---><br>11 años de experiencia
+	   <br>Licenciada en Inglés
+		<br>R & W de 7mo A y B, 9no A y B</div>
+      <hr id="Card7-card-item3">
+      <div id="Card7-card-item4"><i class="fa fa-undo"></i>Click here to rotate back</div>
+   </div>
+</div>
+</div>
+<div class="default">
+<div id="wb_Card6" style="display:flex;width:100%;text-align:center;z-index:24;">
+   <div id="Card6-card-body">
+      <div id="Card6-card-item0"></div>
+      <img id="Card6-card-item1" src="images/Heysa Mayela Salmeron Betanco.jpg" alt="" title="">
+      <div id="Card6-card-item2">Heysa Salmerón</div>
+      <div id="Card6-card-item3">Docente de Inglés Secundaria</div>
+      <div id="Card6-card-item4"><i class="fa fa-undo"></i>Click here to rotate</div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div id="RollOverLayer8" style="overflow:hidden;z-index:28">
+<div class="hover">
+<div id="wb_Card16" style="display:flex;width:100%;text-align:center;z-index:26;">
+   <div id="Card16-card-body">
+      <div id="Card16-card-item0">Información</div>
+      <hr id="Card16-card-item1">
+      <div id="Card16-card-item2">Correo: leonardo.bautista@manticaberio.edu.ni<br><!---<br>Horario de Atención: Martes 11:30 AM - 1 PM---><br>27 años de experiencia
+	   <br>Lic. en física matemáticas
+	   <br>Docente física de 9no a 11mo y cálculo de 11mo</div>
+      <hr id="Card16-card-item3">
+      <div id="Card16-card-item4"><i class="fa fa-undo"></i>Click here to rotate back</div>
+   </div>
+</div>
+</div>
+<div class="default">
+<div id="wb_Card15" style="display:flex;width:100%;text-align:center;z-index:27;">
+   <div id="Card15-card-body">
+      <div id="Card15-card-item0"></div>
+      <img id="Card15-card-item1" src="images/Leonardo Abraham Bautista Mendez.jpg" alt="" title="">
+      <div id="Card15-card-item2">Leonardo Bautista Méndez</div>
+      <div id="Card15-card-item3">Docente Secundaria</div>
+      <div id="Card15-card-item4"><i class="fa fa-undo"></i>Click here to rotate</div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-3">
+<div id="RollOverLayer9" style="overflow:hidden;z-index:31">
+<div class="hover">
+<div id="wb_Card18" style="display:flex;width:100%;text-align:center;z-index:29;">
+   <div id="Card18-card-body">
+      <div id="Card18-card-item0">Información</div>
+      <hr id="Card18-card-item1">
+      <div id="Card18-card-item2">Correo: ana.vallejos@manticaberio.edu.ni<br><!---<br>Horario de Atención: Martes 11:30 AM - 1 PM---><br>13 años de experiencia
+		  <br>Lic. Física matemática 
+		  <br>Docente de matemática 
+	   </div>
+      <hr id="Card18-card-item3">
+      <div id="Card18-card-item4"><i class="fa fa-undo"></i>Click here to rotate back</div>
+   </div>
+</div>
+</div>
+<div class="default">
+<div id="wb_Card17" style="display:flex;width:100%;text-align:center;z-index:30;">
+   <div id="Card17-card-body">
+      <div id="Card17-card-item0"></div>
+      <img id="Card17-card-item1" src="images/Ana Gabriela Vallejos Blandino.jpg" alt="" title="">
+      <div id="Card17-card-item2">Ana Gabriela Vallejos</div>
+      <div id="Card17-card-item3">Docente Secundaria</div>
+      <div id="Card17-card-item4"><i class="fa fa-undo"></i>Click here to rotate</div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid6">
+<div id="LayoutGrid6">
+<div class="col-1">
+<div id="wb_LayoutGrid7">
+<div id="LayoutGrid7">
+<div class="row">
+<div class="col-1">
+<div id="RollOverLayer10" style="overflow:hidden;z-index:35">
+<div class="hover">
+<div id="wb_Card20" style="display:flex;width:100%;text-align:center;z-index:33;">
+   <div id="Card20-card-body">
+      <div id="Card20-card-item0">Información</div>
+      <hr id="Card20-card-item1">
+      <div id="Card20-card-item2">Correo: lourdes.garcia@manticaberio.edu.ni<br><!---<br>Horario de Atención: Martes 11:30 AM - 1 PM---><br>30 años de experiencia
+		  <br>Lic. Química y Maestra Certificada de Google<br>Jefa de Área CCNN
+	   </div>
+      <hr id="Card20-card-item3">
+      <div id="Card20-card-item4"><i class="fa fa-undo"></i>Click here to rotate back</div>
+   </div>
+</div>
+</div>
+<div class="default">
+<div id="wb_Card19" style="display:flex;width:100%;text-align:center;z-index:34;">
+   <div id="Card19-card-body">
+      <div id="Card19-card-item0"></div>
+      <img id="Card19-card-item1" src="images/Lourdes Martinez Estrada.jpg" alt="" title="">
+      <div id="Card19-card-item2">Lourdes Martínez E.</div>
+      <div id="Card19-card-item3">Docente Secundaria</div>
+      <div id="Card19-card-item4"><i class="fa fa-undo"></i>Click here to rotate</div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-2">
+<div id="RollOverLayer17" style="overflow:hidden;z-index:58">
+<div class="hover">
+<div id="wb_Card34" style="display:flex;width:100%;text-align:center;z-index:56;">
+   <div id="Card34-card-body">
+      <div id="Card34-card-item0">Información</div>
+      <hr id="Card34-card-item1">
+      <div id="Card34-card-item2">Correo: adriana.vargas@manticaberio.edu.ni<br><!---<br>Horario de Atención: Martes 11:30 AM - 1 PM---><br>12 años de experiencia
+	   <br>Maestrante en Neuropsicología.  
+	   </div>
+      <hr id="Card34-card-item3">
+      <div id="Card34-card-item4"><i class="fa fa-undo"></i>Click here to rotate back</div>
+   </div>
+</div>
+</div>
+<div class="default">
+<div id="wb_Card33" style="display:flex;width:100%;text-align:center;z-index:57;">
+   <div id="Card33-card-body">
+      <div id="Card33-card-item0"></div>
+      <img id="Card33-card-item1" src="images/Adriana del Socorro Vargas Zepeda.jpg" alt="" title="">
+      <div id="Card33-card-item2">Adriana Vargas</div>
+      <div id="Card33-card-item3">Dpto. de orientación <br>Psicóloga</div>
+      <div id="Card33-card-item4"><i class="fa fa-undo"></i>Click here to rotate</div>
+   </div>
+
+<!---
+<div class="col-2">
+<div id="RollOverLayer11" style="overflow:hidden;z-index:38">
+<div class="hover">
+<div id="wb_Card22" style="display:flex;width:100%;text-align:center;z-index:36;">
+   <div id="Card22-card-body">
+      <div id="Card22-card-item0">Información</div>
+      <hr id="Card22-card-item1">
+      <div id="Card22-card-item2">Correo: moises.amador@manticaberio.edu.ni<br><br>Horario de Atención: Martes 09:00 AM- 11:00 AM
+	   <br><br>12 años de Experiencia
+	   <br>Licenciado en Ciencias de la Educación mención en CCSS. <br>Docente de secundaria. <br>Jefe de área de CCSS.
+	   </div>
+      <hr id="Card22-card-item3">
+      <div id="Card22-card-item4"><i class="fa fa-undo"></i>Click here to rotate back</div>
+   </div>
+</div>
+</div>
+<div class="default">
+<div id="wb_Card21" style="display:flex;width:100%;text-align:center;z-index:37;">
+   <div id="Card21-card-body">
+      <div id="Card21-card-item0"></div>
+      <img id="Card21-card-item1" src="images/Moises Israel Amador.jpg" alt="" title="">
+      <div id="Card21-card-item2">Moisés Israel Amador</div>
+      <div id="Card21-card-item3">Docente Secundaria</div>
+      <div id="Card21-card-item4"><i class="fa fa-undo"></i>Click here to rotate</div>
+   </div>
+   --->
+</div>
+</div>
+</div>
+</div>
+<div class="col-3">
+<div id="RollOverLayer12" style="overflow:hidden;z-index:41">
+<div class="hover">
+<div id="wb_Card24" style="display:flex;width:100%;text-align:center;z-index:39;">
+   <div id="Card24-card-body">
+      <div id="Card24-card-item0">Información</div>
+      <hr id="Card24-card-item1">
+      <div id="Card24-card-item2">Correo: beatriz.herrera@manticaberio.edu.ni<br><<!---<br>Horario de Atención: Martes 11:30 AM - 1 PM---><br>14 años de experiencia
+		  <br>Lic. Matemática Educativa y computación
+	   </div>
+      <hr id="Card24-card-item3">
+      <div id="Card24-card-item4"><i class="fa fa-undo"></i>Click here to rotate back</div>
+   </div>
+</div>
+</div>
+<div class="default">
+<div id="wb_Card23" style="display:flex;width:100%;text-align:center;z-index:40;">
+   <div id="Card23-card-body">
+      <div id="Card23-card-item0"></div>
+      <img id="Card23-card-item1" src="images/Beatriz Esperanza Herrera.jpg" alt="" title="">
+      <div id="Card23-card-item2">Beatriz Herrera</div>
+      <div id="Card23-card-item3">Docente Secundaria</div>
+      <div id="Card23-card-item4"><i class="fa fa-undo"></i>Click here to rotate</div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid8">
+<div id="LayoutGrid8">
+<div class="col-1">
+<div id="wb_LayoutGrid9">
+<div id="LayoutGrid9">
+<div class="row">
+<div class="col-1">
+<div id="RollOverLayer13" style="overflow:hidden;z-index:45">
+<div class="hover">
+<div id="wb_Card26" style="display:flex;width:100%;text-align:center;z-index:43;">
+   <div id="Card26-card-body">
+      <div id="Card26-card-item0">Información</div>
+      <hr id="Card26-card-item1">
+      <div id="Card26-card-item2">Correo: david.moreno@manticaberio.edu.ni<br><!---<br>Horario de Atención: Martes 11:30 AM - 1 PM---><br>23 años de experiencia
+		  <br>MSc. En gestión Educativa y Lic. En Computación
+	   </div>
+      <hr id="Card26-card-item3">
+      <div id="Card26-card-item4"><i class="fa fa-undo"></i>Click here to rotate back</div>
+   </div>
+</div>
+</div>
+<div class="default">
+<div id="wb_Card25" style="display:flex;width:100%;text-align:center;z-index:44;">
+   <div id="Card25-card-body">
+      <div id="Card25-card-item0"></div>
+      <img id="Card25-card-item1" src="images/David Eliazar Moreno.jpg" alt="" title="">
+      <div id="Card25-card-item2">David Moreno</div>
+      <div id="Card25-card-item3">Docente de Computación Secundaria</div>
+      <div id="Card25-card-item4"><i class="fa fa-undo"></i>Click here to rotate</div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+<!---<div class="col-2">
+<div id="RollOverLayer14" style="overflow:hidden;z-index:48">
+<div class="hover">
+<div id="wb_Card28" style="display:flex;width:100%;text-align:center;z-index:46;">
+   <div id="Card28-card-body">
+      <div id="Card28-card-item0">Información</div>
+      <hr id="Card28-card-item1">
+      <div id="Card28-card-item2">Correo: dania.hernandez@manticaberio.edu.ni<br><br>Horario de Atención: Viernes 09:00 AM -11:00 AM
+	   <br><br>17 años de experiencia
+		  <br>Licenciada en ciencias de la educación con mención en Matemática Educativa y Computación
+		  
+	   </div>
+      <hr id="Card28-card-item3">
+      <div id="Card28-card-item4"><i class="fa fa-undo"></i>Click here to rotate back</div>
+   </div>
+</div>
+</div>
+<div class="default">
+<div id="wb_Card27" style="display:flex;width:100%;text-align:center;z-index:47;">
+   <div id="Card27-card-body">
+      <div id="Card27-card-item0"></div>
+      <img id="Card27-card-item1" src="images/Dania del Carmen Hernandez Bustamante.jpg" alt="" title="">
+      <div id="Card27-card-item2">Dania Hernández </div>
+      <div id="Card27-card-item3">Docente Matemática</div>
+      <div id="Card27-card-item4"><i class="fa fa-undo"></i>Click here to rotate</div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+
+<!---
+<div class="col-3">
+<div id="RollOverLayer15" style="overflow:hidden;z-index:51">
+<div class="hover">
+<div id="wb_Card30" style="display:flex;width:100%;text-align:center;z-index:49;">
+   <div id="Card30-card-body">
+      <div id="Card30-card-item0">Información</div>
+      <hr id="Card30-card-item1">
+      <div id="Card30-card-item2">Correo: karraiza@manticaberio.edu.ni<br><br>Horario de Atención: Miércoles 7:00 AM– 9:00 AM
+	   <br><br>8 años de experiencia
+	   <br>Docente de Inglés
+		<br>TEFL CERTIFICATE
+	   </div>
+      <hr id="Card30-card-item3">
+      <div id="Card30-card-item4"><i class="fa fa-undo"></i>Click here to rotate back</div>
+   </div>
+</div>
+</div>
+<div class="default">
+<div id="wb_Card29" style="display:flex;width:100%;text-align:center;z-index:50;">
+   <div id="Card29-card-body">
+      <div id="Card29-card-item0"></div>
+      <img id="Card29-card-item1" src="images/Keyling Lucia Arriaza Rodriguez.jpg" alt="" title="">
+      <div id="Card29-card-item2">Keyling Lulia Arriaza Rodriguez</div>
+      <div id="Card29-card-item3">Docente de Inglés</div>
+      <div id="Card29-card-item4"><i class="fa fa-undo"></i>Click here to rotate</div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid10">
+<div id="LayoutGrid10">
+<div class="col-1">
+<div id="wb_LayoutGrid11">
+<div id="LayoutGrid11">
+<div class="row">
+<div class="col-1">
+<div id="RollOverLayer16" style="overflow:hidden;z-index:55">
+<div class="hover">
+<div id="wb_Card32" style="display:flex;width:100%;text-align:center;z-index:53;">
+   <div id="Card32-card-body">
+      <div id="Card32-card-item0">Información</div>
+      <hr id="Card32-card-item1">
+      <div id="Card32-card-item2">Correo:samir.guardado@manticaberio.edu.ni <br><br>Horario de Atención: Jueves 11:00 AM – 01:00 PM<br><br>3 años de experiencia
+	   <br>Lic. Ciencias de la Educación y Humanidades mención Lengua y Literatura.</div>
+      <hr id="Card32-card-item3">
+      <div id="Card32-card-item4"><i class="fa fa-undo"></i>Click here to rotate back</div>
+   </div>
+</div>
+</div>
+<div class="default">
+<div id="wb_Card31" style="display:flex;width:100%;text-align:center;z-index:54;">
+   <div id="Card31-card-body">
+      <div id="Card31-card-item0"></div>
+      <img id="Card31-card-item1" src="images/Samir Enrique Guardado.jpg" alt="" title="">
+      <div id="Card31-card-item2">Samir Enrique Guardado</div>
+      <div id="Card31-card-item3">Docente de Inglés</div>
+      <div id="Card31-card-item4"><i class="fa fa-undo"></i>Click here to rotate</div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div id="RollOverLayer17" style="overflow:hidden;z-index:58">
+<div class="hover">
+<div id="wb_Card34" style="display:flex;width:100%;text-align:center;z-index:56;">
+   <div id="Card34-card-body">
+      <div id="Card34-card-item0">Información</div>
+      <hr id="Card34-card-item1">
+      <div id="Card34-card-item2">Correo: adriana.vargas@manticaberio.edu.ni<br><br>Horario de Atención: Martes 11:30 AM a 12:30 MD
+		  <br><br>10 años de experiencia
+	   <br>Maestrante en Neuropsicología.  
+	   </div>
+      <hr id="Card34-card-item3">
+      <div id="Card34-card-item4"><i class="fa fa-undo"></i>Click here to rotate back</div>
+   </div>
+</div>
+</div>
+<div class="default">
+<div id="wb_Card33" style="display:flex;width:100%;text-align:center;z-index:57;">
+   <div id="Card33-card-body">
+      <div id="Card33-card-item0"></div>
+      <img id="Card33-card-item1" src="images/Adriana del Socorro Vargas Zepeda.jpg" alt="" title="">
+      <div id="Card33-card-item2">Adriana Vargas</div>
+      <div id="Card33-card-item3">Dpto. de orientación <br>Psicóloga</div>
+      <div id="Card33-card-item4"><i class="fa fa-undo"></i>Click here to rotate</div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+<!---
+<div class="col-3">
+<div id="RollOverLayer18" style="overflow:hidden;z-index:61">
+<div class="hover">
+<div id="wb_Card36" style="display:flex;width:100%;text-align:center;z-index:59;">
+   <div id="Card36-card-body">
+      <div id="Card36-card-item0">Información</div>
+      <hr id="Card36-card-item1">
+      <div id="Card36-card-item2">Correo: f.garciam@manticaberio.edu.ni<br><br>Horario de Atención: Miércoles 7:00 AM – 10:00 AM
+		  <br><br>8 años de experiencia
+	   <br>Lic. en Ingles cómo Lengua Extranjera <br>jefe de Área del dpto. de inglés
+	   </div>
+      <hr id="Card36-card-item3">
+      <div id="Card36-card-item4"><i class="fa fa-undo"></i>Click here to rotate back</div>
+   </div>
+</div>
+</div>
+<div class="default">
+<div id="wb_Card35" style="display:flex;width:100%;text-align:center;z-index:60;">
+   <div id="Card35-card-body">
+      <div id="Card35-card-item0"></div>
+      <img id="Card35-card-item1" src="images/Felix Moises Garcia Martinez.jpg" alt="" title="">
+      <div id="Card35-card-item2">Félix García </div>
+      <div id="Card35-card-item3">Jefe de área inglés.</div>
+      <div id="Card35-card-item4"><i class="fa fa-undo"></i>Click here to rotate</div>
+   </div>
+   --->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid12">
+<div id="LayoutGrid12">
+<div class="col-1">
+<div id="wb_LayoutGrid13">
+<div id="LayoutGrid13">
+<div class="row">
+<!--<div class="col-1">
+<div id="RollOverLayer19" style="overflow:hidden;z-index:65">
+<div class="hover">
+<div id="wb_Card38" style="display:flex;width:100%;text-align:center;z-index:63;">
+   <div id="Card38-card-body">
+      <div id="Card38-card-item0">Información</div>
+      <hr id="Card38-card-item1">
+      <div id="Card38-card-item2">Correo: oscar.paredes@manticaberio.edu.ni<br><br>Horario de Atención: Martes 12:00 AM – 1:00 PM
+	   <br><br> 14 años de experiencia
+	   <br>Lic. en Derecho.
+		<br>Profesor en Educación Media Filosofía y profesor de Vida y Fe.
+	   </div>
+      <hr id="Card38-card-item3">
+      <div id="Card38-card-item4"><i class="fa fa-undo"></i>Click here to rotate back</div>
+   </div>
+</div>
+</div>
+<div class="default">
+<div id="wb_Card37" style="display:flex;width:100%;text-align:center;z-index:64;">
+   <div id="Card37-card-body">
+      <div id="Card37-card-item0"></div>
+      <img id="Card37-card-item1" src="images/Oscar Enrique Paredes Medina.jpg" alt="" title="">
+      <div id="Card37-card-item2">Oscar Enrique Paredes Medina</div>
+      <div id="Card37-card-item3">Ed en la Fe<br>Filosofía</div>
+      <div id="Card37-card-item4"><i class="fa fa-undo"></i>Click here to rotate</div>
+   </div>
+</div>
+</div>
+</div>
+</div>-->
+<div class="col-2">
+</div>
+<div class="col-3">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="wb_Footer">
+<div id="Footer">
+<div class="row">
+<div class="col-1">
+<div id="wb_FontAwesomeIcon3" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:162;">
+<a href="https://www.facebook.com/cemanticaberio" target="_blank"><div id="FontAwesomeIcon3"><i class="fa fa-facebook"></i></div></a>
+</div>
+<div id="wb_FontAwesomeIcon11" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:163;">
+<a href="https://www.youtube.com/channel/UCAhJcrp_RsEv7Kz6uIQGPhg" target="_blank" title="Canal CEMB"><div id="FontAwesomeIcon11"><i class="fa fa-youtube"></i></div></a>
+</div>
+<div id="wb_IconFont1" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:164;">
+<a href="https://www.youtube.com/channel/UCwOuGJLlY5TBDs2xTcmWMPw" target="_blank" title="Canal Educacion Inicial"><div id="IconFont1"><i class="fa fa-youtube-play"></i></div></a>
+</div>
+<div id="wb_Text17">
+<span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:20px;">Dirección:<br></span><span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:15px;">Km 132 Carretera a Somotillo. Chinandega.<br></span><span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:20px;">Teléfono:<br>505-2341-2923<br>E-mail:<br></span><span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:15px;">m.callejas@manticaberio.edu.ni</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_copyright">
+<div id="copyright">
+<div class="row">
+<div class="col-1">
+<div id="wb_Text12">
+<span style="color:#FFFFFF;font-family:Arial;font-size:13px;">Copyright © CEMB 2021. All right reserved. </span>
+</div>
+<!-- POPUP -->
+<div id="Html3" style="display:none;width:35px;height:24px;z-index:167">
+<div class="modal" id="window-notice">
+    <div class="content">
+        <div class="content-text"><a href="https://youtu.be/d_hLZyJt48E">
+<img src="http://www.manticaberio.edu.ni/assets/avisomatricula2021-640x480.jpg" width="100%"/></a>
+          </div>
+        <button class="btncerrar">
+        <span>Cerrar</span>
+        </button>
+    </div>
+</div>
+
+
+
+<script>
+    $(document).ready(function(){
+	
+	$(".modal").fadeIn();
+	
+	$(".btncerrar").click(function(){
+		
+		$(".modal").fadeOut(300);
+		
+	});
+
+});
+</script></div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,2958 @@
+ <!doctype html>
+<html lang="es-ni">
+<head>
+<meta charset="utf-8">
+<title>CEMB</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="insignia2_small.png" rel="icon" sizes="150x150" type="image/png">
+<link href="font-awesome.min.css" rel="stylesheet">
+<link href="CEMB.css" rel="stylesheet">
+<link href="Circulares.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="wb.lazyload.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="wb.parallax.min.js"></script>
+<script src="owl.carousel.min.js"></script>
+<script src="popper.min.js"></script>
+<script src="util.min.js"></script>
+<script src="collapse.min.js"></script>
+<script src="dropdown.min.js"></script>
+<script src="wwb16.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $('#wb_FontAwesomeIcon3').addClass('visibility-hidden');
+   $('#wb_FontAwesomeIcon11').addClass('visibility-hidden');
+   $('#wb_IconFont1').addClass('visibility-hidden');
+   function onScrollPageHeaderDividerTop()
+   {
+      var $obj = $('#PageHeader-divider-top');
+      if (!$obj.hasClass('show') && $obj.inViewPort(false))
+      {
+         $obj.addClass('show');
+      }
+   }
+   onScrollPageHeaderDividerTop();
+   $(window).scroll(function(event)
+   {
+      onScrollPageHeaderDividerTop();
+   });
+   $("a[href*='#header']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutSine');
+   });
+   $("a[href*='#encabezadopict']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_encabezadopict').offset().top }, 600, 'linear');
+   });
+   $('#wb_encabezadopict').parallax();
+   $('#ThemeableMenu1 .dropdown-toggle').dropdown({popperConfig:{placement:'bottom-start',modifiers:{computeStyle:{gpuAcceleration:false}}}});
+   $(document).on('click','.ThemeableMenu1-navbar-collapse.show',function(e)
+   {
+      if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+      {
+         $(this).collapse('hide');
+      }
+   });
+   function onScrollFontAwesomeIcon3()
+   {
+      var $obj = $("#wb_FontAwesomeIcon3");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_FontAwesomeIcon3', 'transform-lightspeed-in', 100, 1000);
+      }
+   }
+   onScrollFontAwesomeIcon3();
+   $(window).scroll(function(event)
+   {
+      onScrollFontAwesomeIcon3();
+   });
+   function onScrollFontAwesomeIcon11()
+   {
+      var $obj = $("#wb_FontAwesomeIcon11");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_FontAwesomeIcon11', 'transform-lightspeed-in', 400, 1000);
+      }
+   }
+   onScrollFontAwesomeIcon11();
+   $(window).scroll(function(event)
+   {
+      onScrollFontAwesomeIcon11();
+   });
+   function onScrollIconFont1()
+   {
+      var $obj = $("#wb_IconFont1");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_IconFont1', 'transform-lightspeed-in', 400, 1000);
+      }
+   }
+   onScrollIconFont1();
+   $(window).scroll(function(event)
+   {
+      onScrollIconFont1();
+   });
+   $('img[data-src]').lazyload();
+});
+</script>
+
+<script>
+$(document).ready(function()
+{
+  $('#wb_Carousel2').owlCarousel( { margin: 10, stagePadding: 10, autoplay: true, rewind: true, dotsEach: true, responsive : { 0: { items : 1 }, 480: { items : 3}, 768: { items : 4}, 970: { items : 5}}});
+});
+</script>
+
+
+</head>
+<body>
+
+
+<div id="wb_PageHeader">
+<div id="PageHeader-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+<path class="divider-fill" d="M66.709,62.141C63.674,62.141 62.115,50.388 60.619,37.105C62.048,29.579 63.814,24.051 66.352,24.051C69.374,24.051 71.362,33.025 73.031,44.299C71.577,51.437 70.374,62.141 66.709,62.141ZM41.114,57.818C40.604,57.416 40.051,57.19 39.441,57.19C33.91,57.19 32.305,76.639 28.938,82.663C30.102,85.32 31.71,87.871 33.333,87.871C36.993,87.87 39.088,73.872 41.114,57.818z" style="fill-opacity:0.3;"/>
+<path class="divider-fill" d="M51.832,78.336C46.587,78.336 45.555,61.319 41.114,57.818C44.303,32.539 46.669,0 52.006,0C56.839,0 58.676,19.844 60.619,37.105C57.568,53.167 56.051,78.336 51.832,78.336ZM17.005,67.259C21.378,67.259 21.89,84.421 26.875,84.421C27.646,84.421 28.321,83.766 28.938,82.663C24.471,72.464 22.587,44.705 18.018,44.705C11.998,44.705 10.296,82.492 6.25,82.492C3.124,82.492 1.562,73.774 -0.001,61.416L-0.001,73.421C1.562,81.2 3.342,90.679 6.468,90.679C12.718,90.679 12.39,67.259 17.005,67.259ZM94.15,31.54C89.658,31.54 89.31,66.348 84.772,66.348C80.584,66.348 80.104,38.746 75.741,38.746C74.548,38.746 73.758,40.729 73.031,44.299C75.851,63.352 77.758,88.979 82.198,88.979C87.608,88.979 88.132,57.865 93.758,57.865C96.867,57.865 98.444,65.681 99.999,73.42L99.999,61.416C98.444,49.122 97.26,31.54 94.15,31.54z" style="fill-opacity:0.5;"/>
+<path class="divider-fill" d="M82.198,88.979C77.757,88.979 75.851,63.353 73.031,44.299C71.577,51.437 70.374,62.141 66.709,62.141C63.674,62.141 62.115,50.388 60.619,37.105C57.568,53.167 56.05,78.336 51.832,78.336C46.587,78.336 45.555,61.319 41.113,57.818C39.088,73.871 36.862,87.87 33.202,87.87C31.578,87.87 30.102,85.32 28.938,82.662C28.321,83.766 27.645,84.42 26.875,84.42C21.89,84.42 21.378,67.259 17.005,67.259C12.39,67.259 12.674,90.634 6.424,90.634C3.298,90.634 1.562,81.199 -0.001,73.419L-0.001,100L99.999,100L99.999,73.42C98.444,65.681 96.867,57.865 93.758,57.865C88.132,57.865 87.608,88.979 82.198,88.979z"/>
+</svg></div>
+<div id="PageHeader">
+<div class="row">
+<div class="col-1">
+<div id="wb_CEMB-INSIGNIA" style="display:inline-block;width:44px;height:45px;z-index:0;">
+<a href="./index.html" onmouseover="AnimateCss('wb_CEMB-INSIGNIA', 'animate-flash', 0, 500);return false;"><img src="images/placeholder.gif" data-src="images/INSIGNIA2.png" id="CEMB-INSIGNIA" alt=""></a>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_ThemeableMenu1" style="display:inline-block;width:100%;text-align:center;z-index:1;">
+<div id="ThemeableMenu1" class="ThemeableMenu1" style="width:100%;height:auto !important;">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ThemeableMenu1-navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="ThemeableMenu1-navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="nav-item">
+<a href="./index.html" class="nav-link">Inicio</a>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Nosotros<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Bienvenida.html" class="nav-link">Bienvenida</a></li>
+<li class="nav-item"><a href="./Quienes-Somos.html" class="nav-link">Quienes Somos</a></li>
+<li class="nav-item"><a href="./Nuestra-Historia.html" class="nav-link">Nuestra Historia</a></li>
+<li class="nav-item"><a href="./School-Profile.html" class="nav-link">School Profile</a></li>
+<li class="nav-item"><a href="./Escudo.html" class="nav-link">Escudo</a></li>
+<li class="nav-item"><a href="./Mision-y-Vision.html" class="nav-link">Misión y Visión</a></li>
+<li class="nav-item"><a href="./Valores.html" class="nav-link">Valores</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Organización<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Estamentos.html" class="nav-link">Estamentos</a></li>
+<li class="nav-item"><a href="./Comite-Ejecutivo.html" class="nav-link">Comité Ejecutivo</a></li>
+<li class="nav-item"><a href="./Equipo-Direccion.html" class="nav-link">Equipo de Dirección</a></li>
+<li class="nav-item"><a href="./Administracion.html" class="nav-link">Administración</a></li>
+<li class="nav-item"><a href="./Directiva-Docente.html" class="nav-link">Directiva Docente</a></li>
+<li class="nav-item"><a href="./Docentes.html" class="nav-link">Personal Docente</a></li>
+<li class="nav-item"><a href="./PersonalApoyo.html" class="nav-link">Personal de Apoyo</a></li>
+<li class="nav-item"><a href="./Organigrama.html" class="nav-link">Organigrama</a></li>
+<li class="nav-item"><a href="./C-Emergencia-CEMB.html" class="nav-link">Cadena de Emergencia</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Doc. Académicos<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Crono-Acti-Evaluativas.html" class="nav-link">Cronogramas AE</a></li>
+<li class="nav-item"><a href="./Desempe-Academico.html" class="nav-link">Desempeño Académico</a></li>
+<li class="nav-item"><a href="./Modalidad-Ensenanzas.html" class="nav-link">Modalidad de Enseñanza</a></li>
+<li class="nav-item"><a href="./TemariosExamenes.html" class="nav-link">Temarios de Exámenes</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Doc. Reglamentarios<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Manual-Convivencia.html" class="nav-link">Manual de Convivencia</a></li>
+<li class="nav-item"><a href="./PAD.html" class="nav-link">PAD</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="./Circulares.html" class="nav-link active">Circulares</a>
+</li>
+<li class="nav-item">
+<a href="./Noticias.html" class="nav-link">Noticias</a>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Admisión<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Proceso-Admision.html" class="nav-link">Proceso Admisión</a></li>
+<li class="nav-item"><a href="./SolicitudAdmision.html" class="nav-link">Solicitud de Admisión</a></li>
+<li class="nav-item"><a href="./Preceso-AdmisionEI.html" class="nav-link">Proceso Admisión Educación Inicial</a></li>
+<li class="nav-item"><a href="./Temarios-Admision.html" class="nav-link">Temarios de Admisión</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Comunidad CEMB<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Consejo-Estudiantil.html" class="nav-link">Consejo Estudiantil</a></li>
+<!---
+<li class="nav-item"><a href="./Operacion-Sonrisa.html" class="nav-link">Club Operación Sonrisa</a></li>   --->
+
+<li class="nav-item"><a href="./Club-Mun.html" class="nav-link">Club MUN</a></li>
+<li class="nav-item"><a href="./Stop-Bullying.html" class="nav-link">Stop Bullying</a></li>
+<li class="nav-item"><a href="./Capacitaciones.html" class="nav-link">Capacitaciones</a></li>
+<li class="nav-item"><a href="./ProyectoPASS.html" class="nav-link">Proyecto PASS</a></li>
+<li class="nav-item"><a href="./Universidades.html" class="nav-link">Universidades</a></li>
+<li class="nav-item"><a href="./Exalumnos.html" class="nav-link">Ex-Alumnos</a></li>
+<li class="nav-item"><a href="./CoachingEstudiantil.html" class="nav-link">Coaching Estudiantil</a></li>
+<li class="nav-item"><a href="./OrgulloCEMB.html" class="nav-link">Orgullo CEMB</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Actividades Relevantes por Áreas<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Matematica.html" class="nav-link">Matemática</a></li>
+<li class="nav-item"><a href="./LeguayLiteratura.html" class="nav-link">Lengua y Literatura</a></li>
+<li class="nav-item"><a href="./CCNN.html" class="nav-link">CCNN</a></li>
+<li class="nav-item"><a href="./CCSS.html" class="nav-link">CCSS</a></li>
+<li class="nav-item"><a href="./Ingles.html" class="nav-link">Inglés</a></li>
+<li class="nav-item"><a href="./Pastoral.html" class="nav-link">Pastoral</a></li>
+<li class="nav-item"><a href="./DeptoOrientacion.html" class="nav-link">Dpto. Orientación</a></li>
+<li class="nav-item"><a href="./DanzaDeportes.html" class="nav-link">Danza y Deportes</a></li>
+<li class="nav-item"><a href="./PPFF.html" class="nav-link">PPFF</a></li>
+<li class="nav-item"><a href="./Teleton.html" class="nav-link">Teleton</a></li>
+<li class="nav-item"><a href="./Fisica.html" class="nav-link">Inglés</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Asociación PPMMFF<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./FuncionPMF.html" class="nav-link">Función</a></li>
+<li class="nav-item"><a href="./DirectivaPMF.html" class="nav-link">Directiva</a></li>
+<li class="nav-item"><a href="./RG-PMF.html" class="nav-link">Representantes de Grado</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Galería<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Campus.php" class="nav-link">Campus</a></li>
+<li class="nav-item"><a href="./GEducaxcionInicial.php" class="nav-link">Educación Inicial</a></li>
+<li class="nav-item"><a href="./GPrimaria.php" class="nav-link">Primaria</a></li>
+<li class="nav-item"><a href="./GSecundaria.php" class="nav-link">Secundaria</a></li>
+<li class="nav-item"><a href="./GPApoyo.php" class="nav-link">Personal de Apoyo</a></li>
+<li class="nav-item"><a href="./GPadresFamilia.php" class="nav-link">Padres de Familia</a></li>
+<li class="nav-item"><a href="./promociones/index.html" class="nav-link">Promociones</a></li>
+<li class="nav-item"><a href="./GVideos.php" class="nav-link">Videos</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="./Contactanos.php" class="nav-link">Contáctanos</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_header">
+<div id="header">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading1" style="display:inline-block;width:100%;z-index:2;">
+<h1 id="Heading1">Centro Educacional Mantica Berio</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--<div id="wb_encabezadopict">
+<div id="encabezadopict-overlay"></div>
+<div id="encabezadopict">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:3;">
+<h1 id="Heading2">Seniors CEMB 2020</h1>
+</div>
+<div id="wb_FontAwesomeIcon1" style="display:inline-block;width:126px;height:100px;text-align:center;z-index:4;">
+<div id="FontAwesomeIcon1"><i class="fa fa-graduation-cap"></i></div>
+</div>
+</div>
+</div>
+</div>
+</div>-->
+<div id="wb_Divider4">
+<div id="Divider4">
+<hr id="DividerLine5" style="display:block;">
+<div id="wb_Heading3" style="display:inline-block;width:165px;z-index:6;">
+<h2 id="Heading3">Circulares</h2>
+</div>
+<hr id="DividerLine7" style="display:block;">
+</div>
+</div>
+<div id="wb_LayoutGrid1">
+<div id="LayoutGrid1-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 24" preserveAspectRatio="none">
+<defs>
+   <path id="wave-animated" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="wave-animated">
+   <use xlink:href="#wave-animated" x="48" y="0" class="divider-fill" style="opacity:0.7" />
+   <use xlink:href="#wave-animated" x="48" y="3" class="divider-fill" style="opacity:0.5" />
+   <use xlink:href="#wave-animated" x="48" y="5" class="divider-fill" style="opacity:0.3" />
+   <use xlink:href="#wave-animated" x="48" y="7" class="divider-fill"  />
+</g>
+</svg>
+</div>
+<div id="LayoutGrid1">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+
+<!------pausa 24/04/2026----->	
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">05/05/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0520262.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0520262.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">05/05/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0520261.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0520261.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>  
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">27/04/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular04202611.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular04202611.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>  
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">24/04/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0420269.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420269.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+<!------
+
+    
+
+
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">09/04/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0420263.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420263.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">09/04/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0420262.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420262.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>   
+
+
+------>
+</div>
+</div> 
+
+<!------pausa 24/04/2026----->
+
+
+<!------pausa 09/04/2026----->	
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">22/04/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0420267.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420267.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">21/04/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0420266.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420266.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>      
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">21/04/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0420265.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420265.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">20/04/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0420264.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420264.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>  
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">09/04/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0420263.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420263.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">09/04/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0420262.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420262.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>   
+<!------
+
+
+
+
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">10/030/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0320263.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320263.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">04/03/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0320262.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320262.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+
+
+    
+    
+    
+ 
+    
+    
+   
+
+
+------>
+</div>
+</div> 
+
+<!------pausa 09/04/2026----->
+
+<!------pausa 27/01/2026----->	
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">07/04/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0420261.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420261.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">24/03/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0320268.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320268.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>   
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">23/03/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0320267.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320267.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>  
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">23/03/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0320266.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320266.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">23/03/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0320265.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320265.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">20/03/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0320264.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320264.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>      
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">10/030/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0320263.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320263.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">04/03/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0320262.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320262.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+<!------
+
+
+
+    
+    
+    
+ 
+    
+    
+   
+
+
+------>
+</div>
+</div> 
+
+<!------pausa 05/03/2026----->	
+
+
+<!------pausa 27/01/2026----->	
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">03/03/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0320261.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320261.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">23/02/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0220267.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0220267.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">10/02/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0220264.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0220264.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>  
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">10/02/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0220263.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0220263.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">10/02/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0220262.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0220262.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">30/01/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular01202611.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular01202611.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>      
+    
+    
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">28/01/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular01202610.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular01202610.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>    
+    
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">27/01/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0120269.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0120269.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>    
+
+<!------
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+------>
+</div>
+</div> 
+
+
+
+
+
+<!------pausa 27/01/2026----->	
+
+
+<!------pausa 06/11/2025----->	
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">27/01/2026</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0120268.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0120268.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>    
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">25/11/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1120259.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1120259.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">24/11/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1120258.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1120258.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>  
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">24/11/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1120257.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1120257.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>  
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">22/11/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1120256.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1120256.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">22/11/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1120255.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1120255.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">16/11/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1120254.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1120254.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+    
+    
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">05/11/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1120253.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1120253.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+<!------
+
+
+
+
+
+
+
+------>
+</div>
+</div> 
+
+
+
+
+
+<!------pausa 06/11/2025----->	
+
+
+<!------pausa 23/09/2025----->	
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">29/10/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular10202512.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular10202512.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">28/10/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular10202511.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular10202511.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">14/10/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1020256.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1020256.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">07/10/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1020252.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1020252.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">07/10/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1020251.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1020251.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>  
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">30/09/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular09202512.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular09202512.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>  
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">23/09/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular09202511.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular09202511.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">23/09/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular09202510.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular09202510.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+<!------
+
+
+
+
+
+   
+
+ 
+
+
+
+    
+
+
+------>
+</div>
+</div> 
+
+
+
+
+
+<!------pausa 23/09/2025----->	
+
+<!------pausa 04/09/2025----->	
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">22/09/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0920259.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0920259.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">10/09/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0920257.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0920257.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">10/09/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0920256.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0920256.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>  
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">10/09/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0920255.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0920255.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">04/09/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0920254.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0920254.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>  
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">04/09/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0920253.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0920253.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>    
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">04/09/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0920252.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0920252.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+<!------
+
+
+
+
+------>
+</div>
+</div> 
+
+
+
+
+
+<!------pausa 04/09/2025----->	
+
+
+<!------pausa 12/08/2025----->	
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">04/09/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0920251.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0920251.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>  
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">27/08/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0820259.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0820259.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>    
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">26/08/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0820258.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0820258.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">20/08/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0820257.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0820257.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">20/08/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0820256.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0820256.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>  
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">20/08/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0820255.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0820255.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">11/08/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0820253.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0820253.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+<!------
+
+    
+
+
+------>
+</div>
+</div> 
+
+
+
+
+
+<!------pausa 12/08/2025----->	
+
+
+<!------pausa 02/06/2025----->	
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">06/08/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0820251.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0820251.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">08/07/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0720251.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0720251.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">01/07/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0620255.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0620255.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>  
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">30/06/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0620254.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0620254.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">17/06/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0620253.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0620253.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>    
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">09/06/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0620252.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0620252.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">02/06/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0620251.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0620251.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+<!------
+
+------>
+</div>
+</div> 
+
+
+
+
+
+<!------pausa 02/06/2025----->	
+
+<!------pausa 19/05/2025----->	
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">29/05/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular05202514.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular05202514.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">28/05/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular05202513.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular05202513.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">22/05/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular05202512.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular05202512.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>    
+
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">21/05/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular05202511.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular05202511.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>  
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">20/05/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular05202510.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular05202510.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">20/05/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0520259.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0520259.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">19/05/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0520258.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0520258.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+<!------
+
+   
+
+
+
+
+
+
+------>
+</div>
+</div> 
+
+
+
+
+
+<!------pausa 19/05/2025----->	
+
+
+<!------pausa 23/04/2025----->	
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">09/05/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0520257.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0520257.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">08/05/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0520256.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0520256.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">30/04/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0420259.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420259.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>   
+
+
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">28/04/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0420258.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420258.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>         
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">28/04/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0420257.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420257.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>    
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">24/04/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0420256.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420256.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">23/04/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0420255.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420255.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+<!------
+
+
+
+------>
+</div>
+</div> 
+
+
+
+<!----fianla de pausa 23/04/2025---->
+
+
+
+<!------pausa 24/02/2025----->	
+
+
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+    
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">22/04/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0420254.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420254.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">02/04/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0420252.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420252.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">01/04/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0420251.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420251.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">31/03/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0320253.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320253.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>     
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">25/03/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/ciruclar0320252.jpeg"><img id="Card9-card-item1" src="images/gnoticias/ciruclar0320252.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>         
+    
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">04/03/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/ciruclar0320251.jpeg"><img id="Card9-card-item1" src="images/gnoticias/ciruclar0320251.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>        
+    
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">24/02/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0220258.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0220258.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">24/02/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0220257.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0220257.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+<!------
+
+
+
+
+
+
+
+
+
+    
+
+
+
+	    
+
+------>
+</div>
+</div> 
+
+
+
+<!----fianla de pausa 24/02/2025---->
+
+
+
+<!------pausa 06/02/2025----->	
+
+
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">20/02/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/ciruclar0220256.jpeg"><img id="Card9-card-item1" src="images/gnoticias/ciruclar0220256.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">20/02/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/ciruclar0220255.jpeg"><img id="Card9-card-item1" src="images/gnoticias/ciruclar0220255.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">19/02/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/ciruclar0220254.jpeg"><img id="Card9-card-item1" src="images/gnoticias/ciruclar0220254.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">12/02/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/ciruclar0220252.jpeg"><img id="Card9-card-item1" src="images/gnoticias/ciruclar0220252.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>  
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">10/02/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0120259.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0120259.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">05/02/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0120258.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0120258.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">30/01/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0120257.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0120257.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+<!------    
+
+
+
+	    
+
+------>
+</div>
+</div> 
+
+
+
+<!----fianla de pausa 06/02/2025---->
+
+
+<!------pausa 10/10/2024----->	
+
+<!------
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">21/01/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0120256.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0120256.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">13/01/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0120253.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0120253.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">10/01/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0120252.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0120252.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">07/01/2025</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0120251.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0120251.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>    
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">02/12/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1120247.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1120247.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">29/11/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1120246.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1120246.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">21/11/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1120245.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1120245.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>    
+<!------    
+
+
+	    
+
+
+	 
+
+------>
+<!------
+</div>
+</div> 
+
+
+
+<!----fianla de pausa 10/10/2024---->
+
+
+<!------pausa 10/10/2024----->	
+
+<!------
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">06/11/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1120243.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1120243.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>    
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">06/11/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1120242.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1120242.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">04/11/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1120241.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1120241.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">28/10/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular10202412.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular10202412.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>     
+    
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">22/10/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular10202410.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular10202410.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">14/10/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1020249.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1020249.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">10/10/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1020248.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1020248.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>	    
+
+<!------
+	 
+
+------>
+<!------
+</div>
+</div> 
+
+
+
+<!----fianla de pausa 10/10/2024---->
+
+
+<!------pausa 24/09/2024----->	
+<!------
+
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">10/10/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1020247.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1020247.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>	    
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">10/10/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1020246.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1020246.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>	 
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">10/10/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1020245.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1020245.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>	      
+
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">07/10/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1020244.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1020244.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>      
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">04/10/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1020243.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1020243.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">02/10/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular1020241.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1020241.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>    
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">25/09/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular09202412.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular09202412.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+<!------
+
+
+
+
+<!----fianla de pausa 24/09/2024---->
+
+
+<!------pausa 04/09/2024----->	
+
+<!------
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+
+
+    
+
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">24/09/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular09202411.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular09202411.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">13/09/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0920249.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0920249.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>    
+    
+  
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">12/09/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0920248.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0920248.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>	            
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">12/09/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0920247.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0920247.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>      
+    
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">09/09/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0920246.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0920246.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>	    
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">09/09/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0920245.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0920245.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>	 
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">04/09/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0920244.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0920244.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>	      
+    
+
+<!----fianla de pausa 04/09/2024---->
+
+<!------pausa 13/06/2024----->	
+
+<!------
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+    
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">02/09/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0920243.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0920243.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>	    
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">02/09/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0920242.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0920242.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>	            
+    
+    <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">02/09/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0920241.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0920241.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>	            
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">26/08/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0820248.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0820248.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>      
+    
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">13/08/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0820245.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0820245.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>    
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">07/08/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0820243.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0820243.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">09/07/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0720241.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0720241.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>       
+
+
+   
+<!----fianla de pausa 09/07/2024---->
+
+
+<!------pausa 13/06/2024----->	
+<!------
+
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">02/07/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0620249.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0620249.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>       
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">27/06/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0620248.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0620248.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>   
+
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">24/06/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0620247.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0620247.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>   
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">24/06/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0620246.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0620246.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>       
+    
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">18/06/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0620245.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0620245.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>     
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">11/06/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0620244.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0620244.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>    
+    
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">11/06/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0620243.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0620243.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+<!----fianla de pausa 13/06/2024---->
+
+<!------pausa 17/05/2024----->	
+<!------
+
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">03/06/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0620242.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0620242.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>    
+    
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">03/06/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0620241.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0620241.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+     
+ 
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">27/05/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0520249.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0520249.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">24/05/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0520248.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0520248.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>   
+
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">23/05/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0520247.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0520247.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>   
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">22/05/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0520246.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0520246.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>       
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">17/05/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0520245.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0520245.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+    
+
+<!----fianla de pausa 17/05/2024---->
+
+
+<!------pausa 25/04/2024----->	
+
+<!------
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">15/05/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0520244.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0520244.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>    
+    
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">02/05/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0520241.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0520241.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+     
+    
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">29/04/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0420245.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420245.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+ 
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">25/04/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0420243.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420243.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>   
+
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">25/04/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0420244.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420244.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>   
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">08/08/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0420241.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420241.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>       
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">18/03/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0320248.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320248.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+    
+
+<!----fianla de pausa 15/03/2024---->	
+
+<!------pausa 07/02/2024----->	
+<!------
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+    
+    <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">15/03/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0320245.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320245.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">15/03/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0320244.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320244.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>     
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">06/03/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0320243.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320243.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div> 
+
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">04/03/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0320241.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320241.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>       
+
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">20/02/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular02202425.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular02202425.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>   
+
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">07/02/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular01202419.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular01202419.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>   
+    
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">07/02/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular01202418.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular01202418.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+	
+	
+</div>
+<!----fianla de pausa 07/02/2024---->	
+
+<!------pausa 22/01/2024----->
+<!------
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">31/01/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular01202416.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular01202416.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>   
+    
+    
+    
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">24/01/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular01202415.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular01202415.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+
+	<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">23/01/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular01202414.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular01202414.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>    
+    
+    <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">18/01/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular01202413.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular01202413.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+	<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">18/01/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular01202413.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular01202412.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+	<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">17/01/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular01202411.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular01202411.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+		<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">17/01/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular01202410.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular01202410.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+	
+</div>
+<!----fianla de pausa 22/01/2024---->
+
+
+<!------pausa 22/01/2024----->	
+<!------
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+	<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">16/01/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0120249.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0120249.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+	<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">16/01/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0120248.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0120248.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+	<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">15/01/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0120247.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0120247.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+		<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">12/01/2024</div>
+   <div id="Card9-card-body">
+      <a href="images/gnoticias/circular0120246.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0120246.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+	
+</div>
+<!----fianla de pausa 22/01/2024---->
+
+
+	
+<!------pausa 31/12/2023-----
+<div id="wb_CardContainer4">
+<div id="CardContainer4">
+	<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">15/08/2023</div>
+   <div id="Card9-card-body">
+      <a href="Docs/circulares2023/Circular150823.jpeg"><img id="Card9-card-item1" src="Docs/circulares2023/Circular150823.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+	<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">01/08/2023</div>
+   <div id="Card9-card-body">
+      <a href="Docs/circulares2023/Circular01082023.jpeg"><img id="Card9-card-item1" src="Docs/circulares2023/Circular01082023.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+	<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">03/07/2023</div>
+   <div id="Card9-card-body">
+      <a href="Docs/circulares2023/anuncio030723.jpeg"><img id="Card9-card-item1" src="Docs/circulares2023/anuncio030723.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+		<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">14/06/2023</div>
+   <div id="Card9-card-body">
+      <a href="Docs/circulares2023/Circular14062023 (5).jpeg"><img id="Card9-card-item1" src="Docs/circulares2023/Circular14062023 (5).jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+		<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">14/06/2023</div>
+   <div id="Card9-card-body">
+      <a href="Docs/circulares2023/Circular14062023 (4).jpeg"><img id="Card9-card-item1" src="Docs/circulares2023/Circular14062023 (4).jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+		<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">14/06/2023</div>
+   <div id="Card9-card-body">
+      <a href="Docs/circulares2023/Circular14062023 (3).jpeg"><img id="Card9-card-item1" src="Docs/circulares2023/Circular14062023 (3).jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+		<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">14/06/2023</div>
+   <div id="Card9-card-body">
+      <a href="Docs/circulares2023/Circular14062023 (2).jpeg"><img id="Card9-card-item1" src="Docs/circulares2023/Circular14062023 (2).jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+		<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">14/06/2023</div>
+   <div id="Card9-card-body">
+      <a href="Docs/circulares2023/Circular14062023 (1).jpeg"><img id="Card9-card-item1" src="Docs/circulares2023/Circular14062023 (1).jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+<!----fianla de pausa 31/12/2023---->
+
+<!------
+		<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">05/05/2023</div>
+   <div id="Card9-card-body">
+      <a href="Docs/circulares2023/DonacionPadres05052023.jpeg"><img id="Card9-card-item1" src="Docs/circulares2023/DonacionPadres05052023.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">26/04/2023</div>
+   <div id="Card9-card-body">
+      <a href="Docs/circulares2023/CarWash26042023.jpeg"><img id="Card9-card-item1" src="Docs/circulares2023/CarWash26042023.jpeg" alt="" title=""></a>
+	   <br>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+	<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+
+		
+   <div id="Card9-card-header">27/03/2023</div>
+
+		
+   <div id="Card9-card-body">
+
+      <a href="Docs/circulares2023/Circular27032023.jpeg"><img id="Card9-card-item1" src="Docs/circulares2023/Circular27032023.jpeg" alt="" title=""></a>
+	   <br>
+	   
+      <hr id="Card9-card-item3">
+
+   </div>
+
+</div>
+	
+	<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">14/03/2023</div>
+   <div id="Card9-card-body">
+      <a href="Docs/circulares2023/Circulasr14032023 (2).jpeg"><img id="Card9-card-item1" src="Docs/circulares2023/Circulasr14032023 (2).jpeg" alt="" title=""></a>
+      <hr id="Card9-card-item3">
+   </div>
+</div>
+	
+	<div id="wb_Card2" style="display:flex;text-align:center;z-index:12;">
+   <div id="Card2-card-header">14/03/2023</div>
+   <div id="Card2-card-body">
+      <a href="Docs/circulares2023/Circulasr14032023 (1).jpeg"><img id="Card2-card-item1" src="Docs/circulares2023/Circulasr14032023 (1).jpeg" alt="" title=""></a>
+      <hr id="Card2-card-item2">
+   </div>
+
+</div>
+	
+<div id="wb_Card7" style="display:flex;text-align:center;z-index:8;">
+
+   <div id="Card7-card-header">13/03/2023</div>
+
+   <div id="Card7-card-body">
+
+      <a href="Docs/circulares2023/Circular13032023 (2).jpeg"><img id="Card7-card-item1" src="Docs/circulares2023/Circular13032023 (2).jpeg" alt="" title=""></a>
+
+      <hr id="Card7-card-item2">
+
+   </div>
+
+</div>
+	
+<div id="wb_Card12" style="display:flex;text-align:center;z-index:8;">
+
+   <div id="Card12-card-header">13/03/2022</div>
+
+   <div id="Card12-card-body">
+
+      <a href="Docs/circulares2023/Circular13032023.jpeg"><img id="Card12-card-item1" src="Docs/circulares2023/Circular13032023.jpeg" alt="" title=""></a>
+
+      <hr id="Card12-card-item2">
+
+   </div>
+
+</div>
+
+<div id="wb_Card1" style="display:flex;text-align:center;z-index:9;">
+
+   <div id="Card1-card-header">13/03/2022</div>
+
+   <div id="Card1-card-body">
+
+      <a href="Docs/circulares2023/CircualarTeleton13032023.jpeg"><img id="Card1-card-item1" src="Docs/circulares2023/CircualarTeleton13032023.jpeg" alt="" title=""></a>
+
+      <hr id="Card1-card-item2">
+
+   </div>
+
+</div>  ---->
+
+
+<!----- 
+<div id="wb_Card10" style="display:flex;text-align:center;z-index:10;">
+
+   <div id="Card10-card-header">21/02/2023</div>
+
+   <div id="Card10-card-body">
+
+      <a href="Docs/circulares2023/circular21022023.jpeg"><img id="Card10-card-item1" src="Docs/circulares2023/circular21022023.jpeg" alt="" title=""></a>
+
+      
+
+      <hr id="Card10-card-item3">
+
+   </div>
+
+</div>
+	
+	<div id="wb_Card10" style="display:flex;text-align:center;z-index:10;">
+
+   <div id="Card10-card-header">13/02/2023</div>
+
+   <div id="Card10-card-body">
+
+      <a href="Docs/circulares2023/circular130022023 (4).jpeg"><img id="Card10-card-item1" src="Docs/circulares2023/circular130022023 (4).jpeg" alt="" title=""></a>
+
+      <hr id="Card10-card-item3">
+
+   </div>
+
+</div>
+	
+	<div id="wb_Card10" style="display:flex;text-align:center;z-index:10;">
+
+   <div id="Card10-card-header">13/02/2023</div>
+
+   <div id="Card10-card-body">
+
+      <a href="Docs/circulares2023/circular130022023 (3).jpeg"><img id="Card10-card-item1" src="Docs/circulares2023/circular130022023 (3).jpeg" alt="" title=""></a>
+
+      <hr id="Card10-card-item3">
+
+   </div>
+
+</div>
+	
+	<div id="wb_Card1" style="display:flex;text-align:center;z-index:9;">
+
+   <div id="Card1-card-header">13/02/2023</div>
+
+   <div id="Card1-card-body">
+
+      <a href="Docs/circulares2023/circular130022023 (2).jpeg"><img id="Card1-card-item1" src="Docs/circulares2023/circular130022023 (2).jpeg" alt="" title=""></a>
+
+      <hr id="Card1-card-item2">
+
+   </div>
+
+</div>
+	
+	<div id="wb_Card12" style="display:flex;text-align:center;z-index:8;">
+
+   <div id="Card12-card-header">13/02/2023</div>
+
+   <div id="Card12-card-body">
+
+      <a href="Docs/circulares2023/circular130022023 (1).jpeg"><img id="Card12-card-item1" src="Docs/circulares2023/circular130022023 (1).jpeg" alt="" title=""></a>
+
+      <hr id="Card12-card-item2">
+
+   </div>
+
+</div>
+	
+	<div id="wb_Card7" style="display:flex;text-align:center;z-index:8;">
+
+   <div id="Card7-card-header">01/02/2023</div>
+
+   <div id="Card7-card-body">
+
+      <a href="Docs/circulares2023/circular 06022023.jpeg"><img id="Card7-card-item1" src="Docs/circulares2023/circular 06022023.jpeg" alt="" title=""></a>
+
+      <hr id="Card7-card-item2">
+
+   </div>
+
+</div>
+	
+	<div id="wb_Card7" style="display:flex;text-align:center;z-index:8;">
+
+   <div id="Card7-card-header">01/02/2023</div>
+
+   <div id="Card7-card-body">
+
+      <a href="Docs/circulares2023/cicular01022023-2.jpg"><img id="Card7-card-item1" src="Docs/circulares2023/cicular01022023-2.jpg" alt="" title=""></a>
+
+      <hr id="Card7-card-item2">
+
+   </div>
+
+</div>
+	
+	
+	<div id="wb_Card2" style="display:flex;text-align:center;z-index:12;">
+   <div id="Card2-card-header">01/02/2023</div>
+
+   <div id="Card2-card-body">
+
+      <a href="Docs/circulares2023/circular01022023.jpg"><img id="Card2-card-item1" src="Docs/circulares2023/circular01022023.jpg" alt="" title=""></a>
+
+      <hr id="Card2-card-item2">
+
+   </div>
+
+</div>  ----->
+	<!-----
+	<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card9-card-header">17/01/2023</div>		
+   <div id="Card9-card-body">
+      <a href="Docs/circulares2023/circular17012023.jpeg"><img src="Docs/circulares2023/circular17012023.jpeg" alt="" height="200" id="Card9-card-item1" title=""></a>
+	   <br>
+	    <div id="Card10-card-item2"> </div>
+      <hr id="Card9-card-item3">
+   </div>
+</div> --->
+
+
+<!--<div id="wb_Card27" style="display:flex;text-align:center;z-index:9;">
+   <div id="Card27-card-header">25/07/2021</div>
+   <div id="Card27-card-body">
+      <a href="./Docs/Circulares/25072021.jpeg"><img id="Card27-card-item1" src="images/25072021.jpeg" alt="" title=""></a>
+      <hr id="Card27-card-item2">
+   </div>
+</div>
+<div id="wb_Card26" style="display:flex;text-align:center;z-index:10;">
+   <div id="Card26-card-header">11/05/2021</div>
+   <div id="Card26-card-body">
+      <a href="./Docs/Circulares/circular 11052021.jpeg"><img id="Card26-card-item1" src="images/circular 11052021.jpeg" alt="" title=""></a>
+      <hr id="Card26-card-item2">
+   </div>
+</div>
+<div id="wb_Card24" style="display:flex;text-align:center;z-index:11;">
+   <div id="Card24-card-header">06/05/2021</div>
+   <div id="Card24-card-body">
+      <a href="./Docs/Circulares/circular06052021.jpeg"><img id="Card24-card-item1" src="images/circular05052021.jpeg" alt="" title=""></a>
+      <hr id="Card24-card-item2">
+   </div>
+</div>
+<div id="wb_Card25" style="display:flex;text-align:center;z-index:12;">
+   <div id="Card25-card-header">05/05/2021</div>
+   <div id="Card25-card-body">
+      <a href="./Docs/Circulares/circular05052021.jpeg"><img id="Card25-card-item1" src="images/circular06052021.jpeg" alt="" title=""></a>
+      <hr id="Card25-card-item2">
+   </div>
+</div>
+<div id="wb_Card28" style="display:flex;text-align:center;z-index:13;">
+   <div id="Card28-card-header">26/04/2021</div>
+   <div id="Card28-card-body">
+      <a href="./Docs/Circulares/circularCEMB26042021 (2).jpeg"><img id="Card28-card-item1" src="images/circularCEMB26042021 (2).jpeg" alt="" title=""></a>
+      <hr id="Card28-card-item2">
+   </div>
+</div>
+<div id="wb_Card29" style="display:flex;text-align:center;z-index:14;">
+   <div id="Card29-card-header">06/04/2021</div>
+   <div id="Card29-card-body">
+      <a href="./Docs/Circulares/circularCEMB26042021 (1).jpeg"><img id="Card29-card-item1" src="images/circular020032021.jpeg" alt="" title=""></a>
+      <hr id="Card29-card-item2">
+   </div>
+</div>-->
+</div>
+</div>
+<!--<div id="wb_CardContainer3">
+<div id="CardContainer3">
+<div id="wb_Card23" style="display:flex;text-align:center;z-index:15;">
+   <div id="Card23-card-header">14/04/2021</div>
+   <div id="Card23-card-body">
+      <a href="./Docs/Circulares/circularCEMB14042021 (2).jpeg"><img id="Card23-card-item1" src="images/circularCEMB14042021 (2).jpeg" alt="" title=""></a>
+      <hr id="Card23-card-item2">
+   </div>
+</div>
+<div id="wb_Card22" style="display:flex;text-align:center;z-index:16;">
+   <div id="Card22-card-header">14/04/2021</div>
+   <div id="Card22-card-body">
+      <a href="./Docs/Circulares/circularCEMB14042021 (1).jpeg"><img id="Card22-card-item1" src="images/circularCEMB14042021 (1).jpeg" alt="" title=""></a>
+      <hr id="Card22-card-item2">
+   </div>
+</div>
+<div id="wb_Card21" style="display:flex;text-align:center;z-index:17;">
+   <div id="Card21-card-header">09/03/2021</div>
+   <div id="Card21-card-body">
+      <a href="./Docs/Circulares/Circular08032021.jpeg"><img id="Card21-card-item1" src="images/Circular09032021.jpeg" alt="" title=""></a>
+      <hr id="Card21-card-item2">
+   </div>
+</div>
+<div id="wb_Card20" style="display:flex;text-align:center;z-index:18;">
+   <div id="Card20-card-header">08/03/2021</div>
+   <div id="Card20-card-body">
+      <a href="./Docs/Circulares/Circular08032021.jpeg"><img id="Card20-card-item1" src="images/Circular08032021.jpeg" alt="" title=""></a>
+      <hr id="Card20-card-item2">
+   </div>
+</div>
+<div id="wb_Card18" style="display:flex;text-align:center;z-index:19;">
+   <div id="Card18-card-header">03/03/2021</div>
+   <div id="Card18-card-body">
+      <a href="./Docs/Circulares/circular-03032021.jpeg"><img id="Card18-card-item1" src="images/circular-03032021.jpeg" alt="" title=""></a>
+      <hr id="Card18-card-item2">
+   </div>
+</div>
+<div id="wb_Card19" style="display:flex;text-align:center;z-index:20;">
+   <div id="Card19-card-header">02/03/2021</div>
+   <div id="Card19-card-body">
+      <a href="./Docs/Circulares/circular020032021.jpeg"><img id="Card19-card-item1" src="images/circular020032021.jpeg" alt="" title=""></a>
+      <hr id="Card19-card-item2">
+   </div>
+</div>
+</div>
+</div>-->
+<!--<div id="wb_CardContainer2">
+<div id="CardContainer2">
+<div id="wb_Card17" style="display:flex;text-align:center;z-index:21;">
+   <div id="Card17-card-header">01/03/2021</div>
+   <div id="Card17-card-body">
+      <a href="./Docs/Circulares/venta-textos-ingles-7mo .pdf"><img id="Card17-card-item1" src="images/venta-textos-ingles-7mo .jpg" alt="" title=""></a>
+      <hr id="Card17-card-item2">
+   </div>
+</div>
+<div id="wb_Card15" style="display:flex;text-align:center;z-index:22;">
+   <div id="Card15-card-header">26/02/2021</div>
+   <div id="Card15-card-body">
+      <a href="./Docs/Circulares/circular-macarilla-entrada.pdf"><img id="Card15-card-item1" src="images/circular macarilla entrada.jpg" alt="" title=""></a>
+      <hr id="Card15-card-item2">
+   </div>
+</div>
+<div id="wb_Card14" style="display:flex;text-align:center;z-index:23;">
+   <div id="Card14-card-header">26/02/2021</div>
+   <div id="Card14-card-body">
+      <a href="./Docs/Circulares/clases-presenciales-marzo.pdf"><img id="Card14-card-item1" src="images/clases presenciales marzo.jpg" alt="" title=""></a>
+      <hr id="Card14-card-item2">
+   </div>
+</div>
+<div id="wb_Card11" style="display:flex;text-align:center;z-index:24;">
+   <div id="Card11-card-header">26/02/2021</div>
+   <div id="Card11-card-body">
+      <a href="./Docs/Circulares/textos-7mo.pdf"><img id="Card11-card-item1" src="images/textos 7mo.jpg" alt="" title=""></a>
+      <hr id="Card11-card-item2">
+   </div>
+</div>
+<div id="wb_Card12" style="display:flex;text-align:center;z-index:25;">
+   <div id="Card12-card-header">23/02/2021</div>
+   <div id="Card12-card-body">
+      <a href="./Docs/Circulares/Circular-23022021.png"><img id="Card12-card-item1" src="images/Circular-23022021.png" alt="" title=""></a>
+      <hr id="Card12-card-item2">
+   </div>
+</div>
+<div id="wb_Card13" style="display:flex;text-align:center;z-index:26;">
+   <div id="Card13-card-header">19/02/2021</div>
+   <div id="Card13-card-body">
+      <a href="./Docs/Circulares/pago-en-linea-Marzo.pdf"><img id="Card13-card-item1" src="images/pago-en-linea-Marzo.jpg" alt="" title=""></a>
+      <hr id="Card13-card-item2">
+   </div>
+</div>
+</div>
+</div>-->
+<!--<div id="wb_CardContainer1">
+<div id="CardContainer1">
+<div id="wb_Card10" style="display:flex;text-align:center;z-index:27;">
+   <div id="Card10-card-header">19/02/2021</div>
+   <div id="Card10-card-body">
+      <a href="./Docs/Circulares/Recomendaciones-a-I-Nivel-A-FEB-18.pdf"><img id="Card10-card-item1" src="images/Recomendaciones-a-I-Nivel-A-FEB-18.jpg" alt="" title=""></a>
+      <hr id="Card10-card-item2">
+   </div>
+</div>
+<div id="wb_Card9" style="display:flex;text-align:center;z-index:28;">
+   <div id="Card9-card-header">19/02/2021</div>
+   <div id="Card9-card-body">
+      <a href="./Docs/Circulares/TIPO-DE-MASACARILLA.pdf"><img id="Card9-card-item1" src="images/TIPO-DE-MASACARILLA.jpg" alt="" title=""></a>
+      <hr id="Card9-card-item2">
+   </div>
+</div>
+<div id="wb_Card6" style="display:flex;text-align:center;z-index:29;">
+   <div id="Card6-card-header">16/02/2021</div>
+   <div id="Card6-card-body">
+      <a href="./Docs/Circulares/circular-regreso-a-clases-ed-inicial.pdf"><img id="Card6-card-item1" src="images/circular-regreso-a-clases-ed-inicial.jpg" alt="" title=""></a>
+      <hr id="Card6-card-item2">
+   </div>
+</div>
+<div id="wb_Card7" style="display:flex;text-align:center;z-index:30;">
+   <div id="Card7-card-header">16/02/2021</div>
+   <div id="Card7-card-body">
+      <a href="./Docs/Circulares/circular-regreso-a-clases-primaria.pdf"><img id="Card7-card-item1" src="images/circular-regreso-a-clases-primaria.jpg" alt="" title=""></a>
+      <hr id="Card7-card-item2">
+   </div>
+</div>
+<div id="wb_Card8" style="display:flex;text-align:center;z-index:31;">
+   <div id="Card8-card-header">16/02/2021</div>
+   <div id="Card8-card-body">
+      <a href="./Docs/Circulares/circular-regreso-a-clases-secundaria.pdf"><img id="Card8-card-item1" src="images/circular-regreso-a-clases-secundaria.jpg" alt="" title=""></a>
+      <hr id="Card8-card-item2">
+   </div>
+</div>
+<div id="wb_Card16" style="display:flex;text-align:center;z-index:32;">
+   <div id="Card16-card-header">23/02/2021</div>
+   <div id="Card16-card-body">
+      <a href="./Docs/Circulares/circular-seguros-lafise-EI-23022021.png"><img id="Card16-card-item1" src="images/circular-seguros-lafise-EI-23022021.png" alt="" title=""></a>
+      <hr id="Card16-card-item2">
+   </div>
+</div>
+</div>
+</div>-->
+<!--<div id="wb_circularg1">
+<div id="circularg1">
+<div id="wb_Card5" style="display:flex;text-align:center;z-index:33;">
+   <div id="Card5-card-header">21/01/2021</div>
+   <div id="Card5-card-body">
+      <a href="./images/CircularCEMB(5).jpeg"><img id="Card5-card-item1" src="images/CircularCEMB(5).jpeg" alt="" title=""></a>
+      <hr id="Card5-card-item2">
+   </div>
+</div>
+<div id="wb_Card4" style="display:flex;text-align:center;z-index:34;">
+   <div id="Card4-card-header">21/01/2021</div>
+   <div id="Card4-card-body">
+      <a href="./images/CircularCEMB(4).jpeg"><img id="Card4-card-item1" src="images/CircularCEMB(4).jpeg" alt="" title=""></a>
+      <hr id="Card4-card-item2">
+   </div>
+</div>
+<div id="wb_Card3" style="display:flex;text-align:center;z-index:35;">
+   <div id="Card3-card-header">12/01/2021</div>
+   <div id="Card3-card-body">
+      <a href="./images/circualarCEMB (3).jpeg"><img id="Card3-card-item1" src="images/circualarCEMB (3).jpeg" alt="" title=""></a>
+      <hr id="Card3-card-item2">
+   </div>
+</div>
+<div id="wb_Card2" style="display:flex;text-align:center;z-index:36;">
+   <div id="Card2-card-header">12/01/2020</div>
+   <div id="Card2-card-body">
+      <a href="./images/circualarCEMB (2).jpeg"><img id="Card2-card-item1" src="images/circualarCEMB (2).jpeg" alt="" title=""></a>
+      <hr id="Card2-card-item2">
+   </div>
+</div>
+<div id="wb_Card1" style="display:flex;text-align:center;z-index:37;">
+   <div id="Card1-card-header">12/01/2021</div>
+   <div id="Card1-card-body">
+      <a href="./images/circualarCEMB (1).jpeg"><img id="Card1-card-item1" src="images/circualarCEMB (1).jpeg" alt="" title=""></a>
+      <hr id="Card1-card-item2">
+   </div>
+</div>
+</div>
+</div>-->
+
+<div id="wb_Footer">
+<div id="Footer">
+<div class="row">
+<div class="col-1">
+<div id="wb_FontAwesomeIcon3" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:38;">
+<a href="https://www.facebook.com/cemanticaberio" target="_blank"><div id="FontAwesomeIcon3"><i class="fa fa-facebook"></i></div></a>
+</div>
+<div id="wb_FontAwesomeIcon11" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:39;">
+<a href="https://www.youtube.com/channel/UCAhJcrp_RsEv7Kz6uIQGPhg" target="_blank" title="Canal CEMB"><div id="FontAwesomeIcon11"><i class="fa fa-youtube"></i></div></a>
+</div>
+<div id="wb_IconFont1" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:40;">
+<a href="https://www.youtube.com/channel/UCwOuGJLlY5TBDs2xTcmWMPw" target="_blank" title="Canal Educacion Inicial"><div id="IconFont1"><i class="fa fa-youtube-play"></i></div></a>
+</div>
+<div id="wb_Text17">
+<span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:20px;">Dirección:<br></span><span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:15px;">Km 132 Carretera a Somotillo. Chinandega.<br></span><span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:20px;">Teléfono:<br>505-2340-1430<br>E-mail:<br></span><span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:15px;">m.callejas@manticaberio.edu.ni</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_copyright">
+<div id="copyright">
+<div class="row">
+<div class="col-1">
+<div id="wb_Text12">
+<span style="color:#FFFFFF;font-family:Arial;font-size:13px;">Copyright © CEMB 2021. All right reserved. </span>
+</div>
+<!-- POPUP -->
+<div id="Html3" style="display:none;width:35px;height:24px;z-index:43">
+<div class="modal" id="window-notice">
+    <div class="content">
+        <div class="content-text"><a href="https://youtu.be/d_hLZyJt48E">
+<img src="http://www.manticaberio.edu.ni/assets/avisomatricula2021-640x480.jpg" width="100%"/></a>
+          </div>
+        <button class="btncerrar">
+        <span>Cerrar</span>
+        </button>
+    </div>
+</div>
+
+
+
+<script>
+    $(document).ready(function(){
+	
+	$(".modal").fadeIn();
+	
+	$(".btncerrar").click(function(){
+		
+		$(".modal").fadeOut(300);
+		
+	});
+
+});
+</script></div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

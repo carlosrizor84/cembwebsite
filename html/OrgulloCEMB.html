@@ -1,0 +1,4667 @@
+<!doctype html>
+<html lang="es-ni">
+<head>
+<meta charset="utf-8">
+<title>CEMB</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="insignia2_small.png" rel="icon" sizes="150x150" type="image/png">
+<link href="font-awesome.min.css" rel="stylesheet">
+<link href="CEMB.css" rel="stylesheet">
+<link href="OrgulloCEMB.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="wb.lazyload.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="popper.min.js"></script>
+<script src="util.min.js"></script>
+<script src="collapse.min.js"></script>
+<script src="dropdown.min.js"></script>
+<script src="carousel.min.js"></script>
+<link rel="stylesheet" href="fancybox/jquery.fancybox-1.3.4.css">
+<script src="fancybox/jquery.easing-1.3.pack.js"></script>
+<script src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<script src="fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script src="wwb16.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $('#wb_FontAwesomeIcon3').addClass('visibility-hidden');
+   $('#wb_FontAwesomeIcon11').addClass('visibility-hidden');
+   $('#wb_IconFont1').addClass('visibility-hidden');
+   function onScrollPageHeaderDividerTop()
+   {
+      var $obj = $('#PageHeader-divider-top');
+      if (!$obj.hasClass('show') && $obj.inViewPort(false))
+      {
+         $obj.addClass('show');
+      }
+   }
+   onScrollPageHeaderDividerTop();
+   $(window).scroll(function(event)
+   {
+      onScrollPageHeaderDividerTop();
+   });
+   $("a[href*='#header']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutSine');
+   });
+   $("a[href*='#infoBlock1']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_infoBlock1').offset().top }, 600, 'easeOutSine');
+   });
+   $('#ThemeableMenu1 .dropdown-toggle').dropdown({popperConfig:{placement:'bottom-start',modifiers:{computeStyle:{gpuAcceleration:false}}}});
+   $(document).on('click','.ThemeableMenu1-navbar-collapse.show',function(e)
+   {
+      if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+      {
+         $(this).collapse('hide');
+      }
+   });
+   function onScrollFontAwesomeIcon3()
+   {
+      var $obj = $("#wb_FontAwesomeIcon3");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_FontAwesomeIcon3', 'transform-lightspeed-in', 100, 1000);
+      }
+   }
+   onScrollFontAwesomeIcon3();
+   $(window).scroll(function(event)
+   {
+      onScrollFontAwesomeIcon3();
+   });
+   function onScrollFontAwesomeIcon11()
+   {
+      var $obj = $("#wb_FontAwesomeIcon11");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_FontAwesomeIcon11', 'transform-lightspeed-in', 400, 1000);
+      }
+   }
+   onScrollFontAwesomeIcon11();
+   $(window).scroll(function(event)
+   {
+      onScrollFontAwesomeIcon11();
+   });
+   function onScrollIconFont1()
+   {
+      var $obj = $("#wb_IconFont1");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_IconFont1', 'transform-lightspeed-in', 400, 1000);
+      }
+   }
+   onScrollIconFont1();
+   $(window).scroll(function(event)
+   {
+      onScrollIconFont1();
+   });
+   $("#CarouselOCEMB").on('slid.bs.carousel', function(e)
+   {
+      var index = $(e.relatedTarget).index();
+      switch(index)
+      {
+         case 0:
+            $('#Carousel2').bootstrapcarousel(0);
+            break;
+         case 1:
+            $('#Carousel2').bootstrapcarousel(1);
+            break;
+         case 2:
+            $('#Carousel2').bootstrapcarousel(2);
+            break;
+         case 3:
+            $('#Carousel2').bootstrapcarousel(3);
+            break;
+      }
+   });
+   $("#CarouselOCEMB").bootstrapcarousel({interval:0, pause: false});
+   $("a[data-rel='PhotoGallery5']").attr('rel', 'PhotoGallery5');
+   $("a[rel^='PhotoGallery5']").fancybox({});
+   $('img[data-src]').lazyload();
+});
+</script>
+</head>
+<body>
+
+
+<div id="wb_PageHeader">
+<div id="PageHeader-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+<path class="divider-fill" d="M66.709,62.141C63.674,62.141 62.115,50.388 60.619,37.105C62.048,29.579 63.814,24.051 66.352,24.051C69.374,24.051 71.362,33.025 73.031,44.299C71.577,51.437 70.374,62.141 66.709,62.141ZM41.114,57.818C40.604,57.416 40.051,57.19 39.441,57.19C33.91,57.19 32.305,76.639 28.938,82.663C30.102,85.32 31.71,87.871 33.333,87.871C36.993,87.87 39.088,73.872 41.114,57.818z" style="fill-opacity:0.3;"/>
+<path class="divider-fill" d="M51.832,78.336C46.587,78.336 45.555,61.319 41.114,57.818C44.303,32.539 46.669,0 52.006,0C56.839,0 58.676,19.844 60.619,37.105C57.568,53.167 56.051,78.336 51.832,78.336ZM17.005,67.259C21.378,67.259 21.89,84.421 26.875,84.421C27.646,84.421 28.321,83.766 28.938,82.663C24.471,72.464 22.587,44.705 18.018,44.705C11.998,44.705 10.296,82.492 6.25,82.492C3.124,82.492 1.562,73.774 -0.001,61.416L-0.001,73.421C1.562,81.2 3.342,90.679 6.468,90.679C12.718,90.679 12.39,67.259 17.005,67.259ZM94.15,31.54C89.658,31.54 89.31,66.348 84.772,66.348C80.584,66.348 80.104,38.746 75.741,38.746C74.548,38.746 73.758,40.729 73.031,44.299C75.851,63.352 77.758,88.979 82.198,88.979C87.608,88.979 88.132,57.865 93.758,57.865C96.867,57.865 98.444,65.681 99.999,73.42L99.999,61.416C98.444,49.122 97.26,31.54 94.15,31.54z" style="fill-opacity:0.5;"/>
+<path class="divider-fill" d="M82.198,88.979C77.757,88.979 75.851,63.353 73.031,44.299C71.577,51.437 70.374,62.141 66.709,62.141C63.674,62.141 62.115,50.388 60.619,37.105C57.568,53.167 56.05,78.336 51.832,78.336C46.587,78.336 45.555,61.319 41.113,57.818C39.088,73.871 36.862,87.87 33.202,87.87C31.578,87.87 30.102,85.32 28.938,82.662C28.321,83.766 27.645,84.42 26.875,84.42C21.89,84.42 21.378,67.259 17.005,67.259C12.39,67.259 12.674,90.634 6.424,90.634C3.298,90.634 1.562,81.199 -0.001,73.419L-0.001,100L99.999,100L99.999,73.42C98.444,65.681 96.867,57.865 93.758,57.865C88.132,57.865 87.608,88.979 82.198,88.979z"/>
+</svg></div>
+<div id="PageHeader">
+<div class="row">
+<div class="col-1">
+<div id="wb_CEMB-INSIGNIA" style="display:inline-block;width:44px;height:45px;z-index:0;">
+<a href="./index.html" onmouseover="AnimateCss('wb_CEMB-INSIGNIA', 'animate-flash', 0, 500);return false;"><img src="images/placeholder.gif" data-src="images/INSIGNIA2.png" id="CEMB-INSIGNIA" alt=""></a>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_ThemeableMenu1" style="display:inline-block;width:100%;text-align:center;z-index:1;">
+<div id="ThemeableMenu1" class="ThemeableMenu1" style="width:100%;height:auto !important;">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ThemeableMenu1-navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="ThemeableMenu1-navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="nav-item">
+<a href="./index.html" class="nav-link">Inicio</a>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Nosotros<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Bienvenida.html" class="nav-link">Bienvenida</a></li>
+<li class="nav-item"><a href="./Quienes-Somos.html" class="nav-link">Quienes Somos</a></li>
+<li class="nav-item"><a href="./Nuestra-Historia.html" class="nav-link">Nuestra Historia</a></li>
+<li class="nav-item"><a href="./School-Profile.html" class="nav-link">School Profile</a></li>
+<li class="nav-item"><a href="./Escudo.html" class="nav-link">Escudo</a></li>
+<li class="nav-item"><a href="./Mision-y-Vision.html" class="nav-link">Misión y Visión</a></li>
+<li class="nav-item"><a href="./Valores.html" class="nav-link">Valores</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Organización<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Estamentos.html" class="nav-link">Estamentos</a></li>
+<li class="nav-item"><a href="./Comite-Ejecutivo.html" class="nav-link">Comité Ejecutivo</a></li>
+<li class="nav-item"><a href="./Equipo-Direccion.html" class="nav-link">Equipo de Dirección</a></li>
+<li class="nav-item"><a href="./Administracion.html" class="nav-link">Administración</a></li>
+<li class="nav-item"><a href="./Directiva-Docente.html" class="nav-link">Directiva Docente</a></li>
+<li class="nav-item"><a href="./Docentes.html" class="nav-link">Personal Docente</a></li>
+<li class="nav-item"><a href="./PersonalApoyo.html" class="nav-link">Personal de Apoyo</a></li>
+<li class="nav-item"><a href="./Organigrama.html" class="nav-link">Organigrama</a></li>
+<li class="nav-item"><a href="./C-Emergencia-CEMB.html" class="nav-link">Cadena de Emergencia</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Doc. Académicos<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Crono-Acti-Evaluativas.html" class="nav-link">Cronogramas AE</a></li>
+<li class="nav-item"><a href="./Desempe-Academico.html" class="nav-link">Desempeño Académico</a></li>
+<li class="nav-item"><a href="./Modalidad-Ensenanzas.html" class="nav-link">Modalidad de Enseñanza</a></li>
+<li class="nav-item"><a href="./TemariosExamenes.html" class="nav-link">Temarios de Exámenes</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Doc. Reglamentarios<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Manual-Convivencia.html" class="nav-link">Manual de Convivencia</a></li>
+<li class="nav-item"><a href="./PAD.html" class="nav-link">PAD</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="./Circulares.html" class="nav-link">Circulares</a>
+</li>
+<li class="nav-item">
+<a href="./Noticias.html" class="nav-link">Noticias</a>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Admisión<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Proceso-Admision.html" class="nav-link">Proceso Admisión</a></li>
+<li class="nav-item"><a href="./SolicitudAdmision.html" class="nav-link">Solicitud de Admisión</a></li>
+<li class="nav-item"><a href="./Preceso-AdmisionEI.html" class="nav-link">Proceso Admisión Educación Inicial</a></li>
+<li class="nav-item"><a href="./Temarios-Admision.html" class="nav-link">Temarios de Admisión</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Comunidad CEMB<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Consejo-Estudiantil.html" class="nav-link">Consejo Estudiantil</a></li>
+<!---
+<li class="nav-item"><a href="./Operacion-Sonrisa.html" class="nav-link">Club Operación Sonrisa</a></li> --->
+
+<li class="nav-item"><a href="./Club-Mun.html" class="nav-link">Club MUN</a></li>
+<li class="nav-item"><a href="./Stop-Bullying.html" class="nav-link">Stop Bullying</a></li>
+<li class="nav-item"><a href="./Capacitaciones.html" class="nav-link">Capacitaciones</a></li>
+<li class="nav-item"><a href="./ProyectoPASS.html" class="nav-link">Proyecto PASS</a></li>
+<li class="nav-item"><a href="./Universidades.html" class="nav-link">Universidades</a></li>
+<li class="nav-item"><a href="./Exalumnos.html" class="nav-link">Ex-Alumnos</a></li>
+<li class="nav-item"><a href="./CoachingEstudiantil.html" class="nav-link">Coaching Estudiantil</a></li>
+<li class="nav-item"><a href="./OrgulloCEMB.html" class="nav-link active">Orgullo CEMB</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Actividades Relevantes por Áreas<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Matematica.html" class="nav-link">Matemática</a></li>
+<li class="nav-item"><a href="./LeguayLiteratura.html" class="nav-link">Lengua y Literatura</a></li>
+<li class="nav-item"><a href="./CCNN.html" class="nav-link">CCNN</a></li>
+<li class="nav-item"><a href="./CCSS.html" class="nav-link">CCSS</a></li>
+<li class="nav-item"><a href="./Ingles.html" class="nav-link">Inglés</a></li>
+<li class="nav-item"><a href="./Pastoral.html" class="nav-link">Pastoral</a></li>
+<li class="nav-item"><a href="./DeptoOrientacion.html" class="nav-link">Dpto. Orientación</a></li>
+<li class="nav-item"><a href="./DanzaDeportes.html" class="nav-link">Danza y Deportes</a></li>
+<li class="nav-item"><a href="./PPFF.html" class="nav-link">PPFF</a></li>
+<li class="nav-item"><a href="./Teleton.html" class="nav-link">Teleton</a></li>
+<li class="nav-item"><a href="./Fisica.html" class="nav-link">Inglés</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Asociación PPMMFF<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./FuncionPMF.html" class="nav-link">Función</a></li>
+<li class="nav-item"><a href="./DirectivaPMF.html" class="nav-link">Directiva</a></li>
+<li class="nav-item"><a href="./RG-PMF.html" class="nav-link">Representantes de Grado</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Galería<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Campus.php" class="nav-link">Campus</a></li>
+<li class="nav-item"><a href="./GEducaxcionInicial.php" class="nav-link">Educación Inicial</a></li>
+<li class="nav-item"><a href="./GPrimaria.php" class="nav-link">Primaria</a></li>
+<li class="nav-item"><a href="./GSecundaria.php" class="nav-link">Secundaria</a></li>
+<li class="nav-item"><a href="./GPApoyo.php" class="nav-link">Personal de Apoyo</a></li>
+<li class="nav-item"><a href="./GPadresFamilia.php" class="nav-link">Padres de Familia</a></li>
+<li class="nav-item"><a href="./promociones/index.html" class="nav-link">Promociones</a></li>
+<li class="nav-item"><a href="./GVideos.php" class="nav-link">Videos</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="./Contactanos.php" class="nav-link">Contáctanos</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_header">
+<div id="header">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading1" style="display:inline-block;width:100%;z-index:2;">
+<h1 id="Heading1">Centro Educacional Mantica Berio</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div id="wb_infoBlock1">
+<div id="infoBlock1-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 24" preserveAspectRatio="none">
+<defs>
+   <path id="wave-animated" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="wave-animated">
+   <use xlink:href="#wave-animated" x="48" y="0" class="divider-fill" style="opacity:0.7" />
+   <use xlink:href="#wave-animated" x="48" y="3" class="divider-fill" style="opacity:0.5" />
+   <use xlink:href="#wave-animated" x="48" y="5" class="divider-fill" style="opacity:0.3" />
+   <use xlink:href="#wave-animated" x="48" y="7" class="divider-fill"  />
+</g>
+</svg>
+</div>
+<div id="infoBlock1">
+<div class="col-1">
+<div id="wb_Image1" style="display:inline-block;width:100%;height:auto;z-index:3;">
+<img src="images/insignia2_small.png" id="Image1" alt="">
+</div>
+</div>
+</div>
+</div>
+
+<!--Start 10/05/2026-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Nos llena de alegría ver cómo nuestros ex alumnos siguen construyendo caminos llenos de sentido y crecimiento.
+
+Felicitamos con mucho cariño a nuestro ex alumno CEMB, hoy un verdadero orgullo de nuestra comunidad, por su historia de vida, esfuerzo y crecimiento personal.
+
+Extendemos también nuestra felicitación a su mamá, Ma. Elena Barrera, y a toda su familia, por acompañarlo con amor, valores y dedicación en cada etapa de su camino. #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/oc0520261.png" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/oc0520261.png" class="image"></a>
+</div>
+    </div>
+<div class="thumbnail">
+
+    </div>    
+    
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 10/05/2026-->
+
+
+<!--Start 06/11/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>♟️✨ ¡Roberto, eres un gran #orgullocemb! ✨♟️
+
+Celebramos con mucha alegría el logro de nuestro estudiante Roberto Ceballos, quien obtuvo el tercer lugar en su tablero de ajedrez rápido durante los VII Juegos Escolares Centroamericanos y del Caribe, realizados en Colombia. 🇨🇴🏅
+
+Tu esfuerzo, constancia y amor por el ajedrez nos llenan de inspiración. 🌟
+Gracias por representar con tanto orgullo y pasión el talento estudiantil que caracteriza a nuestra comunidad. 
+
+¡Felicidades, Roberto! Sabemos que este es solo el comienzo de muchos triunfos más. 🙌♟️
+
+#orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo1120251.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo1120251.jpeg" class="image"></a>
+</div>
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo1120252.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo1120252.jpeg" class="image"></a>
+</div>
+    </div>
+<div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo1120253.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo1120253.jpeg" class="image"></a>
+</div>
+    </div>
+</div>
+    </div>    
+    
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+
+      
+      
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 06/11/2025-->
+
+
+<!--Start 25/09/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Felicidades a las profesoras e Educación Física y Práctica Deportiva: Debon Soto y Keity Pineda por haber obetnido el primer lugar en los juegos Magisteriales Nacionales de Voleibol Playa a nivel departamental.
+ #OrgulloCEMB
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0920251.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0920251.jpeg" class="image"></a>
+</div>
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0920252.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0920252.jpeg" class="image"></a>
+</div>
+    </div>
+<div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0920253.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0920253.jpeg" class="image"></a>
+</div>
+    </div>
+</div>
+    </div>    
+    
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+
+      
+      
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 25/09/2025-->
+
+
+
+<!--Start 22/08/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>¡Felicidades, Santiago Espinoza!
+Celebramos con orgullo tu talento y dedicación al obtener el segundo lugar en la categoría masculina del Certamen Municipal de Matemáticas. 
+¡Sigue brillando y alcanzando grandes logros! Sos un #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo08202514.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo08202514.jpeg" class="image"></a>
+</div>
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo08202513.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo08202513.jpeg" class="image"></a>
+</div>
+    </div>
+<div class="thumbnail">
+
+</div>
+    </div>    
+    
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+
+      
+      
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 22/08/2025-->
+
+
+
+
+<!--Start 19/08/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br> ¡Felicidades, Mayra Alexandra Santana Krimskaya! ♟🏆
+Por su participación en el Torneo de Ajedrez mixto.
+Tu esfuerzo, estrategia y dedicación nos llenan de orgullo.
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo08202512.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo08202512.jpeg" class="image"></a>
+</div>
+    </div>
+<div class="thumbnail">
+
+    </div>    
+    
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 19/08/2025-->
+
+
+
+
+<!--Start 08/08/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>al de Tenis de Mesa Juvenil 🏅
+
+Tu disciplina, esfuerzo y pasión por el deporte nos inspiran a todos. ¡Orgullo CEMB! 💙
+
+#TenisDeMesa #OrgulloCEMB
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0820259.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0820259.jpeg" class="image"></a>
+</div>
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo08202510.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo08202510.jpeg" class="image"></a>
+</div>
+    </div>
+<div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo08202511.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo08202511.jpeg" class="image"></a>
+</div>
+    </div>
+</div>
+    </div>    
+    
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+
+      
+      
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 08/08/2025-->
+
+
+<!--Start 01/08/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>✨👑 ¡Con orgullo felicitamos a nuestra ex alumna Senior 2024, Ashley Somar🏆♟ ¡Felicidades, Roberto Carlos Ceballos! ♟🏆
+Ganador del 2do lugar en el Torneo Nacional de Ajedrez.
+Tu esfuerzo, estrategia y dedicación nos llenan de orgullo.
+
+🇳🇮 Además, nos representará en los Juegos Centroamericanos y del Caribe en Colombia. ¡A seguir conquistando tableros!
+
+#Ajedrez #Campeón #OrgulloCEMB
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0820257.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0820257.jpeg" class="image"></a>
+</div>
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0820258.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0820258.jpeg" class="image"></a>
+</div>
+    </div>
+<div class="thumbnail">
+
+</div>
+    </div>    
+    
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+
+      
+      
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 01/08/2025-->
+
+
+<!--Start 30/07/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>✨👑 ¡Con orgullo felicitamos a nuestra ex alumna Senior 2024, Ashley Somarriba Álvarez, por haber sido coronada Reina de las Fiestas Patronales de Chinandega, en honor a Nuestra Señora Santa Ana! 🇳🇮🎉
+
+Tu carisma, elegancia y compromiso con nuestras tradiciones son un verdadero reflejo de los valores que promueve nuestra comunidad educativa. Hoy celebramos tu logro con alegría, sabiendo que llevas en alto el nombre de nuestra institución
+¡Felicidades, reina! 💙🤍💙 #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0820254.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0820254.jpeg" class="image"></a>
+</div>
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0820255.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0820255.jpeg" class="image"></a>
+</div>
+    </div>
+<div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0820256.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0820256.jpeg" class="image"></a>
+</div>
+    </div>    
+    
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+
+      
+      
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 30/07/2025-->
+
+<!--Start 29/07/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>⚽️ ¡Orgullo escolar en acción! 🇪🇸🌟
+Nuestros talentosos estudiantes Sebastián Matías Martínez Canales (3er Nivel A) y Jaime Matías Martínez Canales (4to A) participaron en la Clínica de Fútbol del Real Madrid en Miami. 🙌🏽🔥
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0820251.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0820251.jpeg" class="image"></a>
+</div>
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0820252.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0820252.jpeg" class="image"></a>
+</div>
+    </div>
+<div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0820253.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0820253.jpeg" class="image"></a>
+</div>
+    </div>    
+    
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+
+      
+      
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 29/07/2025-->
+
+<!--Start 28/07/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>✨ ¡Pequeños sueños, grandes pasos! ⚽️💙
+Francisco Javier de Preescolar tuvo la increíble oportunidad de participar en el Campus Experience del Real Madrid, una vivencia llena de aprendizaje, disciplina y mucha pasión por el fútbol.
+
+Con su uniforme bien puesto y una sonrisa llena de ilusión, demostró que nunca se es demasiado pequeño para empezar a soñar en grande.
+¡Orgullosos de tu esfuerzo, dedicación y alegría! 🌟👏 Sos un #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0720257.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0720257.jpeg" class="image"></a>
+</div>
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0720258.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0720258.jpeg" class="image"></a>
+</div>
+    </div>
+<div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0720259.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0720259.jpeg" class="image"></a>
+</div>
+    </div>    
+    
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+
+      
+      
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 28/07/2025-->
+
+
+
+<!--Start 08/07/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>¡Orgullo en acción!
+Nuestros talentosos estudiantes Alejandro Vílchez López (4.º grado) y Miguel Vílchez López (2.º grado) ganaron el concurso regional de robótica y clasificaron a la 8.ª Edición Mundial de Robótica WRO 🌍.
+
+¡Felicidades campeones! Su creatividad, trabajo en equipo y pasión por la tecnología nos inspiran a todos. 🚀🧠#orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0720251.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0720251.jpeg" class="image"></a>
+</div>
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0720252.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0720252.jpeg" class="image"></a>
+</div>
+    </div>
+<div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0720253.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0720253.jpeg" class="image"></a>
+</div>
+    </div>    
+    
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+<div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0720254.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0720254.jpeg" class="image"></a>
+</div>
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0720255.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0720255.jpeg" class="image"></a>
+</div>
+    </div>
+<div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0720256.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0720256.jpeg" class="image"></a>
+</div>
+    </div>    
+    
+      </div>      
+      
+      
+      
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 08/07/2025-->
+
+
+
+
+<!--Start 30/06/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>¡Líderes encestadores a nivel nacional!
+
+Felicitamos con orgullo a Luis Callejas y Luis Manuel Molina por su destacada participación en el Campeonato Nacional U14 de Baloncesto.
+
+Ambos atletas demostraron un compromiso y nivel de juego excepcionales. ¡Son un orgullo para nuestro equipo y una inspiración para muchos! #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0620252.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0620252.jpeg" class="image"></a>
+</div>
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0620253.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0620253.jpeg" class="image"></a>
+</div>
+    </div>
+<div class="thumbnail">
+
+    </div>    
+    
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 30/06/2025-->
+
+
+
+<!--Start 05/06/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Felicidades a nuestras campeonas! Con gran orgullo anunciamos que nuestro equipo juvenil de volleyball ha sido coronado como Campeón Municipal en los Juegos Colegiales Municipales Juvenil Femenino! Excelente trabajo chicas! Sus talentos y habilidades son un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0620251.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0620251.jpeg" class="image"></a>
+</div>
+    </div>
+<div class="thumbnail">
+
+    </div>    
+    
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 04/06/2025-->
+
+
+
+
+
+<!--Start 20/05/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Felicidades por tus logros Norma Cano eres un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0520252.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0520252.jpeg" class="image"></a>
+</div>
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0520254.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0520254.jpeg" class="image"></a>
+</div>
+    </div>
+<div class="thumbnail">
+
+    </div>    
+    
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 20/05/2025-->
+
+
+
+<!--Start 12/05/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>¡Felicidades Ana Sofía! Por tu excelente desempeño en las Olimpiadas Municipales de Matemáticas - 2025, donde alcanzaste el segundo lugar… tu conocimiento, determinación y enfoque en resultados son de gran inspiración para nuestra comunidad CEMB… eres un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+</div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo020251.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo020251.jpeg" class="image"></a>
+</div>
+    </div>
+<div class="thumbnail">
+</div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 12/05/2025-->
+
+<!--Start 09/05/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Felicidades Roberto Ceballos al alcanzar el primer lugar en el Torneo Municipal de Ajedrez! Y el mayor de los éxitos en tu participación en el torneo Departamental. Tu talento y de disciplina son una gran inspiración. Eres un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0520251.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0520251.jpeg" class="image"></a>
+</div>
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/ogullo0520252.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/ogullo0520252.jpeg" class="image"></a>
+</div>
+    </div>
+<div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0520253.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0520253.jpeg" class="image"></a>
+</div>
+    </div>    
+    
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 09/05/2025-->
+
+
+
+
+<!--Start 28/04/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Felicidades a los mienbros de nuetsra comunidad (Matias León Quiroz Soto, Alex Santiago Dávila López y Santiago Callejas) de la selección departamental de Chinandega de Fenibalón, por su excelente desempeño. Gracias Padres de Familia por ser los pilares fundamentales que impulsa a nuestros atletas al éxito. Especial felicitaciones a Sebastián Callejas seleccionado departamental por jugar el Campeonato Nacional de Fenibalón, y logrando ser el jugador mas valioso del tercer lugar. Son un gran #orgullocemb #mvp
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0420259.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0420259.jpeg" class="image"></a>
+</div>
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo04202510.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo04202510.jpeg" class="image"></a>
+</div>
+    </div>
+<div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo04202511.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo04202511.jpeg" class="image"></a>
+</div>
+    </div>    
+    
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 28/04/2025-->
+
+
+<!--Start 28/04/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Luis Manuel Molina y Enzo Tercero por su excelente desempeño en esgrima, obteniendo el segundo y tercer lugar respectivamente. Su talento, disciplina y ejercución son de gran admiración para todos. Son un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0420257.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0420257.jpeg" class="image"></a>
+</div>
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0420258.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0420258.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 28/04/2025-->
+
+
+
+<!--Start 28/04/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Felicidades Profe Debon, por su reconocimiento como Mejor Técnico Femenino en Baloncesto. Su extraordinaria labor dentro y fuera del colegio es un gran ejemplo para nuestra comunidad. Celebramos cada uno de sus logros! Es un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0420256.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0420256.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 28/04/2025-->
+
+<!--Start 21/04/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>¡Felicidades Ashley! Por tu admisión y Beca Global Scholars de la Universidad Marquette. Tu determinación y enfoque en la excelencia son de gran inspiración para todos en tu comunidad CEMB, eres un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0420255.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0420255.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 21/04/2025-->
+
+
+
+
+<!--Start 14/04/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>¡Felicidades María Teresa Mayorga Vargas! Al ser nombrada deportista destacada por la Alcaldía de Chichigalpa. Tu talento y disciplina te hacen brillar como un gran ejemplo que admirar, eres un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0420254.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0420254.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 14/04/2025-->
+
+
+<!--Start 11/04/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Felicidades al equipo de baloncesto CEMB al coronarse campeones y clasificar al torneo Departamental de Baloncesto #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0420253.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0420253.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 11/04/2025-->
+
+
+
+<!--Start 11/04/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Es un gran honor compartir con nuestra comunidad educativa que Victoria Cabrales, clase 2024, ha sido seleccionada ganadora de la beca Flor de Caña ( Programa de Becas Flor de Caña). Su enfoque en la excelencia e inquebrantable determinación le han abierto puertas a un futuro lleno de oportunidades. Estamos muy orgullosos de gran paso y celebramos el legado que continúas construyendo. #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0420252.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0420252.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 11/04/2025-->
+
+<!--Start 03/04/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>¡Felicidades Mayra Santana Krimskaya! Por alcanzar el 3er lugar a nivel departamental en la Competencia de Ajedrez. Tu destreza nos llena de muchísimos orgullo y celebramos a lo grande el paso que darás hacia la competencia Nacional. #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0420251.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0420251.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 03/04/2025-->
+
+
+
+
+<!--Start 25/03/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>¡Felicidades Aisha! Verte brillar con tu talento es una gran inspiración para tu comunidad CEMB. Eres un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0120255.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0120255.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 25/03/2025-->
+
+
+
+<!--Start 31/01/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>¡Felicidades a nuetros protagonistas niña Musa: Sara Elizabeth Ulloa Somarriba y niño poeta: Liam Andrés Fornos 2025! #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0120254.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0120254.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 31/01/2025-->
+
+
+<!--Start 24/01/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Felicidades María Claudia! Nuestra extraordinaria Musa Dariana 2025! #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0120253.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0120253.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 24/01/2025-->
+
+<!--Start 24/01/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br> Felicidades a María Teresa Mayorga Vargas, es parte del   equipo de las Tigresas,  representando a Chinandega en la Liga de Primera División de Voleibol U19 a nivel nacional, sos un #orgulloCEMB
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0120252.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0120252.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 24/01/2025-->
+
+
+
+
+<!--Start 10/01/2025-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>María Claudia Pérez Narváez. representando nuestro Centro Educativo como Candidata a Musa Dariana 2025. María Claudia sos un #orgulloCEMB
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0120251.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0120251.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 10/01/2025-->
+
+
+<!--Start 12/12/2024-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>¡Felicidades Maru! - nos llena de orgullo compartir la maravillosa noticia de tu admisión a la Universidad Northeastern. María Eugenia Baca refleja los valores y principios que deseamos cultivar en nuestro cuerpo estudiantil. Estamos seguros que, como lo ha hecho a lo largo de su paso por CEMB, continuará siendo luz en el mundo, llevando su liderazgo, excelencia y espíritu inquebrantable a cada uno de los espacios en los que se desarrolle. Maru - ¡eres un gran #orgullocemb !
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo1220241.jpg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo1220241.jpg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 12/12/2024-->
+
+<!--Start 19/11/2024-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Celebrando los logros de nuestros ex alumnos alrededor del mundo! 
+Felicidades Cally por tu admisión al doble grado en Química y Bioquímica en la Universidad de Navarra!
+Eres un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo1120241.jpg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo1120241.jpg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 18/11/2024-->
+
+
+<!--Start 18/10/2024-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Premiación a la excelencia nacional en Chinandega - FUNDACIÓN LEER ES VIVIR ECO VERDE 2024 #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo1020242.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo1020242.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 18/10/2024-->
+
+
+
+<!--Start 13/10/2024-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>¡Felicidades Natalia Solís Espinoza! Por ganar el 3er lugar en Competencia Kata -Open IOSTK Nicaragua. Tu destreza y talento son de gran orgullo para tu familia CEMB. Sigue brillando y alcanzando cada meta que te propones! #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo1020241.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo1020241.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 13/10/2024-->
+
+
+<!--Start 30/09/2024-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>¡Felicidades Elisa Gómez! Por tu extraordinario desempeño en All Dance Costa Rica y lograr el 1er lugar Dúo y 2do Lugar en Competencia de Ballet. Tu talento es maravilloso e inspirador. Celebramos a lo grande esta nueva meta alcanzada, eres un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo09202414.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo09202414.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 30/09/2024-->
+
+
+
+<!--Start 30/09/2024-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>¡Felicidades Jade Mejia! Por tu extraordinario desempeño en All Dance Costa Rica, representando 3 coreografías y logrando dos primeros lugares y un segundo lugar. Tu arte y talento nos llenan de gran orgullo… ¡que sigas brillando! #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo09202413.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo09202413.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 30/09/2024-->
+
+
+<!--Start 30/09/2024-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>¡Felicidades María Dolores Baca! Por tu maravilloso desempeño en All Dance Costa Rica. Nos enorgullece verte alcanzar nuevas metas y brillas con tu talento. Enhorabuena por tu 3er lugar en esta competencia internacional. Eres un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo09202412.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo09202412.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 30/09/2024-->
+
+
+
+<!--Start 28/09/2024-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>¡Felicidades Alexandra Baca Roman por tu 2do lugar en All Dance Costa Rica! - nos enorgullece verte brillar más allá de nuestras fronteras. Eres un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo09202411.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo09202411.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 28/09/2024-->
+
+
+<!--------Start 06/09/2024----->
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  Reconocimiento a Excelencia Academica 2024</h1>
+<h3 id="Heading3"><br>Ralardonados por su excelencia académica por el Programa Nacional de Culture- Leer es vivir 2024.
+<br>También reconocieron al Centro Educacional Mantica Berio como Colegio de Excelencia Académica Oro 2024.
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/excelencia/orgullo0920243.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/excelencia/orgullo0920243.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/excelencia/orgullo0920244.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/excelencia/orgullo0920244.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/excelencia/orgullo0920245.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/excelencia/orgullo0920245.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/excelencia/orgullo0920246.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/excelencia/orgullo0920246.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/excelencia/orgullo0920247.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/excelencia/orgullo0920247.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/excelencia/orgullo0920248.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/excelencia/orgullo0920248.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--------End 06/09/2024----->
+
+
+<!--Start 04/09/2024-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Felicidades Gabrielle Munguia - Medalla de Oro, Torneo Nacional Intermedio Escolar de Tenis de Mesa nacional , Maria Aguilar Medalla de Bronce! Son un gran #orgullocemb y celebramos a lo grande su gran talento!
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0920242.jpg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0920242.jpg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 04/09/2024-->
+
+<!--Start 03/09/2024-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>¡Felicidades Luis Gomez! Por tu beca en UWC y la oportunidad de completar el bachillerato internacional en India. Sos un gran ejemplo de excelencia, perseverancia y disciplina, valores arraigados en nuestra comunidad estudiantil. SOS inspiración para todos y celebramos a lo grande este gran éxito… SOS un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0920241.jpg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0920241.jpg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 03/09/2024-->
+
+
+
+<!--Start 13/08/2024-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Felicidades José Fernando Munguía por ser admitido en el bachillerato internacional Li Po Chun en Hong Kong. Eres un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0820243.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0820243.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 13/08/2024-->
+
+
+<!--Start 13/08/2024-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>¡Felicidades María Alejandra Zepeda! Por tu admisión en Santa Fe College. Tu enfoque en la excelencia y determinación son una inspiración y ejemplo para todos! Éxitos en esta nueva etapa! Eres un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0820241.jpg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0820241.jpg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 13/08/2024-->
+
+<!--Start 19/07/2024-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br> ¡Felicidades Gabrielle Munguía! Por ganar el Segundo Lugar en el Torneo Departamental Intermedio Categoría Femenina de Tenis de Mesa. Y ¡Felicidades María Aguilar por el Cuarto Lugar! Y a ambas por su clasificación para el Torneo Nacional Intermedio Femenino. Sus logros nos llenan de orgullo! Son un gran gran#orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0720245.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0720245.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 13/08/2024-->
+
+<!--Start 05/08/2024-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>¡Felicidades Roger Somarriba! por tu excelente desempeño y consecución de el campeonato de voleibol sub 21 del departamento de Chinandega. Tu desarrollo integral y logro de metas personales nos enorgullece y sirve de inspiración a todos en nuestra comunidad. Eres un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0820242.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0820242.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 05/08/2024-->
+
+<!--Start 05/08/2024-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br> ¡Felicidades Gabrielle Munguía! Por ganar el Segundo Lugar en el Torneo Departamental Intermedio Categoría Femenina de Tenis de Mesa. Y ¡Felicidades María Aguilar por el Cuarto Lugar! Y a ambas por su clasificación para el Torneo Nacional Intermedio Femenino. Sus logros nos llenan de orgullo! Son un gran gran#orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0720245.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0720245.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 05/08/2024-->
+
+
+
+
+<!--Start 31/07/2024-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>¡Felicidades María Eugenia Baca! Al ser reconocida como el tercer lugar a nivel municipal como “Mejor Alumno” en el Certamen de Mejor Estudiante 2024 “Aprendiendo para Crear, Innovando para Transformar” . Tu desempeño extraordinario es admirable y nos inspira y motiva a todos en la comunidad CEMB. Eres sin duda un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0720246.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0720246.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 31/07/2024-->
+
+<!--Start 19/07/2024-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br> ¡Felicidades Gabrielle Munguía! Por ganar el Segundo Lugar en el Torneo Departamental Intermedio Categoría Femenina de Tenis de Mesa. Y ¡Felicidades María Aguilar por el Cuarto Lugar! Y a ambas por su clasificación para el Torneo Nacional Intermedio Femenino. Sus logros nos llenan de orgullo! Son un gran gran#orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0720245.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0720245.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 19/07/2024-->
+
+
+<!--Start 15/07/2024-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br> ¡Felicidades María Alejandra Zepeda Méndez! Por tu Segundo Lugar Nacional, en Karate en la Copa Santa Ana. Tus éxitos son de gran orgullo para nuestra comunidad y nos enorgullece verte brillar dentro y fuera del colegio. Eres un gran  gran#orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0720244.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0720244.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 15/07/2024-->
+
+
+<!--Start 13/07/2024-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br> Muchas felicidades Efrén Montiel! Por tu extraordinaria participación en clínica Iniesta Academy. Nos llena de gran orgullo todos tus logros dentro y fuera del colegio, sos un gran motivo de celebración! Eres un gran#orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0720243.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0720243.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 13/07/2024-->
+
+<!--Start 08/07/2024-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br> Bienvenido Valentino! Y felicidades por tu excelente desempeño en la clínica de fútbol “Academia Iniesta”. Tu desarrollo integral y logro de metas personales nos enorgullece y sirve de inspiración a todos en nuestra comunidad. Eres un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0720242.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0720242.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 08/07/2024-->
+
+<!--Start 08/07/2024-->
+	
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br> ¡Felicidades Génesis Soto! Eres un gran orgullo para nuestra comunidad CEMB y celebramos a lo grande todos tus logros.
+-Medalla de oro en competencia Internacional Danza Activa - Panamá
+
+-Medalla de plata. Segundo lugar puntuación mas alta de su división - Panamá
+#orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0720241.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0720241.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 08/07/2024-->
+
+
+<!--Start 03/06/2024-->
+		
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br> Felicidades Nelly! Por tu admisión y Becas de Ingeniería y Honors en la Universidad St Mary en Texas. Tu enfoque en la excelencia y determinación son una inspiración y ejemplo para todos! Éxitos en esta nueva etapa! Eres un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0520249.jpg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0520249.jpg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 03/06/2024-->
+
+
+<!--Start 03/06/2024-->
+		
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br> ¡Felicidades Ariana! Nos enorgullece celebrar tu éxito y verte dar pasos hacia un futuro brillante… un millón de felicidades por tu beca y admisión a Loyola University New Orleans! eres un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0520248.jpg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0520248.jpg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 03/06/2024-->
+
+
+<!--Start 29/05/2024-->
+		
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br> ¡Felicidades Bridget! Por tu admisión y beca para la carrera de Arquitectura en la Universidad de Nebrija… nos enorgullece verte construir un legado que inspira, seguros que cada paso que tomas te llevará al éxito! Eres un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0520247.jpg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0520247.jpg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<!--End 29/05/2024-->
+
+<!--Start 28/05/2024-->
+		
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br> ¡Felicidades Robinson! Por tu admisión y beca a la universidad de St. Louis en Madrid. Tu determinación y enfoque en la excelencia son un gran ejemplo para todos. Sos un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0520246.jpg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0520246.jpg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--End 28/05/2024-->
+
+
+<!--Start 27/05/2024-->
+		
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br> Felicidades a María Teresa Mayorga Vargas por el subcampeonato en la seleccion departamental de voleibol mayor femenino.        #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0520245.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0520245.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--End 27/05/2024-->
+
+
+<!--Start 14/05/2024-->
+		
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br> ¡Felicidades a nuestros representantes en las Olimpiadas Matemáticas! Luciana Isabel Romero Zepeda ganó PRIMER lugar en OLIMPIADAS MATEMÁTICAS a nivel municipal, femenino. Ricardo Bendaña Soza ganó Segundo lugar Masculino. Felicidades muchachos! Son sin duda alguna un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0520244.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0520244.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--End 14/05/2024-->
+
+<!--Start 13/05/2024-->
+		
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br> ¡Felicidades Lurdes! por tu admisión y BECA completa  <span style="font-weight:bold;">a Marquette University. </span>Tu enfoque y determinacón en la excelencia es de gran inspiración para nuestra comunidad CEMB, eres un gran #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0520243.jpg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0520243.jpg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--End 13/05/2024-->
+
+
+<!--Start 06/05/2024-->
+		
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br> Nos llena de gran orgullo el celebrar la beca y admisión de <span style="font-weight:bold;">María Alejandra Arcia #clase2023 a St Mary’s University en Texas, Estados Unidos. </span>Su liderazgo y excelencia son de gran inspiración para todos en la comunidad CEMB. Nos enorgullece verte crecer! Seguros de que serás un garante de cambio positivo en el mundo! Felicidades #orgullocemb
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0520242.jpg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0520242.jpg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--End 06/05/2024-->
+
+<!--Start 03/05/2024-->
+		
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br> Felicitamos a nuestro estudiantes  <span style="font-weight:bold;">de 6to grado </span>por haber particiado en las departamentales de mini volleyball y clasificaron al nacional.
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0520241.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0520241.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--End 03/05/2024-->
+
+
+
+	<!--Start 28/04/2024-->
+		
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br> Felicitamos a nuestro docente  <span style="font-weight:bold;">Roger Antonio Somarriba Rojas </span>por un logro más en su carrera.
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo04202418.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo04202418.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--End 28/04/2024-->
+
+<!---start 19/04/2024--->
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Felicitamos a nuestros maestra de deportes Lic. Debon Soto por haber ganado el reconocmiento de mejor técnica de baloncesto a nivel nacional. #orgullocemb
+<br>
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+    
+<div class="thumbnails">
+ <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo04202411.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo04202411.jpeg" class="image"></a>
+</div>
+    </div>
+
+          <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo04202412.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo04202412.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo04202413.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo04202413.jpeg" class="image"></a>
+</div>
+      </div>
+      
+      <div class="clearfix visible-col1"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--End 19/04/2024-->
+	
+<!---start 19/04/2024--->
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Felicitamos Miguel Montealegre Baca pro su participacion en el torneo de Esgrima Roberto González- UNAN Managua 19/04/2024
+ #orgullocemb
+<br>
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+    
+<div class="thumbnails">
+ <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo04202415.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo04202415.jpeg" class="image"></a>
+</div>
+    </div>
+
+          <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo04202416.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo04202416.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo04202417.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo04202417.jpeg" class="image"></a>
+</div>
+      </div>
+      
+      <div class="clearfix visible-col1"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--End 19/04/2024-->	
+	
+	
+
+<!---start 19/04/2024--->
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Felicitamos a nuestros ganadores Luis Manuel Molina y Faugzy  Mohamed en el torneo de ajedrez interno para promover actividades deportivas que benefician la salud física y mental. #orgullocemb
+<br>
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+    
+<div class="thumbnails">
+ <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0420248.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0420248.jpeg" class="image"></a>
+</div>
+    </div>
+
+          <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0420249.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0420249.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo04202410.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo04202410.jpeg" class="image"></a>
+</div>
+      </div>
+      
+      <div class="clearfix visible-col1"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--End 19/04/2024-->
+
+<!---start 19/04/2024--->
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Nuestra delegación de DALE (Debates Académicos de Líderes Estudiantiles) está presentes en la edición XI del Congreso en Nicaragua 2024 practicando el arte del debate, explorando y expandiendo las fronteras de la retórica y persuasión en el Model United Nations MUN.
+Les deseamos éxitos y estamos seguros que brillarán.
+#orgullocemb
+<br>
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+    
+<div class="thumbnails">
+ <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0420247.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0420247.jpeg" class="image"></a>
+</div>
+    </div>
+
+          <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0420246.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0420246.jpeg" class="image"></a>
+</div>
+      </div>
+      
+      <div class="clearfix visible-col1"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--End 19/04/2024-->
+
+<!---start 08/04/2024--->
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Gabrielle Munguía medalla de oro categoria sub 15 años y María Lourdes Aguilar medalla de oro categoria sub 13 años torneo nacional fedeniteme clasificatorio para selecciones nacionales de federación internacional de tenis de mesa ( ITTF), ambas Campeonas Nacionales #orgullocemb
+<br>
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+    
+<div class="thumbnail">
+
+    </div>
+    
+   <div class="thumbnails">
+          <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0420245.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0420245.jpeg" class="image"></a>
+</div>
+      </div>
+
+      
+      <div class="clearfix visible-col1"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--End 08/04/2024-->
+
+<!---start 08/04/2024--->
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Selección departamental. Torneo Nacional de baloncesto u12 Ganando el tercer lugar  y trayendo el liderato de triple por el niño 
+Luis Roberto Callejas  #orgullocemb
+<br>
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+    
+<div class="thumbnails">
+ <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0420243.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0420243.jpeg" class="image"></a>
+</div>
+    </div>
+
+          <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0420244.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0420244.jpeg" class="image"></a>
+</div>
+      </div>
+
+      
+      <div class="clearfix visible-col1"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--End 08/04/2024-->
+
+<!---start 07/04/2024--->
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Gloria Urtecho y María Teresa Mayorga participarán en la Nacional de Voleibol. El día de hoy ganaron la Departamental. Orgullosamente CEMB #orgullocemb
+<br>
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+    
+<div class="thumbnails">
+ <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0420241.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0420241.jpeg" class="image"></a>
+</div>
+    </div>
+
+          <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/orgullo0420242.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/orgullo0420242.jpeg" class="image"></a>
+</div>
+      </div>
+
+      
+      <div class="clearfix visible-col1"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--End 07/04/2024-->
+
+<!---start 06/03/2024--->
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>¡Felicidades Roger Largaespada! Queremos reconocer tu gran logro y el de tu equipo al ser coronados campeones en la pasada temporada de fútbol soccer en la liga AMAFUCHI de Chinandega. Celebramos tus logros en todos los espacios, sos un gran #orgullocemb
+<br>
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+    
+<div class="thumbnail">
+
+    </div>
+    
+   <div class="thumbnails">
+          <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/rogerl.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/rogerl.jpeg" class="image"></a>
+</div>
+      </div>
+
+      
+      <div class="clearfix visible-col1"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--End 06/03/2024-->
+
+
+<!---start 05/03/2024--->
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>¡Felicitamos Salvador Valentino </span>por haber logrado el 5to lugar entre 200 excelentes deportistas en la clínica de futbol soccer "Barça Academy de Barcelona". ¡Celebramos cada uno de tus logros! Eres un gran #OrgulloCEMB.
+<br>
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+    
+<div class="thumbnail">
+
+    </div>
+    
+   <div class="thumbnails">
+          <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/salvador.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/salvador.jpeg" class="image"></a>
+</div>
+      </div>
+
+      
+      <div class="clearfix visible-col1"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--End 05/03/2024-->
+
+<!---start 29/11/2023--->
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Felicitamos a nuestra protagonista <span style="font-weight:bold;">Lisa Anaiah Downs </span>por haber ganado 2 medallas de oro en el torneo de Karate centroamericano que se llevo a cabo en Honduras
+<br>
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/lisa1.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/lisa1.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/lisa2.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/lisa2.jpeg" class="image"></a>
+</div>
+      </div>
+     <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/lisa3.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/lisa3.jpeg" class="image"></a>
+</div>
+      </div>
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--End 29/11/2023-->
+
+<!---start 17/11/2023--->
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Felicitamos a nuestros protagonistas <span style="font-weight:bold;">Ariana y Carlos </span>por haberse destacado en las olimpiadas matemáticas municipales 2023
+<br>
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/omath20231.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/omath20231.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/omath20232.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/omath20232.jpeg" class="image"></a>
+</div>
+      </div>
+     <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/omath20233.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/omath20233.jpeg" class="image"></a>
+</div>
+      </div>
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--fin 17/11/2023-->
+
+<!---start 24/10/2023--->
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Felicitamos a la alumna  <span style="font-weight:bold;">Lisa Downs </span>por haberse destacado en el torneo de Karate IOSTK Managua 2023 categoría 12-13 años +52Kg .
+<br>
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/lisad1.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/lisad1.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/lisad2.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/lisad2.jpeg" class="image"></a>
+</div>
+      </div>
+     <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/lisad3.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/lisad3.jpeg" class="image"></a>
+</div>
+      </div>
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--fin-->
+
+
+	
+	<!--Start-->
+		
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br> Felicitamos ex alumna  <span style="font-weight:bold;">Ariette Aragón </span>por haberse destacado en la interpretación de datos complejos de la industria.
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/ariette.jpg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/ariette.jpg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--End-->
+
+
+	<!--Start-->
+		
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br> Felicitamos a nuestra coordinadora de secundaria <span style="font-weight:bold;">Judith Castillo </span>por un logro más en su carrera.
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/certfjudith.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/certfjudith.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--End-->
+
+	<!--Start-->
+		
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br> Genesis ganó el  Primer lugar en  la competencia internacional All Dance Costa Rica. En la  categoría de Ballet clásico.
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+        <div class="thumbnail">
+
+    </div>
+       <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/genesis.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/genesis.jpeg" class="image"></a>
+</div>
+    </div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--End-->
+
+
+<div id="wb_GalleryOCEMBA">
+<div id="GalleryOCEMBA">
+<div class="row">
+<div class="col-1">
+<div id="wb_PhotoGallery1" style="display:inline-block;width:100%;z-index:4;">
+<div id="PhotoGallery1">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="0"><img alt="" src="images/1.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="1"><img alt="" src="images/2.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="2"><img alt="" src="images/3.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="3"><img alt="" src="images/4.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col4"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="4"><img alt="" src="images/5.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="5"><img alt="" src="images/6.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="6"><img alt="" src="images/7.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="7"><img alt="" src="images/8.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col4"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="8"><img alt="" src="images/9.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="9"><img alt="" src="images/10.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="10"><img alt="" src="images/11.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="11"><img alt="" src="images/12.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col4"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="12"><img alt="" src="images/13.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="13"><img alt="" src="images/14.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="14"><img alt="" src="images/15.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="15"><img alt="" src="images/16.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col4"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="16"><img alt="" src="images/17.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="17"><img alt="" src="images/18.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="18"><img alt="" src="images/19.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="19"><img alt="" src="images/20.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col4"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="20"><img alt="" src="images/21.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="21"><img alt="" src="images/22.jpeg" class="image"></a>
+</div>
+      </div>
+	    <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="22"><img alt="" src="images/23.jpeg" class="image"></a>
+</div>
+      </div>
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="23"><img alt="" src="images/24.jpg" class="image"></a>
+</div>
+      </div>
+<div class="clearfix visible-col4"></div>
+	    <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="24"><img alt="" src="images/25.jpg" class="image"></a>
+</div>
+      </div>
+	    <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="25"><img alt="" src="images/26.jpg" class="image"></a>
+</div>
+      </div>
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="26"><img alt="" src="images/27.jpeg" class="image"></a>
+</div>
+      </div>
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="27"><img alt="" src="images/28.jpeg" class="image"></a>
+</div>
+      </div>
+<div class="clearfix visible-col4"></div>
+	   	   <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="28"><img alt="" src="images/29.png" class="image"></a>
+</div>
+      </div>
+	   	   <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="29"><img alt="" src="images/30.jpeg" class="image"></a>
+</div>
+      </div>
+	     	   <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="30"><img alt="" src="images/31.jpeg" class="image"></a>
+</div>
+      </div>
+	     	   <div class="thumbnail">
+<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="31"><img alt="" src="images/32.jpeg" class="image"></a>
+</div>
+      </div>
+<div class="clearfix visible-col4"></div>
+	   <div class="thumbnail">
+		<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="32"><img alt="" src="images/33.jpeg" class="image"></a>
+		</div>
+      </div>
+	    <div class="thumbnail">
+		<div class="frame">
+         <a href="#CarouselOCEMB" data-slide-to="33"><img alt="" src="images/34.jpg" class="image"></a>
+		</div>
+      </div>
+      <div class="clearfix visible-col4"></div>
+   </div>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Heading13" style="display:inline-block;width:100%;z-index:5;">
+<h1 id="Heading13">Nuestro Orgullo CEMB<br>Alumnos</h1>
+</div>
+<div id="wb_CarouselOCEMB" style="">
+<div id="CarouselOCEMB" class="carousel slide">
+<div class="carousel-inner">
+<div class="carousel-item frame-1 active">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-2">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-3">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-4">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-5">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-6">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-7">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-8">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-9">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-10">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-11">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-12">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-13">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-14">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-15">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-16">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-17">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-18">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-19">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-20">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-21">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-22">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-23">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-24">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-25">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-26">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-27">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-28">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-29">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-30">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-31">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-32">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-33">
+<div class="carousel-innerframe">
+</div>
+</div>
+<div class="carousel-item frame-34">
+<div class="carousel-innerframe">
+</div>
+</div>
+</div>
+<a class="carousel-item-left carousel-control" href="#CarouselOCEMB" role="button" data-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span>
+</a>
+<a class="carousel-item-right carousel-control" href="#CarouselOCEMB" role="button" data-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span>
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+	
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	
+	<!--fin-->	
+	<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>Clasificación de Faugzi Mohamed en el torneo municipal de ajedrez.
+<br>El cual se presentará en la clasificación departamental.
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/FaugziAjedrez05032023 (1).jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/FaugziAjedrez05032023 (1).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/FaugziAjedrez05032023 (2).jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/FaugziAjedrez05032023 (2).jpeg" class="image"></a>
+</div>
+      </div>
+     <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/FaugziAjedrez05032023 (3).jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/FaugziAjedrez05032023 (3).jpeg" class="image"></a>
+</div>
+      </div>
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--fin-->
+	
+		<!--Start-->
+		
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  </h1>
+<h3 id="Heading3"><br>La UNAN  sede León hace un reconocimiento al centro educacional Mantica Berio por la participación destacada de los estudiantes Carlos Andres y Carlos Francisco Sequeira Alvarez en los
+ Jóvenes Talentos.
+Esto es producto del trabajo en equipo de sus maestros de primaria , secundaria y PPFF.
+</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/RUNAN05032023 (1).jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/RUNAN05032023 (1).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/RUNAN05032023 (2).jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/RUNAN05032023 (2).jpeg" class="image"></a>
+</div>
+      </div>
+     
+      
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+	<!--End-->
+
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+	<!--fin-->
+<!--------Start----->
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>
+  Reconocimiento a Excelencia Academica 2021</h1>
+<h3 id="Heading3"><br>Reconocimiento de parte del programa Nacional "Leer es vivir" a la Excelencia Académica Oro 2021.
+<br>También reconocieron al Centro Educacional Mantica Berio como Colegio de Excelencia Académica Diamante 2021.
+<br>Reconocimiento de parte del Programa Nacional Leer es vivir a la Sra. Reina Barba  como emprendedora de Chinandega. Excelencia Oro 2021.</h3>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/rto-excelncia-academica-cemb2021 (1).jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/rto-excelncia-academica-cemb2021 (1).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/rto-excelncia-academica-cemb2021 (2).jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/rto-excelncia-academica-cemb2021 (2).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/rto-excelncia-academica-cemb2021 (3).jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/rto-excelncia-academica-cemb2021 (3).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/rto-excelncia-academica-cemb2021 (4).jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/rto-excelncia-academica-cemb2021 (4).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/rto-excelncia-academica-cemb2021 (5).jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/rto-excelncia-academica-cemb2021 (5).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/rto-excelncia-academica-cemb2021 (6).jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/rto-excelncia-academica-cemb2021 (6).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/rto-excelncia-academica-cemb2021 (7).jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/rto-excelncia-academica-cemb2021 (7).jpeg" class="image"></a>
+</div>
+      </div>
+
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/orgulloCEMB/rto-excelncia-academica-cemb2021 (8).jpeg" data-rel="PhotoGallery5"><img alt="" src="images/orgulloCEMB/rto-excelncia-academica-cemb2021 (8).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--------End----->
+<div id="wb_SeparadorOCEMB">
+<div id="SeparadorOCEMB">
+<div class="row">
+<div class="col-1">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_GalleryOCEMBP">
+<div id="GalleryOCEMBP">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading2">Nuestro Orgullo CEMB<br>Profesores</h1>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:8;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/OCEMB1.jpg" data-rel="PhotoGallery5"><img alt="" src="images/OCEMB1.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/OCEMB2.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/OCEMB2.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/OCEMB3.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/OCEMB3.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/OCEMB4.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/OCEMB4.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/OCEMB5.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/OCEMB5.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/OCEMB6.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/OCEMB6.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/OCEMB7.jpeg" data-rel="PhotoGallery5"><img alt="" src="images/OCEMB7.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_Footer">
+<div id="Footer">
+<div class="row">
+<div class="col-1">
+<div id="wb_FontAwesomeIcon3" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:9;">
+<a href="https://www.facebook.com/cemanticaberio" target="_blank"><div id="FontAwesomeIcon3"><i class="fa fa-facebook"></i></div></a>
+</div>
+<div id="wb_FontAwesomeIcon11" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:10;">
+<a href="https://www.youtube.com/channel/UCAhJcrp_RsEv7Kz6uIQGPhg" target="_blank" title="Canal CEMB"><div id="FontAwesomeIcon11"><i class="fa fa-youtube"></i></div></a>
+</div>
+<div id="wb_IconFont1" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:11;">
+<a href="https://www.youtube.com/channel/UCwOuGJLlY5TBDs2xTcmWMPw" target="_blank" title="Canal Educacion Inicial"><div id="IconFont1"><i class="fa fa-youtube-play"></i></div></a>
+</div>
+<div id="wb_Text17">
+<span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:20px;">Dirección:<br></span><span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:15px;">Km 132 Carretera a Somotillo. Chinandega.<br></span><span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:20px;">Teléfono:<br>505-2340-1430<br>E-mail:<br></span><span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:15px;">m.callejas@manticaberio.edu.ni</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_copyright">
+<div id="copyright">
+<div class="row">
+<div class="col-1">
+<div id="wb_Text12">
+<span style="color:#FFFFFF;font-family:Arial;font-size:13px;">Copyright © CEMB 2021. All right reserved. </span>
+</div>
+<!-- POPUP -->
+<div id="Html2" style="display:none;width:35px;height:24px;z-index:14">
+<div class="modal" id="window-notice">
+    <div class="content">
+        <div class="content-text"><a href="https://youtu.be/d_hLZyJt48E">
+<img src="http://www.manticaberio.edu.ni/assets/avisomatricula2021-640x480.jpg" width="100%"/></a>
+          </div>
+        <button class="btncerrar">
+        <span>Cerrar</span>
+        </button>
+    </div>
+</div>
+
+
+
+<script>
+    $(document).ready(function(){
+	
+	$(".modal").fadeIn();
+	
+	$(".btncerrar").click(function(){
+		
+		$(".modal").fadeOut(300);
+		
+	});
+
+});
+</script></div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

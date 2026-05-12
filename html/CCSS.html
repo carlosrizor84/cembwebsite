@@ -1,0 +1,2843 @@
+<!doctype html>
+<html lang="es-ni">
+<head>
+<meta charset="utf-8">
+<title>CEMB</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="insignia2_small.png" rel="icon" sizes="150x150" type="image/png">
+<link href="font-awesome.min.css" rel="stylesheet">
+<link href="CEMB.css" rel="stylesheet">
+<link href="CCSS.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="wb.lazyload.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="popper.min.js"></script>
+<script src="util.min.js"></script>
+<script src="collapse.min.js"></script>
+<script src="dropdown.min.js"></script>
+<link rel="stylesheet" href="fancybox/jquery.fancybox-1.3.4.css">
+<script src="fancybox/jquery.easing-1.3.pack.js"></script>
+<script src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<script src="fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script src="wwb16.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $('#wb_FontAwesomeIcon3').addClass('visibility-hidden');
+   $('#wb_FontAwesomeIcon11').addClass('visibility-hidden');
+   $('#wb_IconFont1').addClass('visibility-hidden');
+   function onScrollPageHeaderDividerTop()
+   {
+      var $obj = $('#PageHeader-divider-top');
+      if (!$obj.hasClass('show') && $obj.inViewPort(false))
+      {
+         $obj.addClass('show');
+      }
+   }
+   onScrollPageHeaderDividerTop();
+   $(window).scroll(function(event)
+   {
+      onScrollPageHeaderDividerTop();
+   });
+   $("a[href*='#header']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutSine');
+   });
+   $("a[href*='#infoBlock1']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_infoBlock1').offset().top }, 600, 'easeOutSine');
+   });
+   $('#ThemeableMenu1 .dropdown-toggle').dropdown({popperConfig:{placement:'bottom-start',modifiers:{computeStyle:{gpuAcceleration:false}}}});
+   $(document).on('click','.ThemeableMenu1-navbar-collapse.show',function(e)
+   {
+      if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+      {
+         $(this).collapse('hide');
+      }
+   });
+   function onScrollLayoutGrid10DividerTop()
+   {
+      var $obj = $('#LayoutGrid10-divider-top');
+      if (!$obj.hasClass('show') && $obj.inViewPort(false))
+      {
+         $obj.addClass('show');
+      }
+   }
+   onScrollLayoutGrid10DividerTop();
+   $(window).scroll(function(event)
+   {
+      onScrollLayoutGrid10DividerTop();
+   });
+   function onScrollLayoutGrid8DividerTop()
+   {
+      var $obj = $('#LayoutGrid8-divider-top');
+      if (!$obj.hasClass('show') && $obj.inViewPort(false))
+      {
+         $obj.addClass('show');
+      }
+   }
+   onScrollLayoutGrid8DividerTop();
+   $(window).scroll(function(event)
+   {
+      onScrollLayoutGrid8DividerTop();
+   });
+   function onScrollLayoutGrid7DividerTop()
+   {
+      var $obj = $('#LayoutGrid7-divider-top');
+      if (!$obj.hasClass('show') && $obj.inViewPort(false))
+      {
+         $obj.addClass('show');
+      }
+   }
+   onScrollLayoutGrid7DividerTop();
+   $(window).scroll(function(event)
+   {
+      onScrollLayoutGrid7DividerTop();
+   });
+   function onScrollLayoutGrid6DividerTop()
+   {
+      var $obj = $('#LayoutGrid6-divider-top');
+      if (!$obj.hasClass('show') && $obj.inViewPort(false))
+      {
+         $obj.addClass('show');
+      }
+   }
+   onScrollLayoutGrid6DividerTop();
+   $(window).scroll(function(event)
+   {
+      onScrollLayoutGrid6DividerTop();
+   });
+   function onScrollLayoutGrid5DividerTop()
+   {
+      var $obj = $('#LayoutGrid5-divider-top');
+      if (!$obj.hasClass('show') && $obj.inViewPort(false))
+      {
+         $obj.addClass('show');
+      }
+   }
+   onScrollLayoutGrid5DividerTop();
+   $(window).scroll(function(event)
+   {
+      onScrollLayoutGrid5DividerTop();
+   });
+   function onScrollLayoutGrid4DividerTop()
+   {
+      var $obj = $('#LayoutGrid4-divider-top');
+      if (!$obj.hasClass('show') && $obj.inViewPort(false))
+      {
+         $obj.addClass('show');
+      }
+   }
+   onScrollLayoutGrid4DividerTop();
+   $(window).scroll(function(event)
+   {
+      onScrollLayoutGrid4DividerTop();
+   });
+   function onScrollLayoutGrid3DividerTop()
+   {
+      var $obj = $('#LayoutGrid3-divider-top');
+      if (!$obj.hasClass('show') && $obj.inViewPort(false))
+      {
+         $obj.addClass('show');
+      }
+   }
+   onScrollLayoutGrid3DividerTop();
+   $(window).scroll(function(event)
+   {
+      onScrollLayoutGrid3DividerTop();
+   });
+   function onScrollLayoutGrid2DividerTop()
+   {
+      var $obj = $('#LayoutGrid2-divider-top');
+      if (!$obj.hasClass('show') && $obj.inViewPort(false))
+      {
+         $obj.addClass('show');
+      }
+   }
+   onScrollLayoutGrid2DividerTop();
+   $(window).scroll(function(event)
+   {
+      onScrollLayoutGrid2DividerTop();
+   });
+   function onScrollLayoutGrid1DividerTop()
+   {
+      var $obj = $('#LayoutGrid1-divider-top');
+      if (!$obj.hasClass('show') && $obj.inViewPort(false))
+      {
+         $obj.addClass('show');
+      }
+   }
+   onScrollLayoutGrid1DividerTop();
+   $(window).scroll(function(event)
+   {
+      onScrollLayoutGrid1DividerTop();
+   });
+   function onScrollFontAwesomeIcon3()
+   {
+      var $obj = $("#wb_FontAwesomeIcon3");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_FontAwesomeIcon3', 'transform-lightspeed-in', 100, 1000);
+      }
+   }
+   onScrollFontAwesomeIcon3();
+   $(window).scroll(function(event)
+   {
+      onScrollFontAwesomeIcon3();
+   });
+   function onScrollFontAwesomeIcon11()
+   {
+      var $obj = $("#wb_FontAwesomeIcon11");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_FontAwesomeIcon11', 'transform-lightspeed-in', 400, 1000);
+      }
+   }
+   onScrollFontAwesomeIcon11();
+   $(window).scroll(function(event)
+   {
+      onScrollFontAwesomeIcon11();
+   });
+   function onScrollIconFont1()
+   {
+      var $obj = $("#wb_IconFont1");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_IconFont1', 'transform-lightspeed-in', 400, 1000);
+      }
+   }
+   onScrollIconFont1();
+   $(window).scroll(function(event)
+   {
+      onScrollIconFont1();
+   });
+   $("a[data-rel='PhotoGallery2']").attr('rel', 'PhotoGallery2');
+   $("a[rel^='PhotoGallery2']").fancybox({});
+   $("a[data-rel='PhotoGallery1']").attr('rel', 'PhotoGallery1');
+   $("a[rel^='PhotoGallery1']").fancybox({});
+   $("a[data-rel='PhotoGallery3']").attr('rel', 'PhotoGallery3');
+   $("a[rel^='PhotoGallery3']").fancybox({});
+   $("a[data-rel='PhotoGallery4']").attr('rel', 'PhotoGallery4');
+   $("a[rel^='PhotoGallery4']").fancybox({});
+   $("a[data-rel='PhotoGallery5']").attr('rel', 'PhotoGallery5');
+   $("a[rel^='PhotoGallery5']").fancybox({});
+   $("a[data-rel='PhotoGallery16']").attr('rel', 'PhotoGallery16');
+   $("a[rel^='PhotoGallery16']").fancybox({});
+   $('img[data-src]').lazyload();
+});
+</script>
+</head>
+<body>
+
+
+<div id="wb_PageHeader">
+<div id="PageHeader-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+<path class="divider-fill" d="M66.709,62.141C63.674,62.141 62.115,50.388 60.619,37.105C62.048,29.579 63.814,24.051 66.352,24.051C69.374,24.051 71.362,33.025 73.031,44.299C71.577,51.437 70.374,62.141 66.709,62.141ZM41.114,57.818C40.604,57.416 40.051,57.19 39.441,57.19C33.91,57.19 32.305,76.639 28.938,82.663C30.102,85.32 31.71,87.871 33.333,87.871C36.993,87.87 39.088,73.872 41.114,57.818z" style="fill-opacity:0.3;"/>
+<path class="divider-fill" d="M51.832,78.336C46.587,78.336 45.555,61.319 41.114,57.818C44.303,32.539 46.669,0 52.006,0C56.839,0 58.676,19.844 60.619,37.105C57.568,53.167 56.051,78.336 51.832,78.336ZM17.005,67.259C21.378,67.259 21.89,84.421 26.875,84.421C27.646,84.421 28.321,83.766 28.938,82.663C24.471,72.464 22.587,44.705 18.018,44.705C11.998,44.705 10.296,82.492 6.25,82.492C3.124,82.492 1.562,73.774 -0.001,61.416L-0.001,73.421C1.562,81.2 3.342,90.679 6.468,90.679C12.718,90.679 12.39,67.259 17.005,67.259ZM94.15,31.54C89.658,31.54 89.31,66.348 84.772,66.348C80.584,66.348 80.104,38.746 75.741,38.746C74.548,38.746 73.758,40.729 73.031,44.299C75.851,63.352 77.758,88.979 82.198,88.979C87.608,88.979 88.132,57.865 93.758,57.865C96.867,57.865 98.444,65.681 99.999,73.42L99.999,61.416C98.444,49.122 97.26,31.54 94.15,31.54z" style="fill-opacity:0.5;"/>
+<path class="divider-fill" d="M82.198,88.979C77.757,88.979 75.851,63.353 73.031,44.299C71.577,51.437 70.374,62.141 66.709,62.141C63.674,62.141 62.115,50.388 60.619,37.105C57.568,53.167 56.05,78.336 51.832,78.336C46.587,78.336 45.555,61.319 41.113,57.818C39.088,73.871 36.862,87.87 33.202,87.87C31.578,87.87 30.102,85.32 28.938,82.662C28.321,83.766 27.645,84.42 26.875,84.42C21.89,84.42 21.378,67.259 17.005,67.259C12.39,67.259 12.674,90.634 6.424,90.634C3.298,90.634 1.562,81.199 -0.001,73.419L-0.001,100L99.999,100L99.999,73.42C98.444,65.681 96.867,57.865 93.758,57.865C88.132,57.865 87.608,88.979 82.198,88.979z"/>
+</svg></div>
+<div id="PageHeader">
+<div class="row">
+<div class="col-1">
+<div id="wb_CEMB-INSIGNIA" style="display:inline-block;width:44px;height:45px;z-index:0;">
+<a href="./index.html" onmouseover="AnimateCss('wb_CEMB-INSIGNIA', 'animate-flash', 0, 500);return false;"><img src="images/placeholder.gif" data-src="images/INSIGNIA2.png" id="CEMB-INSIGNIA" alt=""></a>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_ThemeableMenu1" style="display:inline-block;width:100%;text-align:center;z-index:1;">
+<div id="ThemeableMenu1" class="ThemeableMenu1" style="width:100%;height:auto !important;">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ThemeableMenu1-navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="ThemeableMenu1-navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="nav-item">
+<a href="./index.html" class="nav-link">Inicio</a>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Nosotros<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Bienvenida.html" class="nav-link">Bienvenida</a></li>
+<li class="nav-item"><a href="./Quienes-Somos.html" class="nav-link">Quienes Somos</a></li>
+<li class="nav-item"><a href="./Nuestra-Historia.html" class="nav-link">Nuestra Historia</a></li>
+<li class="nav-item"><a href="./School-Profile.html" class="nav-link">School Profile</a></li>
+<li class="nav-item"><a href="./Escudo.html" class="nav-link">Escudo</a></li>
+<li class="nav-item"><a href="./Mision-y-Vision.html" class="nav-link">Misión y Visión</a></li>
+<li class="nav-item"><a href="./Valores.html" class="nav-link">Valores</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Organización<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Estamentos.html" class="nav-link">Estamentos</a></li>
+<li class="nav-item"><a href="./Comite-Ejecutivo.html" class="nav-link">Comité Ejecutivo</a></li>
+<li class="nav-item"><a href="./Equipo-Direccion.html" class="nav-link">Equipo de Dirección</a></li>
+<li class="nav-item"><a href="./Administracion.html" class="nav-link">Administración</a></li>
+<li class="nav-item"><a href="./Directiva-Docente.html" class="nav-link">Directiva Docente</a></li>
+<li class="nav-item"><a href="./Docentes.html" class="nav-link">Personal Docente</a></li>
+<li class="nav-item"><a href="./PersonalApoyo.html" class="nav-link">Personal de Apoyo</a></li>
+<li class="nav-item"><a href="./Organigrama.html" class="nav-link">Organigrama</a></li>
+<li class="nav-item"><a href="./C-Emergencia-CEMB.html" class="nav-link">Cadena de Emergencia</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Doc. Académicos<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Crono-Acti-Evaluativas.html" class="nav-link">Cronogramas AE</a></li>
+<li class="nav-item"><a href="./Desempe-Academico.html" class="nav-link">Desempeño Académico</a></li>
+<li class="nav-item"><a href="./Modalidad-Ensenanzas.html" class="nav-link">Modalidad de Enseñanza</a></li>
+<li class="nav-item"><a href="./TemariosExamenes.html" class="nav-link">Temarios de Exámenes</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Doc. Reglamentarios<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Manual-Convivencia.html" class="nav-link">Manual de Convivencia</a></li>
+<li class="nav-item"><a href="./PAD.html" class="nav-link">PAD</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="./Circulares.html" class="nav-link">Circulares</a>
+</li>
+<li class="nav-item">
+<a href="./Noticias.html" class="nav-link">Noticias</a>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Admisión<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Proceso-Admision.html" class="nav-link">Proceso Admisión</a></li>
+<li class="nav-item"><a href="./SolicitudAdmision.html" class="nav-link">Solicitud de Admisión</a></li>
+<li class="nav-item"><a href="./Preceso-AdmisionEI.html" class="nav-link">Proceso Admisión Educación Inicial</a></li>
+<li class="nav-item"><a href="./Temarios-Admision.html" class="nav-link">Temarios de Admisión</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Comunidad CEMB<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Consejo-Estudiantil.html" class="nav-link">Consejo Estudiantil</a></li>
+<!---
+<li class="nav-item"><a href="./Operacion-Sonrisa.html" class="nav-link">Club Operación Sonrisa</a></li>  --->
+
+<li class="nav-item"><a href="./Club-Mun.html" class="nav-link">Club MUN</a></li>
+<li class="nav-item"><a href="./Stop-Bullying.html" class="nav-link">Stop Bullying</a></li>
+<li class="nav-item"><a href="./Capacitaciones.html" class="nav-link">Capacitaciones</a></li>
+<li class="nav-item"><a href="./ProyectoPASS.html" class="nav-link">Proyecto PASS</a></li>
+<li class="nav-item"><a href="./Universidades.html" class="nav-link">Universidades</a></li>
+<li class="nav-item"><a href="./Exalumnos.html" class="nav-link">Ex-Alumnos</a></li>
+<li class="nav-item"><a href="./CoachingEstudiantil.html" class="nav-link">Coaching Estudiantil</a></li>
+<li class="nav-item"><a href="./OrgulloCEMB.html" class="nav-link">Orgullo CEMB</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Actividades Relevantes por Áreas<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Matematica.html" class="nav-link">Matemática</a></li>
+<li class="nav-item"><a href="./LeguayLiteratura.html" class="nav-link">Lengua y Literatura</a></li>
+<li class="nav-item"><a href="./CCNN.html" class="nav-link">CCNN</a></li>
+<li class="nav-item"><a href="./CCSS.html" class="nav-link active">CCSS</a></li>
+<li class="nav-item"><a href="./Ingles.html" class="nav-link">Inglés</a></li>
+<li class="nav-item"><a href="./Pastoral.html" class="nav-link">Pastoral</a></li>
+<li class="nav-item"><a href="./DeptoOrientacion.html" class="nav-link">Dpto. Orientación</a></li>
+<li class="nav-item"><a href="./DanzaDeportes.html" class="nav-link">Danza y Deportes</a></li>
+<li class="nav-item"><a href="./PPFF.html" class="nav-link">PPFF</a></li>
+<li class="nav-item"><a href="./Teleton.html" class="nav-link">Teleton</a></li>
+<li class="nav-item"><a href="./Fisica.html" class="nav-link">Inglés</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Asociación PPMMFF<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./FuncionPMF.html" class="nav-link">Función</a></li>
+<li class="nav-item"><a href="./DirectivaPMF.html" class="nav-link">Directiva</a></li>
+<li class="nav-item"><a href="./RG-PMF.html" class="nav-link">Representantes de Grado</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Galería<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-item"><a href="./Campus.php" class="nav-link">Campus</a></li>
+<li class="nav-item"><a href="./GEducaxcionInicial.php" class="nav-link">Educación Inicial</a></li>
+<li class="nav-item"><a href="./GPrimaria.php" class="nav-link">Primaria</a></li>
+<li class="nav-item"><a href="./GSecundaria.php" class="nav-link">Secundaria</a></li>
+<li class="nav-item"><a href="./GPApoyo.php" class="nav-link">Personal de Apoyo</a></li>
+<li class="nav-item"><a href="./GPadresFamilia.php" class="nav-link">Padres de Familia</a></li>
+<li class="nav-item"><a href="./promociones/index.html" class="nav-link">Promociones</a></li>
+<li class="nav-item"><a href="./GVideos.php" class="nav-link">Videos</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="./Contactanos.php" class="nav-link">Contáctanos</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_header">
+<div id="header">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading1" style="display:inline-block;width:100%;z-index:2;">
+<h1 id="Heading1">Centro Educacional Mantica Berio</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_infoBlock1">
+<div id="infoBlock1-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 24" preserveAspectRatio="none">
+<defs>
+   <path id="wave-animated" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="wave-animated">
+   <use xlink:href="#wave-animated" x="48" y="0" class="divider-fill" style="opacity:0.7" />
+   <use xlink:href="#wave-animated" x="48" y="3" class="divider-fill" style="opacity:0.5" />
+   <use xlink:href="#wave-animated" x="48" y="5" class="divider-fill" style="opacity:0.3" />
+   <use xlink:href="#wave-animated" x="48" y="7" class="divider-fill"  />
+</g>
+</svg>
+</div>
+<div id="infoBlock1">
+<div class="col-1">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:3;">
+<h1 id="Heading2">CCSS</h1>
+</div>
+</div>
+</div>
+</div>
+
+<!---start 16/08/2025--->
+	<div id="wb_LayoutGrid19">
+<div id="LayoutGrid19-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid19">
+<div class="row">
+<div class="col-1">
+<div id="Article10" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">¡Desfile patrio 2025 CEMB! </span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, October 01, 2021<br></div>
+   <br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Clase%20de%20DDM%20">Send Comments</a></div>
+</div>
+
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:5;">
+<div id="PhotoGallery16">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d20251.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d20251.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d20252.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d20252.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d20253.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d20253.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+	   
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d20254.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d20254.jpg" class="image"></a>
+</div>
+      </div>
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d20255.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d20255.jpg" class="image"></a>
+</div>
+      </div>
+      
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d20256.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d20256.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      
+ <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d20257.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d20257.jpg" class="image"></a>
+</div>
+      </div>
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d20258.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d20258.jpg" class="image"></a>
+</div>
+      </div>
+      
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d20259.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d20259.jpg" class="image"></a>
+</div>
+      </div>  
+    
+<div class="clearfix visible-col1"></div>
+
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d202510.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d202510.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d202511.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d202511.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d202512.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d202512.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+	   
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d202513.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d202513.jpg" class="image"></a>
+</div>
+      </div>
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d202514.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d202514.jpg" class="image"></a>
+</div>
+      </div>
+      
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d202515.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d202515.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      
+ <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d202516.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d202516.jpg" class="image"></a>
+</div>
+      </div>
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d202517.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d202517.jpg" class="image"></a>
+</div>
+      </div>
+      
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d202518.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d202518.jpg" class="image"></a>
+</div>
+      </div>  
+            
+<div class="clearfix visible-col1"></div>
+
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d202519.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d202519.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d202520.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d202520.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d2022521.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d2022521.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+	   
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d202522.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d202522.jpg" class="image"></a>
+</div>
+      </div>
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d202523.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d202523.jpg" class="image"></a>
+</div>
+      </div>
+      
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d202524.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d202524.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      
+ <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d202525.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d202525.jpg" class="image"></a>
+</div>
+      </div>
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile2025/d202526.jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile2025/d202526.jpg" class="image"></a>
+</div>
+      </div>
+      
+	   <div class="thumbnail">
+
+      </div>  
+      <div class="clearfix visible-col3"></div>
+      </div>      
+   </div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+	<!--fin 16/08/2025-->
+
+
+<!---start 11/08/2025--->
+	<div id="wb_LayoutGrid19">
+<div id="LayoutGrid19-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid19">
+<div class="row">
+<div class="col-1">
+<div id="Article10" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">¡Damos inicio a las Fiestas Patrias en el CEMB! </span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, October 01, 2021<br></div>
+   <br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Clase%20de%20DDM%20">Send Comments</a></div>
+</div>
+
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:5;">
+<div id="PhotoGallery16">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/patria2025/fp20251.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/patria2025/fp20251.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/patria2025/fp20252.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/patria2025/fp20252.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/patria2025/fp20253.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/patria2025/fp20253.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+	   
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/patria2025/fp20254.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/patria2025/fp20254.jpeg" class="image"></a>
+</div>
+      </div>
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/patria2025/fp20255.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/patria2025/fp20255.jpeg" class="image"></a>
+</div>
+      </div>
+      
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/patria2025/fp20256.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/patria2025/fp20256.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      
+ <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/patria2025/fp20257.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/patria2025/fp20257.jpeg" class="image"></a>
+</div>
+      </div>
+	   <div class="thumbnail">
+
+      </div>
+      
+	   <div class="thumbnail">
+
+      </div>  
+      <div class="clearfix visible-col3"></div>
+      
+
+      </div>      
+   </div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+	<!--fin 11/08/2025-->
+
+
+
+<!---start 07/09/2024--->
+	<div id="wb_LayoutGrid19">
+<div id="LayoutGrid19-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid19">
+<div class="row">
+<div class="col-1">
+<div id="Article10" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Desfile patrio 2024.  </span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, October 01, 2021<br></div>
+   <br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Clase%20de%20DDM%20">Send Comments</a></div>
+</div>
+
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:5;">
+<div id="PhotoGallery16">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/defile/desfile0920241.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile0920241.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile0920242.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile0920242.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile0920243.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile0920243.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+	   
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile0920244.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile0920244.jpeg" class="image"></a>
+</div>
+      </div>
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile0920245.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile0920245.jpeg" class="image"></a>
+</div>
+      </div>
+      
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile0920246.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile0920246.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      
+ <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile0920247.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile0920247.jpeg" class="image"></a>
+</div>
+      </div>
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile0920248.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile0920248.jpeg" class="image"></a>
+</div>
+      </div>
+      
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile0920249.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile0920249.jpeg" class="image"></a>
+</div>
+      </div>  
+      <div class="clearfix visible-col3"></div>
+      
+ <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile09202410.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile09202410.jpeg" class="image"></a>
+</div>
+      </div>
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile09202411.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile09202411.jpeg" class="image"></a>
+</div>
+      </div>
+      
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile09202412.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile09202412.jpeg" class="image"></a>
+</div>
+      </div>      
+      <div class="clearfix visible-col3"></div>
+      
+ <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile09202413.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile09202413.jpeg" class="image"></a>
+</div>
+      </div>
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile09202414.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile09202414.jpeg" class="image"></a>
+</div>
+      </div>
+      
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile09202415.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile09202416.jpeg" class="image"></a>
+</div>
+      </div>      
+      <div class="clearfix visible-col3"></div>
+      
+ <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile09202416.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile09202416.jpeg" class="image"></a>
+</div>
+      </div>
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile09202417.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile09202417.jpeg" class="image"></a>
+</div>
+      </div>
+      
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile09202418.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile09202418.jpeg" class="image"></a>
+</div>
+      </div>      
+      
+      <div class="clearfix visible-col3"></div>
+      
+ <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile09202419.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile09202419.jpeg" class="image"></a>
+</div>
+      </div>
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile09202420.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile09202420.jpeg" class="image"></a>
+</div>
+      </div>
+      
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile09202421.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile09202421.jpeg" class="image"></a>
+</div>
+      </div>      
+      <div class="clearfix visible-col3"></div>
+      
+ <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile09202422.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile09202422.jpeg" class="image"></a>
+</div>
+      </div>
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile09202423.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile09202423.jpeg" class="image"></a>
+</div>
+      </div>
+      
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/desfile/desfile0920240.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/desfile/desfile0920240.jpeg" class="image"></a>
+</div>
+      </div>      
+   </div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+	<!--fin 07/09/2024-->
+
+
+
+
+<!---start 06/08/2024--->
+	<div id="wb_LayoutGrid19">
+<div id="LayoutGrid19-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid19">
+<div class="row">
+<div class="col-1">
+<div id="Article10" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Inician las celebraciones de nuestras Fiestas Patrias.  </span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, October 01, 2021<br></div>
+   <br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Clase%20de%20DDM%20">Send Comments</a></div>
+</div>
+
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:5;">
+<div id="PhotoGallery16">
+	
+  		<iframe width="560" height="315" src="https://www.youtube.com/embed/7TQ576TpAj0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+	
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:5;">
+<div id="PhotoGallery16">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/patria2024/ccss0820241.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/patria2024/ccss0820241.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/patria2024/ccss0820242.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/patria2024/ccss0820242.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/patria2024/ccss0820243.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/patria2024/ccss0820243.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+	   
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/patria2024/ccss0820244.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/patria2024/ccss0820244.jpeg" class="image"></a>
+</div>
+      </div>
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/patria2024/ccss0820245.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/patria2024/ccss0820245.jpeg" class="image"></a>
+</div>
+      </div>
+      
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/patria2024/ccss0820246.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/patria2024/ccss0820246.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+	<!--fin 06/08/2024-->
+
+
+	<!---start 20/11/2023--->
+	<div id="wb_LayoutGrid19">
+<div id="LayoutGrid19-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid19">
+<div class="row">
+<div class="col-1">
+<div id="Article10" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Proyecto: Arpillera (Tema: Democratización y pacificación en America Latina)  </span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, October 01, 2021<br></div>
+   <br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Clase%20de%20DDM%20">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:5;">
+<div id="PhotoGallery16">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/arpillera/ccss1.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/arpillera/ccss1.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/arpillera/ccss2.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/arpillera/ccss2.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/arpillera/ccss3.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/arpillera/ccss3.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+	   
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/arpillera/ccss4.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/arpillera/ccss4.jpeg" class="image"></a>
+</div>
+      </div>
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/arpillera/ccss5.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/arpillera/ccss5.jpeg" class="image"></a>
+</div>
+      </div>
+      
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/arpillera/ccss6.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/arpillera/ccss6.jpeg" class="image"></a>
+</div>
+      </div>
+         <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/arpillera/ccss7.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/arpillera/ccss7.jpeg" class="image"></a>
+</div>
+      </div>   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/arpillera/ccss8.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/arpillera/ccss8.jpeg" class="image"></a>
+</div>
+      </div>   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/arpillera/ccss9.jpeg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/arpillera/ccss9.jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+<!--<a id="Button2" href="./CCSS-sistemaSolar02022022.php" style="display:inline-block;width:96px;height:25px;z-index:6;">Mas..</a>-->
+</div>
+</div>
+</div>
+</div>
+
+	<!--fin 20/11/2023-->
+
+<!--Start-->
+		
+			<div id="wb_LayoutGrid19">
+<div id="LayoutGrid19-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid19">
+<div class="row">
+<div class="col-1">
+<div id="Article10" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Fiestas Patrias 2023 </span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, October 01, 2021<br></div>
+   <br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Clase%20de%20DDM%20">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:5;">
+<div id="PhotoGallery16">
+	
+  		<iframe width="560" height="315" src="https://www.youtube.com/embed/3XHeLhJ91Rw" title="YouTube video player" frameborder="100" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/16Q7A4iN_6Q" title="YouTube video player" frameborder="100" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+		
+	    <!--End-->
+
+		<!--Start-->
+		
+			<div id="wb_LayoutGrid19">
+<div id="LayoutGrid19-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid19">
+<div class="row">
+<div class="col-1">
+<div id="Article10" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Ferias Interculturales 2023 </span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, October 01, 2021<br></div>
+   <br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Clase%20de%20DDM%20">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:5;">
+<div id="PhotoGallery16">
+	
+  		<iframe width="560" height="315" src="https://www.youtube.com/embed/Jh5gwKDeWXw" title="YouTube video player" frameborder="100" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/KztR1quCLGc" title="YouTube video player" frameborder="100" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+		
+	    <!--End-->
+	    
+	<div id="wb_LayoutGrid19">
+<div id="LayoutGrid19-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid19">
+<div class="row">
+<div class="col-1">
+<div id="Article10" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Actividades en relación a la Semana de la Autonomía de la Costa Caribe Nicaragüense. </span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, October 01, 2021<br></div>
+   <br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Clase%20de%20DDM%20">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:5;">
+<div id="PhotoGallery16">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/AutonomiaCostaCaribe2022/AutonomiaCostaCaribe2022 (7).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/AutonomiaCostaCaribe2022/AutonomiaCostaCaribe2022 (7).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/AutonomiaCostaCaribe2022/AutonomiaCostaCaribe2022 (3).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/AutonomiaCostaCaribe2022/AutonomiaCostaCaribe2022 (3).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/AutonomiaCostaCaribe2022/AutonomiaCostaCaribe2022 (2).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/AutonomiaCostaCaribe2022/AutonomiaCostaCaribe2022 (2).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+<a id="Button2" href="./CCSS-AutonomiaCaribe2022.php" style="display:inline-block;width:96px;height:25px;z-index:6;">Mas..</a>
+</div>
+</div>
+</div>
+</div>
+
+	<!--fin-->
+	
+	<div id="wb_LayoutGrid19">
+<div id="LayoutGrid19-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid19">
+<div class="row">
+<div class="col-1">
+<div id="Article10" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Chinandega tierra de promesa </span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, October 01, 2021<br></div>
+   <br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Clase%20de%20DDM%20">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:5;">
+<div id="PhotoGallery16">
+	
+  		<iframe width="560" height="315" src="https://www.youtube.com/embed/nZbR20fSW44" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+	
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+	<!--fin-->
+	
+	<div id="wb_LayoutGrid19">
+<div id="LayoutGrid19-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid19">
+<div class="row">
+<div class="col-1">
+<div id="Article10" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Stand Cultural 2022 </span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, October 01, 2021<br></div>
+   <br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Clase%20de%20DDM%20">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:5;">
+<div id="PhotoGallery16">
+	
+  		<iframe width="560" height="315" src="https://www.youtube.com/embed/ssXTAj0M3YQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/l9SaK-IOWNU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+	<!--fin-->
+	
+	<div id="wb_LayoutGrid19">
+<div id="LayoutGrid19-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid19">
+<div class="row">
+<div class="col-1">
+<div id="Article10" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Trabajo del sistema solar por estudiantes de 5to y 6to grado </span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, October 01, 2021<br></div>
+   <br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Clase%20de%20DDM%20">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:5;">
+<div id="PhotoGallery16">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/sistema-solar-5to-6to-2022/sistema-solar-5to-6to-2022 (1).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/sistema-solar-5to-6to-2022/sistema-solar-5to-6to-2022 (1).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/sistema-solar-5to-6to-2022/sistema-solar-5to-6to-2022 (6).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/sistema-solar-5to-6to-2022/sistema-solar-5to-6to-2022 (6).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/sistema-solar-5to-6to-2022/sistema-solar-5to-6to-2022 (2).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/sistema-solar-5to-6to-2022/sistema-solar-5to-6to-2022 (2).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+<a id="Button2" href="./CCSS-sistemaSolar5t06to2022.php" style="display:inline-block;width:96px;height:25px;z-index:6;">Mas..</a>
+</div>
+</div>
+</div>
+</div>
+	<!--fin-->
+	
+	<div id="wb_LayoutGrid19">
+<div id="LayoutGrid19-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid19">
+<div class="row">
+<div class="col-1">
+<div id="Article10" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Estudiantes de 4to grado en una actividad representativa de los volcanes de Nicaragua </span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, October 01, 2021<br></div>
+   <br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Clase%20de%20DDM%20">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:5;">
+<div id="PhotoGallery16">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/volcanes-nicaragua-4to-2022/volcanes-nicaragua-4to-2022 (1).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/volcanes-nicaragua-4to-2022/volcanes-nicaragua-4to-2022 (1).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/volcanes-nicaragua-4to-2022/volcanes-nicaragua-4to-2022 (6).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/volcanes-nicaragua-4to-2022/volcanes-nicaragua-4to-2022 (6).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/volcanes-nicaragua-4to-2022/volcanes-nicaragua-4to-2022 (2).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/volcanes-nicaragua-4to-2022/volcanes-nicaragua-4to-2022 (2).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+<a id="Button2" href="./CCSS-VolcanesNicaragua4to2022.php" style="display:inline-block;width:96px;height:25px;z-index:6;">Mas..</a>
+</div>
+</div>
+</div>
+</div>
+	<!--fin-->
+	
+	<!---start--->
+	<div id="wb_LayoutGrid19">
+<div id="LayoutGrid19-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid19">
+<div class="row">
+<div class="col-1">
+<div id="Article10" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Estudiantes de 6to. Grado "La maleta viajera"  </span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, October 01, 2021<br></div>
+   <br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Clase%20de%20DDM%20">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:5;">
+<div id="PhotoGallery16">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/Maleta-viajera-6to-2022/Maleta-viajera-6to-2022 (1).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/Maleta-viajera-6to-2022/Maleta-viajera-6to-2022 (1).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/Maleta-viajera-6to-2022/Maleta-viajera-6to-2022 (2).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/Maleta-viajera-6to-2022/Maleta-viajera-6to-2022 (2).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/Maleta-viajera-6to-2022/Maleta-viajera-6to-2022 (3).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/Maleta-viajera-6to-2022/Maleta-viajera-6to-2022 (3).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+	   
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/Maleta-viajera-6to-2022/Maleta-viajera-6to-2022 (4).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/Maleta-viajera-6to-2022/Maleta-viajera-6to-2022 (4).jpg" class="image"></a>
+</div>
+      </div>
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/Maleta-viajera-6to-2022/Maleta-viajera-6to-2022 (5).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/Maleta-viajera-6to-2022/Maleta-viajera-6to-2022 (5).jpg" class="image"></a>
+</div>
+      </div>
+      
+	   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/Maleta-viajera-6to-2022/Maleta-viajera-6to-2022 (6).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/Maleta-viajera-6to-2022/Maleta-viajera-6to-2022 (6).jpg" class="image"></a>
+</div>
+      </div>
+         <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/Maleta-viajera-6to-2022/Maleta-viajera-6to-2022 (7).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/Maleta-viajera-6to-2022/Maleta-viajera-6to-2022 (7).jpg" class="image"></a>
+</div>
+      </div>   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/Maleta-viajera-6to-2022/Maleta-viajera-6to-2022 (8).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/Maleta-viajera-6to-2022/Maleta-viajera-6to-2022 (8).jpg" class="image"></a>
+</div>
+      </div>   <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/Maleta-viajera-6to-2022/Maleta-viajera-6to-2022 (9).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/Maleta-viajera-6to-2022/Maleta-viajera-6to-2022 (9).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+<!--<a id="Button2" href="./CCSS-sistemaSolar02022022.php" style="display:inline-block;width:96px;height:25px;z-index:6;">Mas..</a>-->
+</div>
+</div>
+</div>
+</div>
+
+	<!--fin-->
+	
+	<div id="wb_LayoutGrid19">
+<div id="LayoutGrid19-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid19">
+<div class="row">
+<div class="col-1">
+<div id="Article10" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Estudiantes de 5to grado trabajando accidentes costeros a partir de tarjetas educativas </span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, October 01, 2021<br></div>
+   <br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Clase%20de%20DDM%20">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:5;">
+<div id="PhotoGallery16">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/accidente-costeros-5to-2022/accidente-costeros-5to-2022 (1).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/accidente-costeros-5to-2022/accidente-costeros-5to-2022 (1).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/accidente-costeros-5to-2022/accidente-costeros-5to-2022 (2).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/accidente-costeros-5to-2022/accidente-costeros-5to-2022 (2).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/accidente-costeros-5to-2022/accidente-costeros-5to-2022 (3).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/accidente-costeros-5to-2022/accidente-costeros-5to-2022 (3).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+	   
+	    <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/accidente-costeros-5to-2022/accidente-costeros-5to-2022 (4).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/accidente-costeros-5to-2022/accidente-costeros-5to-2022 (3).jpg" class="image"></a>
+</div>
+      </div>  <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/accidente-costeros-5to-2022/accidente-costeros-5to-2022 (4).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/accidente-costeros-5to-2022/accidente-costeros-5to-2022 (3).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+<!--<a id="Button2" href="./CCSS-sistemaSolar02022022.php" style="display:inline-block;width:96px;height:25px;z-index:6;">Mas..</a>-->
+</div>
+</div>
+</div>
+</div>
+	
+	<!--fin-->
+	
+	<div id="wb_LayoutGrid19">
+<div id="LayoutGrid19-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid19">
+<div class="row">
+<div class="col-1">
+<div id="Article10" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Sistema solar por alumnos de 4to grado B </span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, October 01, 2021<br></div>
+   <br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Clase%20de%20DDM%20">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:5;">
+<div id="PhotoGallery16">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/Sistema solar por 4toB/cs-sistema-solar4b (1).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/Sistema solar por 4toB/cs-sistema-solar4b (1).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/Sistema solar por 4toB/cs-sistema-solar4b (6).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/Sistema solar por 4toB/cs-sistema-solar4b (6).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/GEESS/Sistema solar por 4toB/cs-sistema-solar4b (2).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/GEESS/Sistema solar por 4toB/cs-sistema-solar4b (2).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+<a id="Button2" href="./CCSS-sistemaSolar02022022.php" style="display:inline-block;width:96px;height:25px;z-index:6;">Mas..</a>
+</div>
+</div>
+</div>
+</div>
+	<!--fin-->
+<div id="wb_LayoutGrid19">
+<div id="LayoutGrid19-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid19">
+<div class="row">
+<div class="col-1">
+<div id="Article10" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Clase de DDM </span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, October 01, 2021<br></div>
+   <span style="color:#000000;"><br>
+01/10/2021<br>
+Alumnos de 5to y 6to grado en clase de DDM en representación del cuido a la mujer y al varón, con el ideal de lograr equidad.</span><br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Clase%20de%20DDM%20">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery16" style="display:inline-block;width:100%;z-index:5;">
+<div id="PhotoGallery16">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/ddm5y601102021 (1).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/ddm5y601102021 (1).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/ddm5y601102021 (16).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/ddm5y601102021 (16).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/ddm5y601102021 (29).jpg" data-rel="PhotoGallery16"><img alt="" src="images/placeholder.gif" data-src="images/ddm5y601102021 (29).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+<a id="Button2" href="./DDMequidad01102021.php" style="display:inline-block;width:96px;height:25px;z-index:6;">Mas..</a>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid10">
+<div id="LayoutGrid10-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid10">
+<div class="row">
+<div class="col-1">
+<div id="Article9" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Stands Cultural de los 9nos Grados</span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Tuesday, July 06, 2021<br></div>
+   <span style="color:#000080;"><br>
+</span><br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Stands%20Cultural%20de%20los%209nos%20Grados">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_LayoutGrid12">
+<div id="LayoutGrid12">
+<div class="row">
+<div class="col-1">
+<div id="wb_Card5" style="display:flex;width:100%;text-align:center;z-index:7;">
+   <div id="Card5-card-body">
+      <div id="Card5-card-item0">9no A</div>
+      <a href="./Stands9noA.html"><img id="Card5-card-item1" src="images/Stands9noa (2).jpg" alt="" title=""></a>
+   </div>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Card4" style="display:flex;width:100%;text-align:center;z-index:8;">
+   <div id="Card4-card-body">
+      <div id="Card4-card-item0">9no B</div>
+      <a href="./Stands9noB.html"><img id="Card4-card-item1" src="images/Stands9noB (7).jpg" alt="" title=""></a>
+   </div>
+</div>
+</div>
+<div class="col-3">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid8">
+<div id="LayoutGrid8-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid8">
+<div class="row">
+<div class="col-1">
+<div id="Article8" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Stands Cultural de los 8vos Grados</span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Tuesday, July 06, 2021<br></div>
+   <span style="color:#000080;"><br>
+</span><br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Stands%20Cultural%20de%20los%208vos%20Grados">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_LayoutGrid9">
+<div id="LayoutGrid9">
+<div class="row">
+<div class="col-1">
+<div id="wb_Card2" style="display:flex;width:100%;text-align:center;z-index:11;">
+   <div id="Card2-card-body">
+      <div id="Card2-card-item0">8vo A</div>
+      <a href="./Stands8voA.html"><img id="Card2-card-item1" src="images/stands8voA (1).jpeg" alt="" title=""></a>
+   </div>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Card1" style="display:flex;width:100%;text-align:center;z-index:12;">
+   <div id="Card1-card-body">
+      <div id="Card1-card-item0">8vo B</div>
+      <a href="./Stands8voB.html"><img id="Card1-card-item1" src="images/stands8voB (2).jpg" alt="" title=""></a>
+   </div>
+</div>
+</div>
+<div class="col-3">
+<div id="wb_Card3" style="display:flex;width:100%;text-align:center;z-index:13;">
+   <div id="Card3-card-body">
+      <div id="Card3-card-item0">8vo C</div>
+      <a href="./Stands8voC.html"><img id="Card3-card-item1" src="images/Stands8voC (11).jpg" alt="" title=""></a>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid7">
+<div id="LayoutGrid7-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid7">
+<div class="row">
+<div class="col-1">
+<div id="Article7" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Stands Cultural de los 7mos Grados</span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Tuesday, July 06, 2021<br></div>
+   <span style="color:#000080;"><br>
+</span><br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Stands%20Cultural%20de%20los%207mos%20Grados">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_LayoutGrid11">
+<div id="LayoutGrid11">
+<div class="row">
+<div class="col-1">
+<div id="wb_Card22" style="display:flex;width:100%;text-align:center;z-index:16;">
+   <div id="Card22-card-body">
+      <div id="Card22-card-item0">7mo A</div>
+      <a href="./Stands7moA.html"><img id="Card22-card-item1" src="images/standas7moa (23).jpg" alt="" title=""></a>
+   </div>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Card26" style="display:flex;width:100%;text-align:center;z-index:17;">
+   <div id="Card26-card-body">
+      <div id="Card26-card-item0">7mo B</div>
+      <a href="./Stands7moB.html" class="stretched-link"><img id="Card26-card-item1" src="images/Stands7mob (1).jpg" alt="" title=""></a>
+   </div>
+</div>
+</div>
+<div class="col-3">
+<div id="wb_Card24" style="display:flex;width:100%;text-align:center;z-index:18;">
+   <div id="Card24-card-body">
+      <div id="Card24-card-item0">7mo C</div>
+      <a href="./Stands7moC.html"><img id="Card24-card-item1" src="images/stands7moC (29).jpg" alt="" title=""></a>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid6">
+<div id="LayoutGrid6-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid6">
+<div class="row">
+<div class="col-1">
+<div id="Article6" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Certamen de oratoria 11mo Grado</span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Friday, August 20, 2021<br></div>
+   <span style="color:#000080;"><br>
+20/08/2021</span><br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Certamen%20de%20oratoria%2011mo%20Grado">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery5" style="display:inline-block;width:100%;z-index:22;">
+<div id="PhotoGallery5">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (1).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (1).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (2).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (2).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (3).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (3).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (4).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (4).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (5).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (5).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (6).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (6).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (7).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (7).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (8).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (8).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (9).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (9).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (10).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (10).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (11).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (11).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (12).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (12).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (13).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (13).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (14).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (14).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (15).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (15).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (16).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (16).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (17).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (17).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (18).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (18).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (19).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (19).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (20).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (20).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (21).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (21).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (22).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (22).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (23).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (23).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (24).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (24).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (25).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (25).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (26).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (26).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (27).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (27).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (28).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (28).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (29).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (29).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (30).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (30).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (31).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (31).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (32).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (32).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (33).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (33).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (34).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (34).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (35).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (35).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (36).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (36).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (37).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (37).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (38).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (38).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (39).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (39).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (40).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (40).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (41).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (41).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (42).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (42).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (43).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (43).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (44).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (44).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (45).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (45).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (46).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (46).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (47).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (47).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (48).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (48).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria11moG (49).jpg" data-rel="PhotoGallery5"><img alt="" src="images/oratoria11moG (49).jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid5">
+<div id="LayoutGrid5-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid5">
+<div class="row">
+<div class="col-1">
+<div id="Article5" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Galería de lienzos </span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Thursday, August 19, 2021<br></div>
+   <span style="color:#000080;"><br>
+19/08/2021<br>
+Presentación de Galería de lienzos pintados por estudiantes de 6to Grado con el Tema: Expediciones Geográficas del siglo XV y XVI</span><br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Galería%20de%20lienzos%20">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery4" style="display:inline-block;width:100%;z-index:24;">
+<div id="PhotoGallery4">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0014.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0014.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0015.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0015.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0016.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0016.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0017.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0017.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0018.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0018.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0019.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0019.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0020.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0020.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0021.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0021.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0022.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0022.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0023.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0023.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0024.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0024.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0025.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0025.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0026.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0026.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0027.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0027.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0028.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0028.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0029.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0029.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0030.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0030.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0031.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0031.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0032.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0032.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0033.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0033.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0034.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0034.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0035.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0035.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0036.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0036.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0037.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0037.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/IMG-20210819-WA0038.jpg" data-rel="PhotoGallery4"><img alt="" src="images/IMG-20210819-WA0038.jpg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid4">
+<div id="LayoutGrid4-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid4">
+<div class="row">
+<div class="col-1">
+<div id="Article3" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Baile de palo de mayo por alumnos 7mo C</span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Wednesday, August 18, 2021<br></div>
+   <span style="color:#000000;"><br>
+18/08/2021</span><br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Baile%20de%20palo%20de%20mayo%20por%20alumnos%207mo%20C">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_YouTube1" style="display:inline-block;width:100%;z-index:26;">
+<iframe id="YouTube1" src="https://www.youtube.com/embed/UZIIWyjAfnE?rel=1&amp;autoplay=0&amp;autohide=0"></iframe>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid3">
+<div id="LayoutGrid3-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid3">
+<div class="row">
+<div class="col-1">
+<div id="Article2" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Legado Colonial</span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Tuesday, July 06, 2021<br></div>
+   <span style="color:#000080;"><br>
+Presentación del legado colonial por estudiantes de 5to grado</span><br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Legado%20Colonial">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery3" style="display:inline-block;width:100%;z-index:28;">
+<div id="PhotoGallery3">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (1).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (1).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (2).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (2).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (3).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (3).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (4).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (4).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (5).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (5).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (6).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (6).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (7).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (7).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (8).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (8).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (9).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (9).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (10).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (10).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (11).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (11).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (12).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (12).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (13).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (13).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (14).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (14).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (15).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (15).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (16).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (16).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (17).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (17).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (18).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (18).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (19).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (19).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (20).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (20).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (21).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (21).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (22).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (22).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (23).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (23).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (24).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (24).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (25).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (25).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/legadoColonial06082021 (26).jpeg" data-rel="PhotoGallery3"><img alt="" src="images/legadoColonial06082021 (26).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid2">
+<div id="LayoutGrid2-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid2">
+<div class="row">
+<div class="col-1">
+<div id="Article1" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Relieve de los Continentes</span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Thursday, June 10, 2021<br></div>
+   <span style="color:#000080;"><br>
+Estudiantes de 6to Grado realizaron relieves de los continentes</span><br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Relieve%20de%20los%20Continentes">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery1" style="display:inline-block;width:100%;z-index:33;">
+<div id="PhotoGallery1">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (1).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (1).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (2).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (2).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (3).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (3).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (4).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (4).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (5).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (5).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (6).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (6).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (7).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (7).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (8).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (8).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (9).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (9).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (10).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (10).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (11).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (11).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (12).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (12).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (13).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (13).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (14).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (14).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (15).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (15).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (16).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (16).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (17).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (17).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (18).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (18).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (19).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (19).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (20).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (20).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (21).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (21).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (22).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (22).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (23).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (23).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (24).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (24).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (25).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (25).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (26).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (26).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/relieveContinentes (27).jpeg" data-rel="PhotoGallery1"><img alt="" src="images/relieveContinentes (27).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid1">
+<div id="LayoutGrid1-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="LayoutGrid1">
+<div class="row">
+<div class="col-1">
+<div id="Article4" style="overflow:hidden;">
+<div class="blogitem">
+   <span class="blogsubject">Certamen de Oratoria</span>
+   <div class="no-thumb"></div>
+   <div class="blogdate">Thursday, June 10, 2021<br></div>
+   <span style="color:#000080;"><br>
+Alumnos de 8vo grado participaron en el Certamen de Oratoria relizado este 10 de juno del 2021</span><br>
+   <div class="blogcomments"><a href="mailto:mail@yourwebsite.com?subject=Certamen%20de%20Oratoria">Send Comments</a></div>
+</div>
+<div class="clearfix visible-col1"></div>
+</div>
+<div id="wb_PhotoGallery2" style="display:inline-block;width:100%;z-index:35;">
+<div id="PhotoGallery2">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (1).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (1).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (2).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (2).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (3).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (3).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (4).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (4).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (5).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (5).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (6).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (6).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (7).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (7).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (8).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (8).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (9).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (9).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (10).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (10).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (11).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (11).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (12).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (12).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (13).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (13).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (14).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (14).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (15).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (15).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (16).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (16).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (17).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (17).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (18).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (18).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (19).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (19).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (20).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (20).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (21).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (21).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (22).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (22).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (23).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (23).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (24).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (24).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (25).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (25).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (26).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (26).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (27).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (27).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (28).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (28).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (29).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (29).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (30).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (30).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (31).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (31).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (32).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (32).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (33).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (33).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/oratoria8voGCEMB (34).jpeg" data-rel="PhotoGallery2"><img alt="" src="images/oratoria8voGCEMB (34).jpeg" class="image"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_Footer">
+<div id="Footer">
+<div class="row">
+<div class="col-1">
+<div id="wb_FontAwesomeIcon3" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:36;">
+<a href="https://www.facebook.com/cemanticaberio" target="_blank"><div id="FontAwesomeIcon3"><i class="fa fa-facebook"></i></div></a>
+</div>
+<div id="wb_FontAwesomeIcon11" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:37;">
+<a href="https://www.youtube.com/channel/UCAhJcrp_RsEv7Kz6uIQGPhg" target="_blank" title="Canal CEMB"><div id="FontAwesomeIcon11"><i class="fa fa-youtube"></i></div></a>
+</div>
+<div id="wb_IconFont1" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:38;">
+<a href="https://www.youtube.com/channel/UCwOuGJLlY5TBDs2xTcmWMPw" target="_blank" title="Canal Educacion Inicial"><div id="IconFont1"><i class="fa fa-youtube-play"></i></div></a>
+</div>
+<div id="wb_Text17">
+<span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:20px;">Dirección:<br></span><span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:15px;">Km 132 Carretera a Somotillo. Chinandega.<br></span><span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:20px;">Teléfono:<br>505-2341-2923<br>E-mail:<br></span><span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:15px;">m.callejas@manticaberio.edu.ni</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_copyright">
+<div id="copyright">
+<div class="row">
+<div class="col-1">
+<div id="wb_Text12">
+<span style="color:#FFFFFF;font-family:Arial;font-size:13px;">Copyright © CEMB 2021. All right reserved. </span>
+</div>
+<!-- POPUP -->
+<div id="Html3" style="display:none;width:35px;height:24px;z-index:41">
+<div class="modal" id="window-notice">
+    <div class="content">
+        <div class="content-text"><a href="https://youtu.be/d_hLZyJt48E">
+<img src="http://www.manticaberio.edu.ni/assets/avisomatricula2021-640x480.jpg" width="100%"/></a>
+          </div>
+        <button class="btncerrar">
+        <span>Cerrar</span>
+        </button>
+    </div>
+</div>
+
+
+
+<script>
+    $(document).ready(function(){
+	
+	$(".modal").fadeIn();
+	
+	$(".btncerrar").click(function(){
+		
+		$(".modal").fadeOut(300);
+		
+	});
+
+});
+</script></div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
