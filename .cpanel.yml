@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/cemb21/public_html/
-    - /bin/rsync -av --exclude='.git' $TRAVIS_BUILD_DIR/ $DEPLOYPATH
+    - /bin/rsync -av --exclude='.git' --exclude='.cpanel.yml' /home/cemb21/repositories/cembwebsite/ 
+/home/cemb21/public_html/
