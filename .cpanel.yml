@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/cemb21/public_html/
+    - export DEPLOYPATH=/home/cemb21/public_html/test/
     - /bin/cp -R /home/cemb21/repositories/cembwebsite/. $DEPLOYPATH
