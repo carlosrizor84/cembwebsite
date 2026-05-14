@@ -38,7 +38,7 @@ const menuHTML = `
 <div class="ThemeableMenu1-navbar-collapse collapse">
 <ul class="nav navbar-nav">
 <li class="nav-item">
-<a href="./index.html" class="nav-link">Inicio</a>
+<a href="../index.html" class="nav-link">Inicio</a>
 </li>
 <li class="nav-item dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Nosotros<b class="caret"></b></a>
@@ -178,10 +178,27 @@ function loadMenu() {
     // Paso 2: Verificar que el contenedor existe
     // Si no existe, significa que la página no tiene el menú centralizado
     if (menuContainer) {
+        // Detectar si estamos en la raíz o en la carpeta html/
+        // Si la URL actual contiene /html/, estamos dentro de la carpeta html
+        const isInHtmlFolder = window.location.pathname.includes('/html/');
+        
+        // Ajustar las rutas según la ubicación
+        let adjustedMenuHTML = menuHTML;
+        if (isInHtmlFolder) {
+            // Estamos en html/, las rutas ./ funcionan para archivos en html/
+            // Solo necesitamos ajustar index.html que está en la raíz
+            adjustedMenuHTML = menuHTML.replace(/\.\.\/index\.html/g, '../index.html');
+        } else {
+            // Estamos en la raíz, necesitamos agregar html/ a las rutas
+            adjustedMenuHTML = menuHTML
+                .replace(/\.\.\/index\.html/g, 'index.html')
+                .replace(/\.\//g, 'html/');
+        }
+        
         // Paso 3: Reemplazar el contenedor vacío con el HTML completo del menú
         // outerHTML reemplaza el elemento completo (incluyendo el contenedor)
-        // con el contenido de menuHTML
-        menuContainer.outerHTML = menuHTML;
+        // con el contenido de menuHTML ajustado
+        menuContainer.outerHTML = adjustedMenuHTML;
         
         // ============================================================================
         // INICIALIZACIÓN DE DROPDOWNS DE BOOTSTRAP
