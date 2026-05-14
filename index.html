@@ -4,435 +4,372 @@
 
 <head>
 
-<meta charset="utf-8">
+   <meta charset="utf-8">
 
-<title>CEMB</title>
+   <title>CEMB</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="insignia2_small.png" rel="icon" sizes="150x150" type="image/png">
+   <link href="insignia2_small.png" rel="icon" sizes="150x150" type="image/png">
 
-<link href="font-awesome.min.css" rel="stylesheet">
+   <link href="font-awesome.min.css" rel="stylesheet">
 
-<link href="CEMB.css" rel="stylesheet">
+   <link href="css/CEMB.css" rel="stylesheet">
 
-<link href="index.css" rel="stylesheet">
+   <link href="css/index.css" rel="stylesheet">
 
-<script src="jquery-1.12.4.min.js"></script>
+   <script src="js/jquery-1.12.4.min.js"></script>
 
-<script src="wb.lazyload.min.js"></script>
+   <script src="js/wb.lazyload.min.js"></script>
 
-<script src="jquery-ui.min.js"></script>
+   <script src="js/jquery-ui.min.js"></script>
 
-<script src="popper.min.js"></script>
+   <script src="js/popper.min.js"></script>
 
-<script src="util.min.js"></script>
+   <script src="js/util.min.js"></script>
 
-<script src="collapse.min.js"></script>
+   <script src="js/collapse.min.js"></script>
 
-<script src="dropdown.min.js"></script>
+   <script src="js/dropdown.min.js"></script>
 
-<script src="owl.carousel.min.js"></script>
+   <script src="js/owl.carousel.min.js"></script>
 
-<script src="wb.stickylayer.min.js"></script>
+   <script src="js/wb.stickylayer.min.js"></script>
 
-<link rel="stylesheet" href="cookiepolicy/cookiepolicy.css">
+   <link rel="stylesheet" href="css/cookiepolicy/cookiepolicy.css">
 
-<script src="cookiepolicy/cookiepolicy.js"></script>
+   <script src="js/cookiepolicy/cookiepolicy.js"></script>
 
-<script src="wwb16.min.js"></script>`n<script src="../js/menu.js"></script>
+   <script src="wwb16.min.js"></script>`n
+   <script src="../js/menu.js"></script>
 
-<script>
+   <script>
 
-$(document).ready(function()
+      $(document).ready(function () {
 
-{
+         $('#wb_FontAwesomeIcon3').addClass('visibility-hidden');
 
-   $('#wb_FontAwesomeIcon3').addClass('visibility-hidden');
+         $('#wb_FontAwesomeIcon4').addClass('visibility-hidden');
 
-	$('#wb_FontAwesomeIcon4').addClass('visibility-hidden');
+         $('#wb_FontAwesomeIcon11').addClass('visibility-hidden');
 
-   $('#wb_FontAwesomeIcon11').addClass('visibility-hidden');
+         $('#HeadingCEMB').addClass('visibility-hidden');
 
-   $('#HeadingCEMB').addClass('visibility-hidden');
+         $('#wb_IconFont1').addClass('visibility-hidden');
 
-   $('#wb_IconFont1').addClass('visibility-hidden');
+         function onScrollPageHeaderDividerTop() {
 
-   function onScrollPageHeaderDividerTop()
+            var $obj = $('#PageHeader-divider-top');
 
-   {
+            if (!$obj.hasClass('show') && $obj.inViewPort(false)) {
 
-      var $obj = $('#PageHeader-divider-top');
+               $obj.addClass('show');
 
-      if (!$obj.hasClass('show') && $obj.inViewPort(false))
+            }
 
-      {
+         }
 
-         $obj.addClass('show');
+         onScrollPageHeaderDividerTop();
 
-      }
+         $(window).scroll(function (event) {
 
-   }
+            onScrollPageHeaderDividerTop();
 
-   onScrollPageHeaderDividerTop();
+         });
 
-   $(window).scroll(function(event)
+         $("a[href*='#header']").click(function (event) {
 
-   {
+            event.preventDefault();
 
-      onScrollPageHeaderDividerTop();
+            $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutSine');
 
-   });
+         });
 
-   $("a[href*='#header']").click(function(event)
+         $("a[href*='#intro']").click(function (event) {
 
-   {
+            event.preventDefault();
 
-      event.preventDefault();
+            $('html, body').stop().animate({ scrollTop: $('#intro').offset().top }, 600, 'easeOutQuad');
 
-      $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutSine');
+         });
 
-   });
+         $("a[href*='#infoBlock1']").click(function (event) {
 
-   $("a[href*='#intro']").click(function(event)
+            event.preventDefault();
 
-   {
+            $('html, body').stop().animate({ scrollTop: $('#wb_infoBlock1').offset().top }, 600, 'easeOutSine');
 
-      event.preventDefault();
+         });
 
-      $('html, body').stop().animate({ scrollTop: $('#intro').offset().top }, 600, 'easeOutQuad');
+         function onScrollFontAwesomeIcon4() {
 
-   });
+            var $obj = $("#wb_FontAwesomeIcon4");
 
-   $("a[href*='#infoBlock1']").click(function(event)
+            if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false)) {
 
-   {
+               $obj.addClass("in-viewport");
 
-      event.preventDefault();
+               AnimateCss('wb_FontAwesomeIcon4', 'transform-lightspeed-in', 100, 1000);
 
-      $('html, body').stop().animate({ scrollTop: $('#wb_infoBlock1').offset().top }, 600, 'easeOutSine');
+            }
 
-   });
+         }
 
-	function onScrollFontAwesomeIcon4()
+         onScrollFontAwesomeIcon4();
 
-   {
+         $(window).scroll(function (event) {
 
-      var $obj = $("#wb_FontAwesomeIcon4");
+            onScrollFontAwesomeIcon4();
 
-      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         });
 
-      {
+         function onScrollFontAwesomeIcon3() {
 
-         $obj.addClass("in-viewport");
+            var $obj = $("#wb_FontAwesomeIcon3");
 
-         AnimateCss('wb_FontAwesomeIcon4', 'transform-lightspeed-in', 100, 1000);
+            if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false)) {
 
-      }
+               $obj.addClass("in-viewport");
 
-   }
+               AnimateCss('wb_FontAwesomeIcon3', 'transform-lightspeed-in', 100, 1000);
 
-   onScrollFontAwesomeIcon4();
+            }
 
-   $(window).scroll(function(event)
+         }
 
-   {
+         onScrollFontAwesomeIcon3();
 
-      onScrollFontAwesomeIcon4();
+         $(window).scroll(function (event) {
 
-   });
+            onScrollFontAwesomeIcon3();
 
-   function onScrollFontAwesomeIcon3()
+         });
 
-   {
+         function onScrollFontAwesomeIcon11() {
 
-      var $obj = $("#wb_FontAwesomeIcon3");
+            var $obj = $("#wb_FontAwesomeIcon11");
 
-      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+            if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false)) {
 
-      {
+               $obj.addClass("in-viewport");
 
-         $obj.addClass("in-viewport");
+               AnimateCss('wb_FontAwesomeIcon11', 'transform-lightspeed-in', 400, 1000);
 
-         AnimateCss('wb_FontAwesomeIcon3', 'transform-lightspeed-in', 100, 1000);
+            }
 
-      }
+         }
 
-   }
+         onScrollFontAwesomeIcon11();
 
-   onScrollFontAwesomeIcon3();
+         $(window).scroll(function (event) {
 
-   $(window).scroll(function(event)
+            onScrollFontAwesomeIcon11();
 
-   {
+         });
 
-      onScrollFontAwesomeIcon3();
+         function onScrollHeading6() {
 
-   });
+            var $obj = $("#wb_Heading6");
 
-   function onScrollFontAwesomeIcon11()
+            if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false)) {
 
-   {
+               $obj.addClass("in-viewport");
 
-      var $obj = $("#wb_FontAwesomeIcon11");
+               AnimateCss('HeadingCEMB', 'vanish-in', 100, 1000);
 
-      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+            }
 
-      {
+            else
 
-         $obj.addClass("in-viewport");
+               if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true)) {
 
-         AnimateCss('wb_FontAwesomeIcon11', 'transform-lightspeed-in', 400, 1000);
+                  $obj.removeClass("in-viewport");
 
-      }
+                  AnimateCss('HeadingCEMB', 'animate-fade-out', 0, 0);
 
-   }
+               }
 
-   onScrollFontAwesomeIcon11();
+         }
 
-   $(window).scroll(function(event)
+         if (!$('#wb_Heading6').inViewPort(true)) {
 
-   {
+            $('#wb_Heading6').addClass("in-viewport");
 
-      onScrollFontAwesomeIcon11();
+         }
 
-   });
+         onScrollHeading6();
 
-   function onScrollHeading6()
+         $(window).scroll(function (event) {
 
-   {
+            onScrollHeading6();
 
-      var $obj = $("#wb_Heading6");
+         });
 
-      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         $('#ThemeableMenu1 .dropdown-toggle').dropdown({ popperConfig: { placement: 'bottom-start', modifiers: { computeStyle: { gpuAcceleration: false } } } });
 
-      {
+         $(document).on('click', '.ThemeableMenu1-navbar-collapse.show', function (e) {
 
-         $obj.addClass("in-viewport");
+            if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) {
 
-         AnimateCss('HeadingCEMB', 'vanish-in', 100, 1000);
+               $(this).collapse('hide');
 
-      }
+            }
 
-      else
+         });
 
-      if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         if ($.cookie('Anuncio') == null) {
 
-      {
+            $.gritter.add(
 
-         $obj.removeClass("in-viewport");
+               {
 
-         AnimateCss('HeadingCEMB', 'animate-fade-out', 0, 0);
+                  title: 'Evento Próximo',
 
-      }
+                  text: 'Revisa la sección del evento en los siguientes link.<br><a  href="./Noticias.html" style="color:#008080">Noticias</a><br><a  href="./Circulares.html" style="color:#008080">Circulares</a><br><a  href="./Crono-Acti-Evaluativas.html" style="color:#008080">Cronogramas AE</a>',
 
-   }
+                  sticky: false,
 
-   if (!$('#wb_Heading6').inViewPort(true))
+                  class_name: 'gritter-light',
 
-   {
+                  time: 10000
 
-      $('#wb_Heading6').addClass("in-viewport");
+               });
 
-   }
+            $('a.check').on('click', function () {
 
-   onScrollHeading6();
+               var timestamp = (new Date()).getTime();
 
-   $(window).scroll(function(event)
+               $.cookie('Anuncio', timestamp, { expires: new Date(timestamp + (31536000 * 1000)), path: '/' });
 
-   {
+               $('#gritter-notice-wrapper').fadeOut("slow");
 
-      onScrollHeading6();
+            });
 
-   });
+         }
 
-   $('#ThemeableMenu1 .dropdown-toggle').dropdown({popperConfig:{placement:'bottom-start',modifiers:{computeStyle:{gpuAcceleration:false}}}});
+         function onScrollIconFont1() {
 
-   $(document).on('click','.ThemeableMenu1-navbar-collapse.show',function(e)
+            var $obj = $("#wb_IconFont1");
 
-   {
+            if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false)) {
 
-      if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+               $obj.addClass("in-viewport");
 
-      {
+               AnimateCss('wb_IconFont1', 'transform-lightspeed-in', 400, 1000);
 
-         $(this).collapse('hide');
+            }
 
-      }
+         }
 
-   });
+         onScrollIconFont1();
 
-if ($.cookie('Anuncio') == null) 
+         $(window).scroll(function (event) {
 
-{
+            onScrollIconFont1();
 
-   $.gritter.add(
+         });
 
-   {
+         $("#Layer1").stickylayer({ orientation: 4, position: [0, 0], delay: 500 });
 
-      title: 'Evento Próximo',
+         $("#Layerpesame").stickylayer({ orientation: 4, position: [0, 100], delay: 500 });
 
-      text: 'Revisa la sección del evento en los siguientes link.<br><a  href="./Noticias.html" style="color:#008080">Noticias</a><br><a  href="./Circulares.html" style="color:#008080">Circulares</a><br><a  href="./Crono-Acti-Evaluativas.html" style="color:#008080">Cronogramas AE</a>',
+         $("#Layer2").stickylayer({ orientation: 4, position: [0, 200], delay: 500 });
 
-      sticky: false,
+         $('img[data-src]').lazyload();
 
-      class_name: 'gritter-light',
+         $(window).on('resize', function () {
 
-      time: 10000
+            ResponsiveVideo('intro-video');
 
-   });
+         });
 
-   $('a.check').on('click', function() 
+         ResponsiveVideo('intro-video');
 
-   {
+      });
 
-      var timestamp = (new Date()).getTime();
+   </script>
 
-      $.cookie('Anuncio', timestamp, { expires: new Date(timestamp + (31536000 * 1000)), path: '/'});
+   <script>
 
-      $('#gritter-notice-wrapper').fadeOut("slow");
+      $(document).ready(function () {
 
-   });
+         function waitForItUpdate() {
 
-} 
+            // change the date here
 
-   function onScrollIconFont1()
+            var dateFuture = new Date("July 27, 2021 06:45:00");
 
-   {
+            var dateNow = new Date();
 
-      var $obj = $("#wb_IconFont1");
+            var seconds = Math.floor((dateFuture - (dateNow)) / 1000);
 
-      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+            var minutes = Math.floor(seconds / 60);
 
-      {
+            var hours = Math.floor(minutes / 60);
 
-         $obj.addClass("in-viewport");
+            var days = Math.floor(hours / 24);
 
-         AnimateCss('wb_IconFont1', 'transform-lightspeed-in', 400, 1000);
 
-      }
 
-   }
+            hours = Math.round(hours - (days * 24));
 
-   onScrollIconFont1();
+            minutes = Math.round(minutes - (days * 24 * 60) - (hours * 60));
 
-   $(window).scroll(function(event)
+            seconds = Math.round(seconds - (days * 24 * 60 * 60) - (hours * 60 * 60) - (minutes * 60));
 
-   {
 
-      onScrollIconFont1();
 
-   });
+            $('#waitForItDays').html(days);
 
-   $("#Layer1").stickylayer({orientation: 4, position: [0, 0], delay: 500});
+            $('#waitForItHours').html(hours);
 
-   $("#Layerpesame").stickylayer({orientation: 4, position: [0, 100], delay: 500});
+            $('#waitForItMinutes').html(minutes);
 
-   $("#Layer2").stickylayer({orientation: 4, position: [0, 200], delay: 500});
+            $('#waitForItSeconds').html(seconds);
 
-   $('img[data-src]').lazyload();
+         }
 
-   $(window).on('resize', function()
+         waitForItUpdate();
 
-   {
+         setInterval(waitForItUpdate, 1000);
 
-      ResponsiveVideo('intro-video');
+      });
 
-   });
+   </script>
 
-   ResponsiveVideo('intro-video');
+   <script>
 
-});
+      $(document).ready(function () {
 
-</script>
+         $('#wb_Carousel2').owlCarousel({ margin: 10, stagePadding: 10, autoplay: true, rewind: true, dotsEach: true, responsive: { 0: { items: 1 }, 480: { items: 3 }, 768: { items: 4 }, 970: { items: 5 } } });
 
-<script>
+      });
 
-$(document).ready(function()
+   </script>
 
-{
 
-   function waitForItUpdate()
 
-   {
 
-      // change the date here
 
-      var dateFuture = new Date("July 27, 2021 06:45:00");
+   <!-- Start of Async Callbell Code -->
 
-      var dateNow = new Date();
+   <script>
 
-      var seconds = Math.floor((dateFuture - (dateNow))/1000);
+      window.callbellSettings = {
 
-      var minutes = Math.floor(seconds/60);
+         token: "6ATFgBR4DnXFW75qn9GDfWX1"
 
-      var hours = Math.floor(minutes/60);
+      };
 
-      var days = Math.floor(hours/24);
+   </script>
 
+   <script>
 
+      (function () { var w = window; var ic = w.callbell; if (typeof ic === "function") { ic('reattach_activator'); ic('update', callbellSettings); } else { var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Callbell = i; var l = function () { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://dash.callbell.eu/include/' + window.callbellSettings.token + '.js'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); }; if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })()
 
-      hours = Math.round(hours-(days*24));
+   </script>
 
-      minutes = Math.round(minutes-(days*24*60)-(hours*60));
-
-      seconds = Math.round(seconds-(days*24*60*60)-(hours*60*60)-(minutes*60));
-
-                                 
-
-      $('#waitForItDays').html(days);
-
-      $('#waitForItHours').html(hours);
-
-      $('#waitForItMinutes').html(minutes);
-
-      $('#waitForItSeconds').html(seconds);   
-
-   }
-
-   waitForItUpdate();
-
-   setInterval(waitForItUpdate, 1000);
-
-});
-
-</script>
-
-<script>
-
-$(document).ready(function()
-
-{
-
-  $('#wb_Carousel2').owlCarousel( { margin: 10, stagePadding: 10, autoplay: true, rewind: true, dotsEach: true, responsive : { 0: { items : 1 }, 480: { items : 3}, 768: { items : 4}, 970: { items : 5}}});
-
-});
-
-</script>
-
-
-
-
-
-<!-- Start of Async Callbell Code -->
-
-<script>
-
-  window.callbellSettings = {
-
-    token: "6ATFgBR4DnXFW75qn9GDfWX1"
-
-  };
-
-</script>
-
-<script>
-
-  (function(){var w=window;var ic=w.callbell;if(typeof ic==="function"){ic('reattach_activator');ic('update',callbellSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Callbell=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://dash.callbell.eu/include/'+window.callbellSettings.token+'.js';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
-
-</script>
-
-<!-- End of Async Callbell Code -->
+   <!-- End of Async Callbell Code -->
 
 </head>
 
@@ -442,451 +379,521 @@ $(document).ready(function()
 
 
 
-<div id="wb_PageHeader">
+   <div id="wb_PageHeader">
 
-<div id="PageHeader-divider-top">
+      <div id="PageHeader-divider-top">
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
 
-<path class="divider-fill" d="M66.709,62.141C63.674,62.141 62.115,50.388 60.619,37.105C62.048,29.579 63.814,24.051 66.352,24.051C69.374,24.051 71.362,33.025 73.031,44.299C71.577,51.437 70.374,62.141 66.709,62.141ZM41.114,57.818C40.604,57.416 40.051,57.19 39.441,57.19C33.91,57.19 32.305,76.639 28.938,82.663C30.102,85.32 31.71,87.871 33.333,87.871C36.993,87.87 39.088,73.872 41.114,57.818z" style="fill-opacity:0.3;"/>
+            <path class="divider-fill"
+               d="M66.709,62.141C63.674,62.141 62.115,50.388 60.619,37.105C62.048,29.579 63.814,24.051 66.352,24.051C69.374,24.051 71.362,33.025 73.031,44.299C71.577,51.437 70.374,62.141 66.709,62.141ZM41.114,57.818C40.604,57.416 40.051,57.19 39.441,57.19C33.91,57.19 32.305,76.639 28.938,82.663C30.102,85.32 31.71,87.871 33.333,87.871C36.993,87.87 39.088,73.872 41.114,57.818z"
+               style="fill-opacity:0.3;" />
 
-<path class="divider-fill" d="M51.832,78.336C46.587,78.336 45.555,61.319 41.114,57.818C44.303,32.539 46.669,0 52.006,0C56.839,0 58.676,19.844 60.619,37.105C57.568,53.167 56.051,78.336 51.832,78.336ZM17.005,67.259C21.378,67.259 21.89,84.421 26.875,84.421C27.646,84.421 28.321,83.766 28.938,82.663C24.471,72.464 22.587,44.705 18.018,44.705C11.998,44.705 10.296,82.492 6.25,82.492C3.124,82.492 1.562,73.774 -0.001,61.416L-0.001,73.421C1.562,81.2 3.342,90.679 6.468,90.679C12.718,90.679 12.39,67.259 17.005,67.259ZM94.15,31.54C89.658,31.54 89.31,66.348 84.772,66.348C80.584,66.348 80.104,38.746 75.741,38.746C74.548,38.746 73.758,40.729 73.031,44.299C75.851,63.352 77.758,88.979 82.198,88.979C87.608,88.979 88.132,57.865 93.758,57.865C96.867,57.865 98.444,65.681 99.999,73.42L99.999,61.416C98.444,49.122 97.26,31.54 94.15,31.54z" style="fill-opacity:0.5;"/>
+            <path class="divider-fill"
+               d="M51.832,78.336C46.587,78.336 45.555,61.319 41.114,57.818C44.303,32.539 46.669,0 52.006,0C56.839,0 58.676,19.844 60.619,37.105C57.568,53.167 56.051,78.336 51.832,78.336ZM17.005,67.259C21.378,67.259 21.89,84.421 26.875,84.421C27.646,84.421 28.321,83.766 28.938,82.663C24.471,72.464 22.587,44.705 18.018,44.705C11.998,44.705 10.296,82.492 6.25,82.492C3.124,82.492 1.562,73.774 -0.001,61.416L-0.001,73.421C1.562,81.2 3.342,90.679 6.468,90.679C12.718,90.679 12.39,67.259 17.005,67.259ZM94.15,31.54C89.658,31.54 89.31,66.348 84.772,66.348C80.584,66.348 80.104,38.746 75.741,38.746C74.548,38.746 73.758,40.729 73.031,44.299C75.851,63.352 77.758,88.979 82.198,88.979C87.608,88.979 88.132,57.865 93.758,57.865C96.867,57.865 98.444,65.681 99.999,73.42L99.999,61.416C98.444,49.122 97.26,31.54 94.15,31.54z"
+               style="fill-opacity:0.5;" />
 
-<path class="divider-fill" d="M82.198,88.979C77.757,88.979 75.851,63.353 73.031,44.299C71.577,51.437 70.374,62.141 66.709,62.141C63.674,62.141 62.115,50.388 60.619,37.105C57.568,53.167 56.05,78.336 51.832,78.336C46.587,78.336 45.555,61.319 41.113,57.818C39.088,73.871 36.862,87.87 33.202,87.87C31.578,87.87 30.102,85.32 28.938,82.662C28.321,83.766 27.645,84.42 26.875,84.42C21.89,84.42 21.378,67.259 17.005,67.259C12.39,67.259 12.674,90.634 6.424,90.634C3.298,90.634 1.562,81.199 -0.001,73.419L-0.001,100L99.999,100L99.999,73.42C98.444,65.681 96.867,57.865 93.758,57.865C88.132,57.865 87.608,88.979 82.198,88.979z"/>
+            <path class="divider-fill"
+               d="M82.198,88.979C77.757,88.979 75.851,63.353 73.031,44.299C71.577,51.437 70.374,62.141 66.709,62.141C63.674,62.141 62.115,50.388 60.619,37.105C57.568,53.167 56.05,78.336 51.832,78.336C46.587,78.336 45.555,61.319 41.113,57.818C39.088,73.871 36.862,87.87 33.202,87.87C31.578,87.87 30.102,85.32 28.938,82.662C28.321,83.766 27.645,84.42 26.875,84.42C21.89,84.42 21.378,67.259 17.005,67.259C12.39,67.259 12.674,90.634 6.424,90.634C3.298,90.634 1.562,81.199 -0.001,73.419L-0.001,100L99.999,100L99.999,73.42C98.444,65.681 96.867,57.865 93.758,57.865C88.132,57.865 87.608,88.979 82.198,88.979z" />
 
-</svg></div>
+         </svg>
+      </div>
 
-<div id="PageHeader">
+      <div id="PageHeader">
 
-<div class="row">
+         <div class="row">
 
-<div class="col-1">
+            <div class="col-1">
 
-<div id="wb_CEMB-INSIGNIA" style="display:inline-block;width:44px;height:45px;z-index:0;">
+               <div id="wb_CEMB-INSIGNIA" style="display:inline-block;width:44px;height:45px;z-index:0;">
 
-<a href="./index.html" onmouseover="AnimateCss('wb_CEMB-INSIGNIA', 'animate-flash', 0, 500);return false;"><img src="images/placeholder.gif" data-src="images/INSIGNIA2.png" id="CEMB-INSIGNIA" alt=""></a>
+                  <a href="./index.html"
+                     onmouseover="AnimateCss('wb_CEMB-INSIGNIA', 'animate-flash', 0, 500);return false;"><img
+                        src="images/placeholder.gif" data-src="images/INSIGNIA2.png" id="CEMB-INSIGNIA" alt=""></a>
 
-</div>
+               </div>
 
-</div>
+            </div>
 
-<div class="col-2">
+            <div class="col-2">
 
-<div id="wb_ThemeableMenu1" style="display:inline-block;width:100%;text-align:center;z-index:1;">
+               <div id="wb_ThemeableMenu1" style="display:inline-block;width:100%;text-align:center;z-index:1;">
 
-<div id="ThemeableMenu1" class="ThemeableMenu1" style="width:100%;height:auto !important;">
+                  <div id="ThemeableMenu1" class="ThemeableMenu1" style="width:100%;height:auto !important;">
 
-<div class="container">
+                     <div class="container">
 
-<div class="navbar-header">
+                        <div class="navbar-header">
 
-<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ThemeableMenu1-navbar-collapse">
+                           <button type="button" class="navbar-toggle" data-toggle="collapse"
+                              data-target=".ThemeableMenu1-navbar-collapse">
 
-<span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
 
-<span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
 
-<span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
 
-</button>
+                           </button>
 
-</div>
+                        </div>
 
-<div class="ThemeableMenu1-navbar-collapse collapse">
+                        <div class="ThemeableMenu1-navbar-collapse collapse">
 
-<ul class="nav navbar-nav">
+                           <ul class="nav navbar-nav">
 
-<li class="nav-item">
+                              <li class="nav-item">
 
-<a href="./index.html" class="nav-link active">Inicio</a>
+                                 <a href="./index.html" class="nav-link active">Inicio</a>
 
-</li>
+                              </li>
 
-<li class="nav-item dropdown">
+                              <li class="nav-item dropdown">
 
-<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Nosotros<b class="caret"></b></a>
+                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nosotros<b
+                                       class="caret"></b></a>
 
-<ul class="dropdown-menu">
+                                 <ul class="dropdown-menu">
 
-<li class="nav-item"><a href="./Bienvenida.html" class="nav-link">Bienvenida</a></li>
+                                    <li class="nav-item"><a href="./Bienvenida.html" class="nav-link">Bienvenida</a>
+                                    </li>
 
-<li class="nav-item"><a href="./Quienes-Somos.html" class="nav-link">Quienes Somos</a></li>
+                                    <li class="nav-item"><a href="./Quienes-Somos.html" class="nav-link">Quienes
+                                          Somos</a></li>
 
-<li class="nav-item"><a href="./Nuestra-Historia.html" class="nav-link">Nuestra Historia</a></li>
+                                    <li class="nav-item"><a href="./Nuestra-Historia.html" class="nav-link">Nuestra
+                                          Historia</a></li>
 
-<li class="nav-item"><a href="./School-Profile.html" class="nav-link">School Profile</a></li>
+                                    <li class="nav-item"><a href="./School-Profile.html" class="nav-link">School
+                                          Profile</a></li>
 
-<li class="nav-item"><a href="./Escudo.html" class="nav-link">Escudo</a></li>
+                                    <li class="nav-item"><a href="./Escudo.html" class="nav-link">Escudo</a></li>
 
-<li class="nav-item"><a href="./Mision-y-Vision.html" class="nav-link">Misión y Visión</a></li>
+                                    <li class="nav-item"><a href="./Mision-y-Vision.html" class="nav-link">Misión y
+                                          Visión</a></li>
 
-<li class="nav-item"><a href="./Valores.html" class="nav-link">Valores</a></li>
+                                    <li class="nav-item"><a href="./Valores.html" class="nav-link">Valores</a></li>
 
-</ul>
+                                 </ul>
 
-</li>
+                              </li>
 
-<li class="nav-item dropdown">
+                              <li class="nav-item dropdown">
 
-<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Organización<b class="caret"></b></a>
+                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Organización<b
+                                       class="caret"></b></a>
 
-<ul class="dropdown-menu">
+                                 <ul class="dropdown-menu">
 
-<li class="nav-item"><a href="./Estamentos.html" class="nav-link">Estamentos</a></li>
+                                    <li class="nav-item"><a href="./Estamentos.html" class="nav-link">Estamentos</a>
+                                    </li>
 
-<li class="nav-item"><a href="./Comite-Ejecutivo.html" class="nav-link">Comité Ejecutivo</a></li>
+                                    <li class="nav-item"><a href="./Comite-Ejecutivo.html" class="nav-link">Comité
+                                          Ejecutivo</a></li>
 
-<li class="nav-item"><a href="./Equipo-Direccion.html" class="nav-link">Equipo de Dirección</a></li>
+                                    <li class="nav-item"><a href="./Equipo-Direccion.html" class="nav-link">Equipo de
+                                          Dirección</a></li>
 
-<li class="nav-item"><a href="./Administracion.html" class="nav-link">Administración</a></li>
+                                    <li class="nav-item"><a href="./Administracion.html"
+                                          class="nav-link">Administración</a></li>
 
-<li class="nav-item"><a href="./Directiva-Docente.html" class="nav-link">Directiva Docente</a></li>
+                                    <li class="nav-item"><a href="./Directiva-Docente.html" class="nav-link">Directiva
+                                          Docente</a></li>
 
-<li class="nav-item"><a href="./Docentes.html" class="nav-link">Personal Docente</a></li>
+                                    <li class="nav-item"><a href="./Docentes.html" class="nav-link">Personal Docente</a>
+                                    </li>
 
-<li class="nav-item"><a href="./PersonalApoyo.html" class="nav-link">Personal de Apoyo</a></li>
+                                    <li class="nav-item"><a href="./PersonalApoyo.html" class="nav-link">Personal de
+                                          Apoyo</a></li>
 
-<li class="nav-item"><a href="./Organigrama.html" class="nav-link">Organigrama</a></li>
+                                    <li class="nav-item"><a href="./Organigrama.html" class="nav-link">Organigrama</a>
+                                    </li>
 
-<li class="nav-item"><a href="./C-Emergencia-CEMB.html" class="nav-link">Cadena de Emergencia</a></li>
+                                    <li class="nav-item"><a href="./C-Emergencia-CEMB.html" class="nav-link">Cadena de
+                                          Emergencia</a></li>
 
-</ul>
+                                 </ul>
 
-</li>
+                              </li>
 
-<li class="nav-item dropdown">
+                              <li class="nav-item dropdown">
 
-<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Doc. Académicos<b class="caret"></b></a>
+                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Doc. Académicos<b
+                                       class="caret"></b></a>
 
-<ul class="dropdown-menu">
+                                 <ul class="dropdown-menu">
 
-<li class="nav-item"><a href="./Crono-Acti-Evaluativas.html" class="nav-link">Cronogramas AE</a></li>
+                                    <li class="nav-item"><a href="./Crono-Acti-Evaluativas.html"
+                                          class="nav-link">Cronogramas AE</a></li>
 
-<li class="nav-item"><a href="./Desempe-Academico.html" class="nav-link">Desempeño Académico</a></li>
+                                    <li class="nav-item"><a href="./Desempe-Academico.html" class="nav-link">Desempeño
+                                          Académico</a></li>
 
-<li class="nav-item"><a href="./Modalidad-Ensenanzas.html" class="nav-link">Modalidad de Enseñanza</a></li>
+                                    <li class="nav-item"><a href="./Modalidad-Ensenanzas.html"
+                                          class="nav-link">Modalidad de Enseñanza</a></li>
 
-<li class="nav-item"><a href="./TemariosExamenes.html" class="nav-link">Temarios de Exámenes</a></li>
+                                    <li class="nav-item"><a href="./TemariosExamenes.html" class="nav-link">Temarios de
+                                          Exámenes</a></li>
 
-</ul>
+                                 </ul>
 
-</li>
+                              </li>
 
-<li class="nav-item dropdown">
+                              <li class="nav-item dropdown">
 
-<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Doc. Reglamentarios<b class="caret"></b></a>
+                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Doc. Reglamentarios<b
+                                       class="caret"></b></a>
 
-<ul class="dropdown-menu">
+                                 <ul class="dropdown-menu">
 
-<li class="nav-item"><a href="./Manual-Convivencia.html" class="nav-link">Manual de Convivencia</a></li>
+                                    <li class="nav-item"><a href="./Manual-Convivencia.html" class="nav-link">Manual de
+                                          Convivencia</a></li>
 
-<li class="nav-item"><a href="./PAD.html" class="nav-link">PAD</a></li>
+                                    <li class="nav-item"><a href="./PAD.html" class="nav-link">PAD</a></li>
 
-</ul>
+                                 </ul>
 
-</li>
+                              </li>
 
-<li class="nav-item">
+                              <li class="nav-item">
 
-<a href="./Circulares.html" class="nav-link">Circulares</a>
+                                 <a href="./Circulares.html" class="nav-link">Circulares</a>
 
-</li>
+                              </li>
 
-<li class="nav-item">
+                              <li class="nav-item">
 
-<a href="./Noticias.html" class="nav-link">Noticias</a>
+                                 <a href="./Noticias.html" class="nav-link">Noticias</a>
 
-</li>
+                              </li>
 
-<li class="nav-item dropdown">
+                              <li class="nav-item dropdown">
 
-<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Admisión<b class="caret"></b></a>
+                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admisión<b
+                                       class="caret"></b></a>
 
-<ul class="dropdown-menu">
+                                 <ul class="dropdown-menu">
 
-<li class="nav-item"><a href="./Proceso-Admision.html" class="nav-link">Proceso Admisión</a></li>
+                                    <li class="nav-item"><a href="./Proceso-Admision.html" class="nav-link">Proceso
+                                          Admisión</a></li>
 
-<li class="nav-item"><a href="./SolicitudAdmision.html" class="nav-link">Solicitud de Admisión</a></li>
+                                    <li class="nav-item"><a href="./SolicitudAdmision.html" class="nav-link">Solicitud
+                                          de Admisión</a></li>
 
-<li class="nav-item"><a href="./Preceso-AdmisionEI.html" class="nav-link">Proceso Admisión Educación Inicial</a></li>
+                                    <li class="nav-item"><a href="./Preceso-AdmisionEI.html" class="nav-link">Proceso
+                                          Admisión Educación Inicial</a></li>
 
-<li class="nav-item"><a href="./Temarios-Admision.html" class="nav-link">Temarios de Admisión</a></li>
+                                    <li class="nav-item"><a href="./Temarios-Admision.html" class="nav-link">Temarios de
+                                          Admisión</a></li>
 
-</ul>
+                                 </ul>
 
-</li>
+                              </li>
 
-<li class="nav-item dropdown">
+                              <li class="nav-item dropdown">
 
-<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Comunidad CEMB<b class="caret"></b></a>
+                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Comunidad CEMB<b
+                                       class="caret"></b></a>
 
-<ul class="dropdown-menu">
+                                 <ul class="dropdown-menu">
 
-<li class="nav-item"><a href="./Consejo-Estudiantil.html" class="nav-link">Consejo Estudiantil</a></li>
-<!---
+                                    <li class="nav-item"><a href="./Consejo-Estudiantil.html" class="nav-link">Consejo
+                                          Estudiantil</a></li>
+                                    <!---
 <li class="nav-item"><a href="./Operacion-Sonrisa.html" class="nav-link">Club Operación Sonrisa</a></li> --->
 
-<li class="nav-item"><a href="./Club-Mun.html" class="nav-link">Club MUN</a></li>
+                                    <li class="nav-item"><a href="./Club-Mun.html" class="nav-link">Club MUN</a></li>
 
-<li class="nav-item"><a href="./Stop-Bullying.html" class="nav-link">Stop Bullying</a></li>
+                                    <li class="nav-item"><a href="./Stop-Bullying.html" class="nav-link">Stop
+                                          Bullying</a></li>
 
-<li class="nav-item"><a href="./Capacitaciones.html" class="nav-link">Capacitaciones</a></li>
+                                    <li class="nav-item"><a href="./Capacitaciones.html"
+                                          class="nav-link">Capacitaciones</a></li>
 
-<li class="nav-item"><a href="./ProyectoPASS.html" class="nav-link">Proyecto PASS</a></li>
+                                    <li class="nav-item"><a href="./ProyectoPASS.html" class="nav-link">Proyecto
+                                          PASS</a></li>
 
-<li class="nav-item"><a href="./Universidades.html" class="nav-link">Universidades</a></li>
+                                    <li class="nav-item"><a href="./Universidades.html"
+                                          class="nav-link">Universidades</a></li>
 
-<li class="nav-item"><a href="./Exalumnos.html" class="nav-link">Ex-Alumnos</a></li>
+                                    <li class="nav-item"><a href="./Exalumnos.html" class="nav-link">Ex-Alumnos</a></li>
 
-<li class="nav-item"><a href="./CoachingEstudiantil.html" class="nav-link">Coaching Estudiantil</a></li>
+                                    <li class="nav-item"><a href="./CoachingEstudiantil.html" class="nav-link">Coaching
+                                          Estudiantil</a></li>
 
-<li class="nav-item"><a href="./OrgulloCEMB.html" class="nav-link">Orgullo CEMB</a></li>
+                                    <li class="nav-item"><a href="./OrgulloCEMB.html" class="nav-link">Orgullo CEMB</a>
+                                    </li>
 
-</ul>
+                                 </ul>
 
-</li>
+                              </li>
 
-<li class="nav-item dropdown">
+                              <li class="nav-item dropdown">
 
-<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Actividades Relevantes por Áreas<b class="caret"></b></a>
+                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Actividades Relevantes por
+                                    Áreas<b class="caret"></b></a>
 
-<ul class="dropdown-menu">
+                                 <ul class="dropdown-menu">
 
-<li class="nav-item"><a href="./Matematica.html" class="nav-link">Matemática</a></li>
+                                    <li class="nav-item"><a href="./Matematica.html" class="nav-link">Matemática</a>
+                                    </li>
 
-<li class="nav-item"><a href="./LeguayLiteratura.html" class="nav-link">Lengua y Literatura</a></li>
+                                    <li class="nav-item"><a href="./LeguayLiteratura.html" class="nav-link">Lengua y
+                                          Literatura</a></li>
 
-<li class="nav-item"><a href="./CCNN.html" class="nav-link">CCNN</a></li>
+                                    <li class="nav-item"><a href="./CCNN.html" class="nav-link">CCNN</a></li>
 
-<li class="nav-item"><a href="./CCSS.html" class="nav-link">CCSS</a></li>
+                                    <li class="nav-item"><a href="./CCSS.html" class="nav-link">CCSS</a></li>
 
-<li class="nav-item"><a href="./Ingles.html" class="nav-link">Inglés</a></li>
+                                    <li class="nav-item"><a href="./Ingles.html" class="nav-link">Inglés</a></li>
 
-<li class="nav-item"><a href="./Pastoral.html" class="nav-link">Pastoral</a></li>
+                                    <li class="nav-item"><a href="./Pastoral.html" class="nav-link">Pastoral</a></li>
 
-<li class="nav-item"><a href="./DeptoOrientacion.html" class="nav-link">Dpto. Orientación</a></li>
+                                    <li class="nav-item"><a href="./DeptoOrientacion.html" class="nav-link">Dpto.
+                                          Orientación</a></li>
 
-<li class="nav-item"><a href="./DanzaDeportes.html" class="nav-link">Danza y Deportes</a></li>
+                                    <li class="nav-item"><a href="./DanzaDeportes.html" class="nav-link">Danza y
+                                          Deportes</a></li>
 
-<li class="nav-item"><a href="./PPFF.html" class="nav-link">PPFF</a></li>
+                                    <li class="nav-item"><a href="./PPFF.html" class="nav-link">PPFF</a></li>
 
-<li class="nav-item"><a href="./Teleton.html" class="nav-link">Teletón</a></li>
+                                    <li class="nav-item"><a href="./Teleton.html" class="nav-link">Teletón</a></li>
 
-<li class="nav-item"><a href="./Fisica.html" class="nav-link">Física</a></li>
+                                    <li class="nav-item"><a href="./Fisica.html" class="nav-link">Física</a></li>
 
-<li class="nav-item"><a href="./Informatica.html" class="nav-link">Informatica</a></li>
+                                    <li class="nav-item"><a href="./Informatica.html" class="nav-link">Informatica</a>
+                                    </li>
 
-</ul>
+                                 </ul>
 
-</li>
+                              </li>
 
-<li class="nav-item dropdown">
+                              <li class="nav-item dropdown">
 
-<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Asociación PPMMFF<b class="caret"></b></a>
+                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Asociación PPMMFF<b
+                                       class="caret"></b></a>
 
-<ul class="dropdown-menu">
+                                 <ul class="dropdown-menu">
 
-<li class="nav-item"><a href="./FuncionPMF.html" class="nav-link">Función</a></li>
+                                    <li class="nav-item"><a href="./FuncionPMF.html" class="nav-link">Función</a></li>
 
-<li class="nav-item"><a href="./DirectivaPMF.html" class="nav-link">Directiva</a></li>
+                                    <li class="nav-item"><a href="./DirectivaPMF.html" class="nav-link">Directiva</a>
+                                    </li>
 
-<!--<li class="nav-item"><a href="./RG-PMF.html" class="nav-link">Representantes de Grado</a></li>-->
+                                    <!--<li class="nav-item"><a href="./RG-PMF.html" class="nav-link">Representantes de Grado</a></li>-->
 
-</ul>
+                                 </ul>
 
-</li>
+                              </li>
 
-<li class="nav-item dropdown">
+                              <li class="nav-item dropdown">
 
-<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Galería<b class="caret"></b></a>
+                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Galería<b
+                                       class="caret"></b></a>
 
-<ul class="dropdown-menu">
+                                 <ul class="dropdown-menu">
 
-<li class="nav-item"><a href="./Campus.php" class="nav-link">Campus</a></li>
+                                    <li class="nav-item"><a href="./Campus.php" class="nav-link">Campus</a></li>
 
-<li class="nav-item"><a href="./GEducaxcionInicial.php" class="nav-link">Educación Inicial</a></li>
+                                    <li class="nav-item"><a href="./GEducaxcionInicial.php" class="nav-link">Educación
+                                          Inicial</a></li>
 
-<li class="nav-item"><a href="./GPrimaria.php" class="nav-link">Primaria</a></li>
+                                    <li class="nav-item"><a href="./GPrimaria.php" class="nav-link">Primaria</a></li>
 
-<li class="nav-item"><a href="./GSecundaria.php" class="nav-link">Secundaria</a></li>
+                                    <li class="nav-item"><a href="./GSecundaria.php" class="nav-link">Secundaria</a>
+                                    </li>
 
-<li class="nav-item"><a href="./GPApoyo.php" class="nav-link">Personal de Apoyo</a></li>
+                                    <li class="nav-item"><a href="./GPApoyo.php" class="nav-link">Personal de Apoyo</a>
+                                    </li>
 
-<li class="nav-item"><a href="./GPadresFamilia.php" class="nav-link">Padres de Familia</a></li>
+                                    <li class="nav-item"><a href="./GPadresFamilia.php" class="nav-link">Padres de
+                                          Familia</a></li>
 
-<li class="nav-item"><a href="./GDocentes.html" class="nav-link">Docentes</a></li>
-	
-<li class="nav-item"><a href="./promociones/index.html" class="nav-link">Promociones</a></li>
+                                    <li class="nav-item"><a href="./GDocentes.html" class="nav-link">Docentes</a></li>
 
-<li class="nav-item"><a href="./GVideos.php" class="nav-link">Videos</a></li>
-</ul>
+                                    <li class="nav-item"><a href="./promociones/index.html"
+                                          class="nav-link">Promociones</a></li>
 
-</li>
-<li class="nav-item">
+                                    <li class="nav-item"><a href="./GVideos.php" class="nav-link">Videos</a></li>
+                                 </ul>
 
-<a href="./RevistaCEMB2022.html" class="nav-link">Revista CEMB</a>
+                              </li>
+                              <li class="nav-item">
 
-</li>
-	
-<li class="nav-item">
+                                 <a href="./RevistaCEMB2022.html" class="nav-link">Revista CEMB</a>
 
-<a href="./Contactanos.php" class="nav-link">Contáctanos</a>
+                              </li>
 
-</li>
+                              <li class="nav-item">
 
-</ul>
+                                 <a href="./Contactanos.php" class="nav-link">Contáctanos</a>
 
-</div>
+                              </li>
 
-</div>
+                           </ul>
 
-</div>
+                        </div>
 
-</div>
+                     </div>
 
-</div>
+                  </div>
 
-</div>
+               </div>
 
-</div>
+            </div>
 
-</div>
+         </div>
 
-<div id="wb_header">
+      </div>
 
-<div id="header">
-
-<div class="row">
-
-<div class="col-1">
-
-<div id="wb_Heading1" style="display:inline-block;width:100%;z-index:2;">
-
-<h1 id="Heading1">Centro Educacional Mantica Berio</h1>
-
-</div>
-
-</div>
-
-<div class="col-2">
-
-<div id="wb_Image1" style="display:inline-block;width:100%;height:auto;z-index:3;">
-
-<a href="https://sites.google.com/manticaberio.edu.ni/educacioninicialcemb/p%C3%A1gina-principal" target="_blank"><img src="images/padCEMB2020-2.jpg" id="Image1" alt="" title="Click para EI"></a>
-
-</div>
-
-<div id="wb_Text2">
-
-<span style="color:#FFFFFF;font-family:Calibri;font-size:13px;">Click para acceder a Educación Inicial</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div id="intro" style="position:relative;text-align:center;width:100%;height:688px;float:left;clear:left;display:inline-flex;z-index:69;">
-
-<div id="intro-video"><iframe src="https://www.youtube.com/embed/r6Z-QSNDC6A?controls=0&showinfo=0&rel=0&autoplay=1&mute=1&loop=1&playlist=r6Z-QSNDC6A" frameborder="0" allowfullscreen></iframe></div>
-
-<div id="intro-overlay"></div>
-
-<div id="intro_Container" style="width:100%">
-
-<div id="wb_Heading6" style="display:inline-block;width:100%;z-index:5;">
-
-<h1 id="Heading6">Bienvenidos año lectivo 2026</h1>
-
-</div>
-
-<div id="wb_Text1">
-
-<span style="color:#FFFFFF;font-family:Arial;font-size:19px;"><em>Clic para ver video</em></span>
-
-</div>
-
-<div id="wb_down-arrow" style="display:inline-block;width:36px;height:36px;text-align:center;z-index:7;">
-
-<a href="https://www.youtube.com/embed/wdaqKX-EJJw"><div id="down-arrow"><i class="fa fa-youtube-square"></i></div></a>
-
-</div>
-
-</div>
-
-</div>
-
-<div id="wb_infoBlock1">
-
-<div id="infoBlock1-divider-top">
-
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 24" preserveAspectRatio="none">
-
-<defs>
-
-   <path id="wave-animated" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-
-</defs>
-
-<g class="wave-animated">
-
-   <use xlink:href="#wave-animated" x="48" y="0" class="divider-fill" style="opacity:0.7" />
-
-   <use xlink:href="#wave-animated" x="48" y="3" class="divider-fill" style="opacity:0.5" />
-
-   <use xlink:href="#wave-animated" x="48" y="5" class="divider-fill" style="opacity:0.3" />
-
-   <use xlink:href="#wave-animated" x="48" y="7" class="divider-fill"  />
-
-</g>
-
-</svg>
-
-</div>
-
-<div id="infoBlock1">
-
-<div class="col-1">
-
-<div id="wb_Text3">
-
-<span style="color:#2B579A;font-family:'Century Schoolbook';font-size:20px;"><strong>Noticias Recientes</strong></span>
-	
-</div>
-<div id="wb_Text3">
-</div>
-
-<!---Pausa inicio 07/05/2026--->
-
-<div id="wb_notiGrid">
-	<div id="notiGrid">
-
-
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">07/05/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0520264.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0520264.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
    </div>
-</div>
 
-	    
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">07/05/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0520263.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0520263.jpeg" alt="" title=""></a>
-	   <br>
-	  
-      <hr id="Card9-card-item3">    
-       </div>
-</div>		    
-	    
-<!---
+   <div id="wb_header">
+
+      <div id="header">
+
+         <div class="row">
+
+            <div class="col-1">
+
+               <div id="wb_Heading1" style="display:inline-block;width:100%;z-index:2;">
+
+                  <h1 id="Heading1">Centro Educacional Mantica Berio</h1>
+
+               </div>
+
+            </div>
+
+            <div class="col-2">
+
+               <div id="wb_Image1" style="display:inline-block;width:100%;height:auto;z-index:3;">
+
+                  <a href="https://sites.google.com/manticaberio.edu.ni/educacioninicialcemb/p%C3%A1gina-principal"
+                     target="_blank"><img src="images/padCEMB2020-2.jpg" id="Image1" alt="" title="Click para EI"></a>
+
+               </div>
+
+               <div id="wb_Text2">
+
+                  <span style="color:#FFFFFF;font-family:Calibri;font-size:13px;">Click para acceder a Educación
+                     Inicial</span>
+
+               </div>
+
+            </div>
+
+         </div>
+
+      </div>
+
+   </div>
+
+   <div id="intro"
+      style="position:relative;text-align:center;width:100%;height:688px;float:left;clear:left;display:inline-flex;z-index:69;">
+
+      <div id="intro-video"><iframe
+            src="https://www.youtube.com/embed/r6Z-QSNDC6A?controls=0&showinfo=0&rel=0&autoplay=1&mute=1&loop=1&playlist=r6Z-QSNDC6A"
+            frameborder="0" allowfullscreen></iframe></div>
+
+      <div id="intro-overlay"></div>
+
+      <div id="intro_Container" style="width:100%">
+
+         <div id="wb_Heading6" style="display:inline-block;width:100%;z-index:5;">
+
+            <h1 id="Heading6">Bienvenidos año lectivo 2026</h1>
+
+         </div>
+
+         <div id="wb_Text1">
+
+            <span style="color:#FFFFFF;font-family:Arial;font-size:19px;"><em>Clic para ver video</em></span>
+
+         </div>
+
+         <div id="wb_down-arrow" style="display:inline-block;width:36px;height:36px;text-align:center;z-index:7;">
+
+            <a href="https://www.youtube.com/embed/wdaqKX-EJJw">
+               <div id="down-arrow"><i class="fa fa-youtube-square"></i></div>
+            </a>
+
+         </div>
+
+      </div>
+
+   </div>
+
+   <div id="wb_infoBlock1">
+
+      <div id="infoBlock1-divider-top">
+
+         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 24"
+            preserveAspectRatio="none">
+
+            <defs>
+
+               <path id="wave-animated" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+
+            </defs>
+
+            <g class="wave-animated">
+
+               <use xlink:href="#wave-animated" x="48" y="0" class="divider-fill" style="opacity:0.7" />
+
+               <use xlink:href="#wave-animated" x="48" y="3" class="divider-fill" style="opacity:0.5" />
+
+               <use xlink:href="#wave-animated" x="48" y="5" class="divider-fill" style="opacity:0.3" />
+
+               <use xlink:href="#wave-animated" x="48" y="7" class="divider-fill" />
+
+            </g>
+
+         </svg>
+
+      </div>
+
+      <div id="infoBlock1">
+
+         <div class="col-1">
+
+            <div id="wb_Text3">
+
+               <span style="color:#2B579A;font-family:'Century Schoolbook';font-size:20px;"><strong>Noticias
+                     Recientes</strong></span>
+
+            </div>
+            <div id="wb_Text3">
+            </div>
+
+            <!---Pausa inicio 07/05/2026--->
+
+            <div id="wb_notiGrid">
+               <div id="notiGrid">
+
+
+                  <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                     <div id="Card9-card-header">07/05/2026</div>
+                     <div id="Card9-card-body">
+                        <a href="images/gnoticias/circular0520264.jpeg"><img id="Card9-card-item1"
+                              src="images/gnoticias/circular0520264.jpeg" alt="" title=""></a>
+                        <br>
+                        <hr id="Card9-card-item3">
+                     </div>
+                  </div>
+
+
+                  <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                     <div id="Card9-card-header">07/05/2026</div>
+                     <div id="Card9-card-body">
+                        <a href="images/gnoticias/circular0520263.jpeg"><img id="Card9-card-item1"
+                              src="images/gnoticias/circular0520263.jpeg" alt="" title=""></a>
+                        <br>
+
+                        <hr id="Card9-card-item3">
+                     </div>
+                  </div>
+
+                  <!---
 	    
 <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
    <div id="Card9-card-header">27/04/2026</div>
@@ -945,92 +952,100 @@ $(document).ready(function()
 
 
  --->
-</div>
-<!---Pausa inicio 07/05/2026--->
+               </div>
+               <!---Pausa inicio 07/05/2026--->
 
 
 
 
-<!---Pausa inicio 06/05/2026--->
-<!---One video only--->
+               <!---Pausa inicio 06/05/2026--->
+               <!---One video only--->
 
-<div>
-<CENTER> 
-<div>
-	<div>
+               <div>
+                  <CENTER>
+                     <div>
+                        <div>
 
-   <div id="Card9-card-header">06/05/2026</div>
-   <div >
-     <iframe width="1000" height="350" src="https://www.youtube.com/embed/izk0AR-2Bnc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	   <br>
-      <hr >
-   </div>
-</div>	 
+                           <div id="Card9-card-header">06/05/2026</div>
+                           <div>
+                              <iframe width="1000" height="350" src="https://www.youtube.com/embed/izk0AR-2Bnc"
+                                 title="YouTube video player" frameborder="0"
+                                 allow="accelerometer; autoplay; clipboard-write;encrypted-media; gyroscope; picture-in-picture"
+                                 allowfullscreen></iframe>
+                              <br>
+                              <hr>
+                           </div>
+                        </div>
 
-</CENTER>
-</div>
-<!---Pausa final 06/05/2026--->
-
-
-
-<!---Pausa inicio 24/04/2026--->
-
-<div id="wb_notiGrid">
-	<div id="notiGrid">
+                  </CENTER>
+               </div>
+               <!---Pausa final 06/05/2026--->
 
 
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">05/05/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0520262.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0520262.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>
 
-	    
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">05/05/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0520261.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0520261.jpeg" alt="" title=""></a>
-	   <br>
-	  
-      <hr id="Card9-card-item3">    
-       </div>
-</div>		    
-	    
-	    
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">27/04/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular04202611.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular04202611.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>
+               <!---Pausa inicio 24/04/2026--->
+
+               <div id="wb_notiGrid">
+                  <div id="notiGrid">
 
 
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">25/04/2026</div>
-   <div id="Card9-card-body">
-     <a href="images/gnoticias/circular04202610.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular04202610.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>
+                     <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                        <div id="Card9-card-header">05/05/2026</div>
+                        <div id="Card9-card-body">
+                           <a href="images/gnoticias/circular0520262.jpeg"><img id="Card9-card-item1"
+                                 src="images/gnoticias/circular0520262.jpeg" alt="" title=""></a>
+                           <br>
+                           <hr id="Card9-card-item3">
+                        </div>
+                     </div>
 
-	    
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">24/04/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0420269.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420269.jpeg" alt="" title=""></a>
-	   <br>
-	  
-      <hr id="Card9-card-item3">    
-       </div>
-</div>
 
-<!---
+                     <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                        <div id="Card9-card-header">05/05/2026</div>
+                        <div id="Card9-card-body">
+                           <a href="images/gnoticias/circular0520261.jpeg"><img id="Card9-card-item1"
+                                 src="images/gnoticias/circular0520261.jpeg" alt="" title=""></a>
+                           <br>
+
+                           <hr id="Card9-card-item3">
+                        </div>
+                     </div>
+
+
+                     <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                        <div id="Card9-card-header">27/04/2026</div>
+                        <div id="Card9-card-body">
+                           <a href="images/gnoticias/circular04202611.jpeg"><img id="Card9-card-item1"
+                                 src="images/gnoticias/circular04202611.jpeg" alt="" title=""></a>
+                           <br>
+                           <hr id="Card9-card-item3">
+                        </div>
+                     </div>
+
+
+                     <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                        <div id="Card9-card-header">25/04/2026</div>
+                        <div id="Card9-card-body">
+                           <a href="images/gnoticias/circular04202610.jpeg"><img id="Card9-card-item1"
+                                 src="images/gnoticias/circular04202610.jpeg" alt="" title=""></a>
+                           <br>
+                           <hr id="Card9-card-item3">
+                        </div>
+                     </div>
+
+
+                     <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                        <div id="Card9-card-header">24/04/2026</div>
+                        <div id="Card9-card-body">
+                           <a href="images/gnoticias/circular0420269.jpeg"><img id="Card9-card-item1"
+                                 src="images/gnoticias/circular0420269.jpeg" alt="" title=""></a>
+                           <br>
+
+                           <hr id="Card9-card-item3">
+                        </div>
+                     </div>
+
+                     <!---
 
 	    
 
@@ -1058,109 +1073,119 @@ $(document).ready(function()
 
 
  --->
-</div>
-<!---Pausa inicio 24/04/2026--->
+                  </div>
+                  <!---Pausa inicio 24/04/2026--->
 
 
 
-<!---Pausa inicio 22/04/2026--->
-<!---One video only--->
+                  <!---Pausa inicio 22/04/2026--->
+                  <!---One video only--->
 
-<div>
-<CENTER> 
-<div>
-	<div>
+                  <div>
+                     <CENTER>
+                        <div>
+                           <div>
 
-   <div id="Card9-card-header">22/04/2026</div>
-   <div >
-     <iframe width="1000" height="350" src="https://www.youtube.com/embed/zlGZVmKqXrY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	   <br>
-      <hr >
-   </div>
-</div>	 
+                              <div id="Card9-card-header">22/04/2026</div>
+                              <div>
+                                 <iframe width="1000" height="350" src="https://www.youtube.com/embed/zlGZVmKqXrY"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write;encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                                 <br>
+                                 <hr>
+                              </div>
+                           </div>
 
-</CENTER>
-</div>
-<!---Pausa final 22/04/2026--->
-
-
-
-<!---Pausa inicio 09/04/2026--->
-
-<div id="wb_notiGrid">
-	<div id="notiGrid">
-	    
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">23/04/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0420268.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420268.jpeg" alt="" title=""></a>
-	   <br>
-	  
-      <hr id="Card9-card-item3">    
-       </div>
-</div>
+                     </CENTER>
+                  </div>
+                  <!---Pausa final 22/04/2026--->
 
 
 
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">22/04/2026</div>
-   <div id="Card9-card-body">
-     <a href="images/gnoticias/circular0420267.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420267.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>	    
-	    
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">21/02/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0420266.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420266.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>
+                  <!---Pausa inicio 09/04/2026--->
+
+                  <div id="wb_notiGrid">
+                     <div id="notiGrid">
+
+                        <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                           <div id="Card9-card-header">23/04/2026</div>
+                           <div id="Card9-card-body">
+                              <a href="images/gnoticias/circular0420268.jpeg"><img id="Card9-card-item1"
+                                    src="images/gnoticias/circular0420268.jpeg" alt="" title=""></a>
+                              <br>
+
+                              <hr id="Card9-card-item3">
+                           </div>
+                        </div>
 
 
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">21/04/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0420265.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420265.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>
 
-	    
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">20/04/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0420264.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420264.jpeg" alt="" title=""></a>
-	   <br>
-	  
-      <hr id="Card9-card-item3">    
-       </div>
-</div>		    
-	    
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">09/04/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0420263.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420263.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>	  
+                        <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                           <div id="Card9-card-header">22/04/2026</div>
+                           <div id="Card9-card-body">
+                              <a href="images/gnoticias/circular0420267.jpeg"><img id="Card9-card-item1"
+                                    src="images/gnoticias/circular0420267.jpeg" alt="" title=""></a>
+                              <br>
+                              <hr id="Card9-card-item3">
+                           </div>
+                        </div>
 
-	    
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">09/04/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0420262.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420262.jpeg" alt="" title=""></a>
-	   <br>
-	  
-      <hr id="Card9-card-item3">    
-       </div>
-</div>
-<!---
+                        <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                           <div id="Card9-card-header">21/02/2026</div>
+                           <div id="Card9-card-body">
+                              <a href="images/gnoticias/circular0420266.jpeg"><img id="Card9-card-item1"
+                                    src="images/gnoticias/circular0420266.jpeg" alt="" title=""></a>
+                              <br>
+                              <hr id="Card9-card-item3">
+                           </div>
+                        </div>
+
+
+                        <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                           <div id="Card9-card-header">21/04/2026</div>
+                           <div id="Card9-card-body">
+                              <a href="images/gnoticias/circular0420265.jpeg"><img id="Card9-card-item1"
+                                    src="images/gnoticias/circular0420265.jpeg" alt="" title=""></a>
+                              <br>
+                              <hr id="Card9-card-item3">
+                           </div>
+                        </div>
+
+
+                        <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                           <div id="Card9-card-header">20/04/2026</div>
+                           <div id="Card9-card-body">
+                              <a href="images/gnoticias/circular0420264.jpeg"><img id="Card9-card-item1"
+                                    src="images/gnoticias/circular0420264.jpeg" alt="" title=""></a>
+                              <br>
+
+                              <hr id="Card9-card-item3">
+                           </div>
+                        </div>
+
+                        <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                           <div id="Card9-card-header">09/04/2026</div>
+                           <div id="Card9-card-body">
+                              <a href="images/gnoticias/circular0420263.jpeg"><img id="Card9-card-item1"
+                                    src="images/gnoticias/circular0420263.jpeg" alt="" title=""></a>
+                              <br>
+                              <hr id="Card9-card-item3">
+                           </div>
+                        </div>
+
+
+                        <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                           <div id="Card9-card-header">09/04/2026</div>
+                           <div id="Card9-card-body">
+                              <a href="images/gnoticias/circular0420262.jpeg"><img id="Card9-card-item1"
+                                    src="images/gnoticias/circular0420262.jpeg" alt="" title=""></a>
+                              <br>
+
+                              <hr id="Card9-card-item3">
+                           </div>
+                        </div>
+                        <!---
 
 
 
@@ -1184,64 +1209,69 @@ $(document).ready(function()
 
 
 
-<!---Pausa inicio 09/04/2026--->
+                        <!---Pausa inicio 09/04/2026--->
 
-<!---Pausa inicio 27/01/2026--->
+                        <!---Pausa inicio 27/01/2026--->
 
-<div id="wb_notiGrid">
-	<div id="notiGrid">
-	    
-	    
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">07/04/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0420261.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0420261.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>	  
-
-	    
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">24/03/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0320268.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320268.jpeg" alt="" title=""></a>
-	   <br>
-	  
-      <hr id="Card9-card-item3">    
-       </div>
-</div>
-
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">23/03/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0320267.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320267.jpeg" alt="" title=""></a>
-	   <br>
-	  
-      <hr id="Card9-card-item3">    
-       </div>
-</div>	
+                        <div id="wb_notiGrid">
+                           <div id="notiGrid">
 
 
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">23/03/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0320266.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320266.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>
+                              <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                 <div id="Card9-card-header">07/04/2026</div>
+                                 <div id="Card9-card-body">
+                                    <a href="images/gnoticias/circular0420261.jpeg"><img id="Card9-card-item1"
+                                          src="images/gnoticias/circular0420261.jpeg" alt="" title=""></a>
+                                    <br>
+                                    <hr id="Card9-card-item3">
+                                 </div>
+                              </div>
 
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">23/03/2026</div>
-   <div id="Card9-card-body">
-     <a href="images/gnoticias/circular0320267.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320267.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>	    
-	    
-<!---
+
+                              <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                 <div id="Card9-card-header">24/03/2026</div>
+                                 <div id="Card9-card-body">
+                                    <a href="images/gnoticias/circular0320268.jpeg"><img id="Card9-card-item1"
+                                          src="images/gnoticias/circular0320268.jpeg" alt="" title=""></a>
+                                    <br>
+
+                                    <hr id="Card9-card-item3">
+                                 </div>
+                              </div>
+
+                              <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                 <div id="Card9-card-header">23/03/2026</div>
+                                 <div id="Card9-card-body">
+                                    <a href="images/gnoticias/circular0320267.jpeg"><img id="Card9-card-item1"
+                                          src="images/gnoticias/circular0320267.jpeg" alt="" title=""></a>
+                                    <br>
+
+                                    <hr id="Card9-card-item3">
+                                 </div>
+                              </div>
+
+
+                              <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                 <div id="Card9-card-header">23/03/2026</div>
+                                 <div id="Card9-card-body">
+                                    <a href="images/gnoticias/circular0320266.jpeg"><img id="Card9-card-item1"
+                                          src="images/gnoticias/circular0320266.jpeg" alt="" title=""></a>
+                                    <br>
+                                    <hr id="Card9-card-item3">
+                                 </div>
+                              </div>
+
+                              <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                 <div id="Card9-card-header">23/03/2026</div>
+                                 <div id="Card9-card-body">
+                                    <a href="images/gnoticias/circular0320267.jpeg"><img id="Card9-card-item1"
+                                          src="images/gnoticias/circular0320267.jpeg" alt="" title=""></a>
+                                    <br>
+                                    <hr id="Card9-card-item3">
+                                 </div>
+                              </div>
+
+                              <!---
 	    
 	    
   
@@ -1281,89 +1311,96 @@ $(document).ready(function()
 
 
 
-<!---Pausa inicio 23/03/2026--->
+                              <!---Pausa inicio 23/03/2026--->
 
 
 
 
 
-<!---Pausa inicio 27/01/2026--->
+                              <!---Pausa inicio 27/01/2026--->
 
-<div id="wb_notiGrid">
-	<div id="notiGrid">
-
-
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">20/03/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0320264.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320264.jpeg" alt="" title=""></a>
-	   <br>
-	  
-      <hr id="Card9-card-item3">    
-       </div>
-</div>	
+                              <div id="wb_notiGrid">
+                                 <div id="notiGrid">
 
 
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">10/03/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0320263.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320263.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>
+                                    <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                       <div id="Card9-card-header">20/03/2026</div>
+                                       <div id="Card9-card-body">
+                                          <a href="images/gnoticias/circular0320264.jpeg"><img id="Card9-card-item1"
+                                                src="images/gnoticias/circular0320264.jpeg" alt="" title=""></a>
+                                          <br>
 
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">04/03/2026</div>
-   <div id="Card9-card-body">
-     <a href="images/gnoticias/circular0320262.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320262.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>	    
-	    
-
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">03/03/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0320261.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0320261.jpeg" alt="" title=""></a>
-	   <br>
-	  
-      <hr id="Card9-card-item3">    
-       </div>
-</div>	    
-	    
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">23/02/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0220267.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0220267.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>	    
-	    
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">17/02/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0220266.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0220266.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>
+                                          <hr id="Card9-card-item3">
+                                       </div>
+                                    </div>
 
 
-	    
-	    
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">12/02/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0220265.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0220265.jpeg" alt="" title=""></a>
-	   <br>
-	  
-      <hr id="Card9-card-item3">    
-       </div>
-</div>
-<!---
+                                    <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                       <div id="Card9-card-header">10/03/2026</div>
+                                       <div id="Card9-card-body">
+                                          <a href="images/gnoticias/circular0320263.jpeg"><img id="Card9-card-item1"
+                                                src="images/gnoticias/circular0320263.jpeg" alt="" title=""></a>
+                                          <br>
+                                          <hr id="Card9-card-item3">
+                                       </div>
+                                    </div>
+
+                                    <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                       <div id="Card9-card-header">04/03/2026</div>
+                                       <div id="Card9-card-body">
+                                          <a href="images/gnoticias/circular0320262.jpeg"><img id="Card9-card-item1"
+                                                src="images/gnoticias/circular0320262.jpeg" alt="" title=""></a>
+                                          <br>
+                                          <hr id="Card9-card-item3">
+                                       </div>
+                                    </div>
+
+
+                                    <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                       <div id="Card9-card-header">03/03/2026</div>
+                                       <div id="Card9-card-body">
+                                          <a href="images/gnoticias/circular0320261.jpeg"><img id="Card9-card-item1"
+                                                src="images/gnoticias/circular0320261.jpeg" alt="" title=""></a>
+                                          <br>
+
+                                          <hr id="Card9-card-item3">
+                                       </div>
+                                    </div>
+
+                                    <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                       <div id="Card9-card-header">23/02/2026</div>
+                                       <div id="Card9-card-body">
+                                          <a href="images/gnoticias/circular0220267.jpeg"><img id="Card9-card-item1"
+                                                src="images/gnoticias/circular0220267.jpeg" alt="" title=""></a>
+                                          <br>
+                                          <hr id="Card9-card-item3">
+                                       </div>
+                                    </div>
+
+                                    <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                       <div id="Card9-card-header">17/02/2026</div>
+                                       <div id="Card9-card-body">
+                                          <a href="images/gnoticias/circular0220266.jpeg"><img id="Card9-card-item1"
+                                                src="images/gnoticias/circular0220266.jpeg" alt="" title=""></a>
+                                          <br>
+                                          <hr id="Card9-card-item3">
+                                       </div>
+                                    </div>
+
+
+
+
+                                    <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                       <div id="Card9-card-header">12/02/2026</div>
+                                       <div id="Card9-card-body">
+                                          <a href="images/gnoticias/circular0220265.jpeg"><img id="Card9-card-item1"
+                                                src="images/gnoticias/circular0220265.jpeg" alt="" title=""></a>
+                                          <br>
+
+                                          <hr id="Card9-card-item3">
+                                       </div>
+                                    </div>
+                                    <!---
 
 
 
@@ -1374,157 +1411,189 @@ $(document).ready(function()
 
 
  --->
-	
-<!---Pausa final 12/02/2026--->
+
+                                    <!---Pausa final 12/02/2026--->
 
 
 
 
-<!---Pausa inicio 27/01/2026--->
+                                    <!---Pausa inicio 27/01/2026--->
 
-<div id="wb_notiGrid">
-	<div id="notiGrid">
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">10/02/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0220264.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0220264.jpeg" alt="" title=""></a>
-	   <br>
-	  
-      <hr id="Card9-card-item3">    
-       </div>
-</div>
+                                    <div id="wb_notiGrid">
+                                       <div id="notiGrid">
+                                          <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                             <div id="Card9-card-header">10/02/2026</div>
+                                             <div id="Card9-card-body">
+                                                <a href="images/gnoticias/circular0220264.jpeg"><img
+                                                      id="Card9-card-item1" src="images/gnoticias/circular0220264.jpeg"
+                                                      alt="" title=""></a>
+                                                <br>
 
-
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">10/02/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0220263.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0220263.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>
-
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">10/02/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0220262.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0220262.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>
+                                                <hr id="Card9-card-item3">
+                                             </div>
+                                          </div>
 
 
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">03/02/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0220261.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0220261.jpeg" alt="" title=""></a>
-	   <br>
-	  
-      <hr id="Card9-card-item3">    
-       </div>
-</div>
+                                          <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                             <div id="Card9-card-header">10/02/2026</div>
+                                             <div id="Card9-card-body">
+                                                <a href="images/gnoticias/circular0220263.jpeg"><img
+                                                      id="Card9-card-item1" src="images/gnoticias/circular0220263.jpeg"
+                                                      alt="" title=""></a>
+                                                <br>
+                                                <hr id="Card9-card-item3">
+                                             </div>
+                                          </div>
+
+                                          <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                             <div id="Card9-card-header">10/02/2026</div>
+                                             <div id="Card9-card-body">
+                                                <a href="images/gnoticias/circular0220262.jpeg"><img
+                                                      id="Card9-card-item1" src="images/gnoticias/circular0220262.jpeg"
+                                                      alt="" title=""></a>
+                                                <br>
+                                                <hr id="Card9-card-item3">
+                                             </div>
+                                          </div>
 
 
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">30/01/2026</div>
-   <div id="Card9-card-body">
-     <a href="images/gnoticias/circular01202611.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular01202611.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>
+                                          <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                             <div id="Card9-card-header">03/02/2026</div>
+                                             <div id="Card9-card-body">
+                                                <a href="images/gnoticias/circular0220261.jpeg"><img
+                                                      id="Card9-card-item1" src="images/gnoticias/circular0220261.jpeg"
+                                                      alt="" title=""></a>
+                                                <br>
 
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">28/01/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular01202610.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular01202610.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>
+                                                <hr id="Card9-card-item3">
+                                             </div>
+                                          </div>
 
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">27/01/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0120269.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0120269.jpeg" alt="" title=""></a>
-	   <br>
-	  
-      <hr id="Card9-card-item3">    
-       </div>
-</div>	
 
-<!---
+                                          <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                             <div id="Card9-card-header">30/01/2026</div>
+                                             <div id="Card9-card-body">
+                                                <a href="images/gnoticias/circular01202611.jpeg"><img
+                                                      id="Card9-card-item1" src="images/gnoticias/circular01202611.jpeg"
+                                                      alt="" title=""></a>
+                                                <br>
+                                                <hr id="Card9-card-item3">
+                                             </div>
+                                          </div>
+
+                                          <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                             <div id="Card9-card-header">28/01/2026</div>
+                                             <div id="Card9-card-body">
+                                                <a href="images/gnoticias/circular01202610.jpeg"><img
+                                                      id="Card9-card-item1" src="images/gnoticias/circular01202610.jpeg"
+                                                      alt="" title=""></a>
+                                                <br>
+                                                <hr id="Card9-card-item3">
+                                             </div>
+                                          </div>
+
+                                          <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                             <div id="Card9-card-header">27/01/2026</div>
+                                             <div id="Card9-card-body">
+                                                <a href="images/gnoticias/circular0120269.jpeg"><img
+                                                      id="Card9-card-item1" src="images/gnoticias/circular0120269.jpeg"
+                                                      alt="" title=""></a>
+                                                <br>
+
+                                                <hr id="Card9-card-item3">
+                                             </div>
+                                          </div>
+
+                                          <!---
 
 
  --->
-	
-<!---Pausa final 27/01/2026--->
 
-<!---Pausa inicio 10/01/2026--->
+                                          <!---Pausa final 27/01/2026--->
 
-<div id="wb_notiGrid">
-	<div id="notiGrid">
+                                          <!---Pausa inicio 10/01/2026--->
 
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">27/01/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0120268.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0120268.jpeg" alt="" title=""></a>
-	   <br>
-	  
-      <hr id="Card9-card-item3">    
-       </div>
-</div>	
+                                          <div id="wb_notiGrid">
+                                             <div id="notiGrid">
 
+                                                <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                                   <div id="Card9-card-header">27/01/2026</div>
+                                                   <div id="Card9-card-body">
+                                                      <a href="images/gnoticias/circular0120268.jpeg"><img
+                                                            id="Card9-card-item1"
+                                                            src="images/gnoticias/circular0120268.jpeg" alt=""
+                                                            title=""></a>
+                                                      <br>
 
-
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">20/01/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0120267.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0120267.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>
-
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">20/01/2026</div>
-   <div id="Card9-card-body">
-     <a href="images/gnoticias/circular0120266.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0120266.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>
-
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">20/01/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0120265.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0120265.jpeg" alt="" title=""></a>
-	   <br>
-	  
-      <hr id="Card9-card-item3">    
-       </div>
-</div>
+                                                      <hr id="Card9-card-item3">
+                                                   </div>
+                                                </div>
 
 
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">19/01/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0120264.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0120264.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>
 
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">14/01/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0120263.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0120263.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>
+                                                <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                                   <div id="Card9-card-header">20/01/2026</div>
+                                                   <div id="Card9-card-body">
+                                                      <a href="images/gnoticias/circular0120267.jpeg"><img
+                                                            id="Card9-card-item1"
+                                                            src="images/gnoticias/circular0120267.jpeg" alt=""
+                                                            title=""></a>
+                                                      <br>
+                                                      <hr id="Card9-card-item3">
+                                                   </div>
+                                                </div>
 
-<!---
+                                                <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                                   <div id="Card9-card-header">20/01/2026</div>
+                                                   <div id="Card9-card-body">
+                                                      <a href="images/gnoticias/circular0120266.jpeg"><img
+                                                            id="Card9-card-item1"
+                                                            src="images/gnoticias/circular0120266.jpeg" alt=""
+                                                            title=""></a>
+                                                      <br>
+                                                      <hr id="Card9-card-item3">
+                                                   </div>
+                                                </div>
+
+                                                <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                                   <div id="Card9-card-header">20/01/2026</div>
+                                                   <div id="Card9-card-body">
+                                                      <a href="images/gnoticias/circular0120265.jpeg"><img
+                                                            id="Card9-card-item1"
+                                                            src="images/gnoticias/circular0120265.jpeg" alt=""
+                                                            title=""></a>
+                                                      <br>
+
+                                                      <hr id="Card9-card-item3">
+                                                   </div>
+                                                </div>
+
+
+                                                <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                                   <div id="Card9-card-header">19/01/2026</div>
+                                                   <div id="Card9-card-body">
+                                                      <a href="images/gnoticias/circular0120264.jpeg"><img
+                                                            id="Card9-card-item1"
+                                                            src="images/gnoticias/circular0120264.jpeg" alt=""
+                                                            title=""></a>
+                                                      <br>
+                                                      <hr id="Card9-card-item3">
+                                                   </div>
+                                                </div>
+
+                                                <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+                                                   <div id="Card9-card-header">14/01/2026</div>
+                                                   <div id="Card9-card-body">
+                                                      <a href="images/gnoticias/circular0120263.jpeg"><img
+                                                            id="Card9-card-item1"
+                                                            src="images/gnoticias/circular0120263.jpeg" alt=""
+                                                            title=""></a>
+                                                      <br>
+                                                      <hr id="Card9-card-item3">
+                                                   </div>
+                                                </div>
+
+                                                <!---
 
 
 
@@ -1545,75 +1614,99 @@ $(document).ready(function()
 
 
  --->
-	
-<!---Pausa final 10/01/2026--->
 
-<!---Pausa inicio 03/12/2025--->
+                                                <!---Pausa final 10/01/2026--->
 
-<div id="wb_notiGrid">
-	<div id="notiGrid">
+                                                <!---Pausa inicio 03/12/2025--->
 
-
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">10/01/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0120262.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0120262.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>
+                                                <div id="wb_notiGrid">
+                                                   <div id="notiGrid">
 
 
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">02/01/2026</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular0120261.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular0120261.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>
+                                                      <div id="wb_Card9"
+                                                         style="display:flex;text-align:center;z-index:11;">
+                                                         <div id="Card9-card-header">10/01/2026</div>
+                                                         <div id="Card9-card-body">
+                                                            <a href="images/gnoticias/circular0120262.jpeg"><img
+                                                                  id="Card9-card-item1"
+                                                                  src="images/gnoticias/circular0120262.jpeg" alt=""
+                                                                  title=""></a>
+                                                            <br>
+                                                            <hr id="Card9-card-item3">
+                                                         </div>
+                                                      </div>
 
 
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">25/12/2025</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular1220254.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1220254.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>
-
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">17/12/2025</div>
-   <div id="Card9-card-body">
-     <a href="images/gnoticias/circular1220253.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1220253.jpeg" alt="" title=""></a>
-	   <br>
-      <hr id="Card9-card-item3">
-   </div>
-</div>
-
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">17/12/2025</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular1220252.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1220252.jpeg" alt="" title=""></a>
-	   <br>
-	  
-      <hr id="Card9-card-item3">    
-       </div>
-</div>
+                                                      <div id="wb_Card9"
+                                                         style="display:flex;text-align:center;z-index:11;">
+                                                         <div id="Card9-card-header">02/01/2026</div>
+                                                         <div id="Card9-card-body">
+                                                            <a href="images/gnoticias/circular0120261.jpeg"><img
+                                                                  id="Card9-card-item1"
+                                                                  src="images/gnoticias/circular0120261.jpeg" alt=""
+                                                                  title=""></a>
+                                                            <br>
+                                                            <hr id="Card9-card-item3">
+                                                         </div>
+                                                      </div>
 
 
+                                                      <div id="wb_Card9"
+                                                         style="display:flex;text-align:center;z-index:11;">
+                                                         <div id="Card9-card-header">25/12/2025</div>
+                                                         <div id="Card9-card-body">
+                                                            <a href="images/gnoticias/circular1220254.jpeg"><img
+                                                                  id="Card9-card-item1"
+                                                                  src="images/gnoticias/circular1220254.jpeg" alt=""
+                                                                  title=""></a>
+                                                            <br>
+                                                            <hr id="Card9-card-item3">
+                                                         </div>
+                                                      </div>
 
-<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
-   <div id="Card9-card-header">01/12/2025</div>
-   <div id="Card9-card-body">
-      <a href="images/gnoticias/circular1220251.jpeg"><img id="Card9-card-item1" src="images/gnoticias/circular1220251.jpeg" alt="" title=""></a>
-	   <br>
-	  
-      <hr id="Card9-card-item3">    
-       </div>
-</div>	
-<!---
+                                                      <div id="wb_Card9"
+                                                         style="display:flex;text-align:center;z-index:11;">
+                                                         <div id="Card9-card-header">17/12/2025</div>
+                                                         <div id="Card9-card-body">
+                                                            <a href="images/gnoticias/circular1220253.jpeg"><img
+                                                                  id="Card9-card-item1"
+                                                                  src="images/gnoticias/circular1220253.jpeg" alt=""
+                                                                  title=""></a>
+                                                            <br>
+                                                            <hr id="Card9-card-item3">
+                                                         </div>
+                                                      </div>
+
+                                                      <div id="wb_Card9"
+                                                         style="display:flex;text-align:center;z-index:11;">
+                                                         <div id="Card9-card-header">17/12/2025</div>
+                                                         <div id="Card9-card-body">
+                                                            <a href="images/gnoticias/circular1220252.jpeg"><img
+                                                                  id="Card9-card-item1"
+                                                                  src="images/gnoticias/circular1220252.jpeg" alt=""
+                                                                  title=""></a>
+                                                            <br>
+
+                                                            <hr id="Card9-card-item3">
+                                                         </div>
+                                                      </div>
+
+
+
+                                                      <div id="wb_Card9"
+                                                         style="display:flex;text-align:center;z-index:11;">
+                                                         <div id="Card9-card-header">01/12/2025</div>
+                                                         <div id="Card9-card-body">
+                                                            <a href="images/gnoticias/circular1220251.jpeg"><img
+                                                                  id="Card9-card-item1"
+                                                                  src="images/gnoticias/circular1220251.jpeg" alt=""
+                                                                  title=""></a>
+                                                            <br>
+
+                                                            <hr id="Card9-card-item3">
+                                                         </div>
+                                                      </div>
+                                                      <!---
 
 
 
@@ -1627,11 +1720,11 @@ $(document).ready(function()
 
 
  --->
-	
-<!---Pausa final 03/12/2025--->
 
-<!---Pausa inicio 16/11/2025--->
-<!---<
+                                                      <!---Pausa final 03/12/2025--->
+
+                                                      <!---Pausa inicio 16/11/2025--->
+                                                      <!---<
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 
@@ -1703,13 +1796,13 @@ $(document).ready(function()
 
 
  --->
-	
-<!---Pausa final 16/11/2025--->
+
+                                                      <!---Pausa final 16/11/2025--->
 
 
 
-<!---Pausa inicio 28/10/2025--->
-<!---<
+                                                      <!---Pausa inicio 28/10/2025--->
+                                                      <!---<
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 
@@ -1777,14 +1870,14 @@ $(document).ready(function()
 <!---
 
  --->
-	
-<!---Pausa final 28/10/2025--->
+
+                                                      <!---Pausa final 28/10/2025--->
 
 
 
 
-<!---One video only--->
-<!---<
+                                                      <!---One video only--->
+                                                      <!---<
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 <div>
@@ -1810,8 +1903,8 @@ $(document).ready(function()
 <!---One video only--->
 
 
-<!---Pausa inicio 19/10/2025--->
-<!---<
+                                                      <!---Pausa inicio 19/10/2025--->
+                                                      <!---<
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 <div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
@@ -1886,12 +1979,12 @@ $(document).ready(function()
  
    
 --->
-	
-<!---Pausa final 19/10/2025--->
+
+                                                      <!---Pausa final 19/10/2025--->
 
 
-<!---One video only--->
-<!---<
+                                                      <!---One video only--->
+                                                      <!---<
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 <div>
@@ -1915,7 +2008,7 @@ $(document).ready(function()
 
 
 <!---One video only--->
-<!---<
+                                                      <!---<
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 <div>
@@ -1939,7 +2032,7 @@ $(document).ready(function()
 
 
 <!---One video only--->
-<!---<
+                                                      <!---<
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 <div>
@@ -1962,9 +2055,9 @@ $(document).ready(function()
 <!---Pausa final 15/10/2025--->
 
 
-<!---Pausa inicio 02/10/2025--->
-<!---One video only--->
-<!---<
+                                                      <!---Pausa inicio 02/10/2025--->
+                                                      <!---One video only--->
+                                                      <!---<
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 <div>
@@ -1987,8 +2080,8 @@ $(document).ready(function()
 <!---Pausa final 02/10/2025--->
 
 
-<!---Pausa inicio 23/09/2025--->
-<!---<
+                                                      <!---Pausa inicio 23/09/2025--->
+                                                      <!---<
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 
@@ -2083,13 +2176,13 @@ $(document).ready(function()
 
 
 --->
-	
-<!---Pausa final 23/09/2025--->
+
+                                                      <!---Pausa final 23/09/2025--->
 
 
 
-<!---Pausa inicio 04/09/2025--->
-<!---<
+                                                      <!---Pausa inicio 04/09/2025--->
+                                                      <!---<
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 
@@ -2180,13 +2273,13 @@ $(document).ready(function()
 
 
 --->
-	
-<!---Pausa final 04/09/2025--->
+
+                                                      <!---Pausa final 04/09/2025--->
 
 
 
-<!---Pausa inicio 20/08/2025--->
-<!---<
+                                                      <!---Pausa inicio 20/08/2025--->
+                                                      <!---<
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 
@@ -2284,17 +2377,17 @@ $(document).ready(function()
 
 
 --->
-	
-<!---Pausa final 20/08/2025--->
+
+                                                      <!---Pausa final 20/08/2025--->
 
 
 
 
 
 
-<!---Pausa inicio 16/08/2025--->
-<!---One video only--->
-<!---<
+                                                      <!---Pausa inicio 16/08/2025--->
+                                                      <!---One video only--->
+                                                      <!---<
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 <div>
@@ -2316,9 +2409,9 @@ $(document).ready(function()
 </div>
 <!---Pausa final 16/08/2025--->
 
-<!---Pausa inicio 15/09/2025--->
-<!---One video only--->
-<!---<
+                                                      <!---Pausa inicio 15/09/2025--->
+                                                      <!---One video only--->
+                                                      <!---<
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 <div>
@@ -2340,9 +2433,9 @@ $(document).ready(function()
 </div>
 <!---Pausa final 15/08/2025--->
 
-<!---Pausa inicio 14/08/2025--->
-<!---One video only--->
-<!---<
+                                                      <!---Pausa inicio 14/08/2025--->
+                                                      <!---One video only--->
+                                                      <!---<
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 <div>
@@ -2367,8 +2460,8 @@ $(document).ready(function()
 
 
 
-<!---Pausa inicio 20/05/2025--->
-<!---<
+                                                      <!---Pausa inicio 20/05/2025--->
+                                                      <!---<
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 
@@ -2483,14 +2576,14 @@ $(document).ready(function()
 
 
 --->
-	
-<!---Pausa final 20/05/2025--->
+
+                                                      <!---Pausa final 20/05/2025--->
 
 
 
 
-<!---Pausa inicio 20/05/2025--->
-<!---<
+                                                      <!---Pausa inicio 20/05/2025--->
+                                                      <!---<
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 	    
@@ -2595,11 +2688,11 @@ $(document).ready(function()
 
 
 --->
-	
-<!---Pausa final 20/05/2025--->
 
-<!---Pausa inicio 20/05/2025--->
-<!---<
+                                                      <!---Pausa final 20/05/2025--->
+
+                                                      <!---Pausa inicio 20/05/2025--->
+                                                      <!---<
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 
@@ -2691,15 +2784,15 @@ $(document).ready(function()
 
 
 --->
-	
-<!---Pausa final 20/05/2025--->
+
+                                                      <!---Pausa final 20/05/2025--->
 
 
 
 
 
-<!---Pausa inicio 24/04/2025--->
-<!---<
+                                                      <!---Pausa inicio 24/04/2025--->
+                                                      <!---<
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 
@@ -2769,13 +2862,13 @@ $(document).ready(function()
 
 
 --->
-	
-<!---Pausa final 24/04/2025--->
+
+                                                      <!---Pausa final 24/04/2025--->
 
 
 
-<!---Pausa inicio 31/03/2025--->
-<!---<
+                                                      <!---Pausa inicio 31/03/2025--->
+                                                      <!---<
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 
@@ -2841,13 +2934,13 @@ $(document).ready(function()
 <!---	    
 
 --->
-	
-<!---Pausa final 31/03/2025--->
 
-	    
-<!---Pausa inicio 07/03/2025--->
-<!---One video only--->
-<!---<
+                                                      <!---Pausa final 31/03/2025--->
+
+
+                                                      <!---Pausa inicio 07/03/2025--->
+                                                      <!---One video only--->
+                                                      <!---<
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 <div>
@@ -2869,8 +2962,8 @@ $(document).ready(function()
 </div>
 <!---Pausa final 07/03/2025--->
 
-	    <!---Pausa inicio 20/02/2025--->
-	    <!---<
+                                                      <!---Pausa inicio 20/02/2025--->
+                                                      <!---<
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 	    
@@ -2937,8 +3030,8 @@ $(document).ready(function()
 	
 <!---Pausa final 20/02/2025--->
 
-<!---Pausa inicio 11/02/2025--->
-<!---<
+                                                      <!---Pausa inicio 11/02/2025--->
+                                                      <!---<
 
 <div id="wb_notiGrid">
 	<div id="notiGrid">
@@ -3009,13 +3102,13 @@ $(document).ready(function()
 
 
 --->
-	
-<!---Pausa final 11/02/2025--->
+
+                                                      <!---Pausa final 11/02/2025--->
 
 
-<!---Pausa inicio 22/11/2024--->
+                                                      <!---Pausa inicio 22/11/2024--->
 
-<!---<
+                                                      <!---<
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 	    
@@ -3077,12 +3170,12 @@ $(document).ready(function()
 <!--- 
 
 --->
-	
-<!---Pausa final 13/01/2025--->
+
+                                                      <!---Pausa final 13/01/2025--->
 
 
-<!---Pausa inicio 22/11/2024--->
-<!---
+                                                      <!---Pausa inicio 22/11/2024--->
+                                                      <!---
 
 <div id="wb_notiGrid">
 	<div id="notiGrid">
@@ -3153,12 +3246,12 @@ $(document).ready(function()
 
 
 --->
-	
-<!---Pausa final 22/11/2024--->
 
-<!---Pausa inicio 28/10/2024--->
+                                                      <!---Pausa final 22/11/2024--->
 
-<!---
+                                                      <!---Pausa inicio 28/10/2024--->
+
+                                                      <!---
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 
@@ -3226,9 +3319,9 @@ $(document).ready(function()
 <!---Pausa final 28/10/2024--->
 
 
-<!---Pausa inicio 09/10/2024--->
-<!---One video only--->
-<!---
+                                                      <!---Pausa inicio 09/10/2024--->
+                                                      <!---One video only--->
+                                                      <!---
 <div>
 <CENTER> 
 <div>
@@ -3249,9 +3342,9 @@ $(document).ready(function()
 
 
 
-<!---Pausa inicio 15/10/2024--->
-<!---One video only--->
-<!---
+                                                      <!---Pausa inicio 15/10/2024--->
+                                                      <!---One video only--->
+                                                      <!---
 <div>
 <CENTER> 
 <div>
@@ -3271,8 +3364,8 @@ $(document).ready(function()
 
 
 
-<!---Pausa inicio 10/10/2024--->
-<!---
+                                                      <!---Pausa inicio 10/10/2024--->
+                                                      <!---
 
 <div id="wb_notiGrid">
 	<div id="notiGrid">
@@ -3354,15 +3447,15 @@ $(document).ready(function()
    </div>
 </div>	 
 ---->
-<!---
+                                                      <!---
  </div>
 </div>	
 <!---Pausa final 10/10/2024--->
 
 
-<!---Pausa inicio 09/10/2024--->
-<!---One video only--->
-<!---
+                                                      <!---Pausa inicio 09/10/2024--->
+                                                      <!---One video only--->
+                                                      <!---
 <div>
 <CENTER> 
 <div>
@@ -3381,8 +3474,8 @@ $(document).ready(function()
 <!---Pausa final 09/10/2024--->
 
 
-<!---Pausa inicio 24/09/2024--->
-<!---
+                                                      <!---Pausa inicio 24/09/2024--->
+                                                      <!---
 
 <div id="wb_notiGrid">
 	<div id="notiGrid">
@@ -3463,9 +3556,9 @@ $(document).ready(function()
 <!---Pausa final 24/09/2024--->
 
 
-<!---Pausa inicio 12/09/2024--->
-<!---One video only--->
-<!---
+                                                      <!---Pausa inicio 12/09/2024--->
+                                                      <!---One video only--->
+                                                      <!---
 <div>
 <CENTER> 
 <div>
@@ -3483,9 +3576,9 @@ $(document).ready(function()
 </div>
 <!---Pausa final 12/09/2024--->
 
-<!---Pausa inicio 09/09/2024--->
+                                                      <!---Pausa inicio 09/09/2024--->
 
-<!---
+                                                      <!---
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 
@@ -3562,16 +3655,16 @@ $(document).ready(function()
 	  
       <hr id="Card9-card-item3">
        ---->
-   </div>
-</div>	    
+                                                   </div>
+                                                </div>
 
 
-<!---Pausa final 09/09/2024--->
+                                                <!---Pausa final 09/09/2024--->
 
 
-<!---Pausa inicio 07/09/2024--->
-<!---One video only--->
-<!---
+                                                <!---Pausa inicio 07/09/2024--->
+                                                <!---One video only--->
+                                                <!---
 <div>
 <CENTER> 
 <div>
@@ -3590,8 +3683,8 @@ $(document).ready(function()
 <!---Pausa final 07/09/2024--->
 
 
-<!---Pausa inicio 27/08/2024--->
-<!---
+                                                <!---Pausa inicio 27/08/2024--->
+                                                <!---
 
 <div id="wb_notiGrid">
 	<div id="notiGrid">
@@ -3710,8 +3803,8 @@ $(document).ready(function()
 
 
 
-<!---Pausa inicio 09/07/2024--->
-<!---
+                                                <!---Pausa inicio 09/07/2024--->
+                                                <!---
 
 <div id="wb_notiGrid">
 	<div id="notiGrid">
@@ -3791,9 +3884,9 @@ $(document).ready(function()
 <!---Pausa final 09/07/2024--->
 
 
-<!---Pausa 13/06/2024--->
+                                                <!---Pausa 13/06/2024--->
 
-<!---
+                                                <!---
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 
@@ -3870,9 +3963,9 @@ $(document).ready(function()
 
 <!---Pausa 13/06/2024--->
 
-<!---Pausa 17/05/2024--->
+                                                <!---Pausa 17/05/2024--->
 
-<!---
+                                                <!---
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 
@@ -3949,13 +4042,13 @@ $(document).ready(function()
 	    
 --->
 
-<!---Pausa 17/05/2024--->
+                                                <!---Pausa 17/05/2024--->
 
 
 
-<!---Pausa 25/04/2024--->
+                                                <!---Pausa 25/04/2024--->
 
-<!---28/08/2024
+                                                <!---28/08/2024
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 
@@ -4036,8 +4129,8 @@ $(document).ready(function()
 
 
 
-<!---Pausa 15/03/2024--->
-<!---28/08/2024
+                                                <!---Pausa 15/03/2024--->
+                                                <!---28/08/2024
 <div id="wb_notiGrid">
 	<div id="notiGrid">
 
@@ -4185,8 +4278,8 @@ $(document).ready(function()
 <!---Pausa 15/03/2024--->
 
 
-<!---Pausa 23/02/2024--->
-<!---28/08/2024
+                                                <!---Pausa 23/02/2024--->
+                                                <!---28/08/2024
 
 <div id="wb_notiGrid">
 	<div id="notiGrid">
@@ -4292,9 +4385,9 @@ $(document).ready(function()
 <!---Pausa 23/02/2024--->
 
 
-<!---Pausa 07/02/2024--->
+                                                <!---Pausa 07/02/2024--->
 
-<!---28/08/2024
+                                                <!---28/08/2024
 
 <div id="wb_notiGrid">
 	<div id="notiGrid">
@@ -4381,9 +4474,9 @@ $(document).ready(function()
 
 
 
-<!---Pausa 19/01/2024--->
+                                                <!---Pausa 19/01/2024--->
 
-<!---28/08/2024
+                                                <!---28/08/2024
 
 
 <div id="wb_notiGrid">
@@ -4474,9 +4567,9 @@ $(document).ready(function()
 
 
 
-<!---Pausa 09/01/2024--->
+                                                <!---Pausa 09/01/2024--->
 
-<!---28/08/2024
+                                                <!---28/08/2024
 
 
 <div id="wb_notiGrid">
@@ -4566,9 +4659,9 @@ $(document).ready(function()
 <!---Pausa 09/01/2024--->
 
 
-<!---Pausa 04/10/2023--->
+                                                <!---Pausa 04/10/2023--->
 
-<!---28/08/2024
+                                                <!---28/08/2024
 
 <div id="wb_notiGrid">
 	<div id="notiGrid">
@@ -4658,7 +4751,7 @@ $(document).ready(function()
 
 
 
-<!---<div id="wb_notiGrid">
+                                                <!---<div id="wb_notiGrid">
 
 		<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
    <div id="Card9-card-header">17/08/2023</div>
@@ -4782,8 +4875,8 @@ $(document).ready(function()
    </div>
 </div>
 		<!---Pausa--->
-		
-<!---	<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
+
+                                                <!---	<div id="wb_Card9" style="display:flex;text-align:center;z-index:11;">
    <div id="Card9-card-header">14/03/2023</div>
    <div id="Card9-card-body">
       <a href="Docs/circulares2023/Circulasr14032023 (2).jpeg"><img id="Card9-card-item1" src="Docs/circulares2023/Circulasr14032023 (2).jpeg" alt="" title=""></a>
@@ -4860,7 +4953,7 @@ $(document).ready(function()
 
 </div>
 	<!---Pausa--->
-<!---<div id="notiGrid">
+                                                <!---<div id="notiGrid">
 	
 	<div id="wb_Card10" style="display:flex;text-align:center;z-index:10;">
 
@@ -4974,375 +5067,444 @@ $(document).ready(function()
 </div>--->
 
 
-</div>
+                                             </div>
 
-<div id="wb_LayoutGrid1">
+                                             <div id="wb_LayoutGrid1">
 
-<div id="LayoutGrid1">
+                                                <div id="LayoutGrid1">
 
-<div class="row">
+                                                   <div class="row">
 
-<div class="col-1">
+                                                      <div class="col-1">
 
-<a id="Button1" href="./Noticias.html" style="display:inline-block;width:93px;height:30px;z-index:14;">Mas</a>
+                                                         <a id="Button1" href="./Noticias.html"
+                                                            style="display:inline-block;width:93px;height:30px;z-index:14;">Mas</a>
 
-</div>
+                                                      </div>
 
-</div>
+                                                   </div>
 
-</div>
+                                                </div>
 
-</div>
+                                             </div>
 
-</div>
+                                          </div>
 
-</div>
+                                       </div>
 
-</div>
+                                    </div>
 
-	<div id="wb_LayoutGrid5">
+                                    <div id="wb_LayoutGrid5">
 
-<div id="LayoutGrid5">
+                                       <div id="LayoutGrid5">
 
-<div class="row">
+                                          <div class="row">
 
-<div class="col-1">
+                                             <div class="col-1">
 
-<div id="wb_Heading12" style="display:inline-block;width:100%;z-index:18;">
+                                                <div id="wb_Heading12"
+                                                   style="display:inline-block;width:100%;z-index:18;">
 
-<h1 id="Heading12">Semana de Capacidades Diferentes</h1>
+                                                   <h1 id="Heading12">Semana de Capacidades Diferentes</h1>
 
-</div>
+                                                </div>
 
-</div>
+                                             </div>
 
-</div>
+                                          </div>
 
-</div>
+                                       </div>
 
-</div>
+                                    </div>
 
-<div id="wb_LayoutGrid4">
+                                    <div id="wb_LayoutGrid4">
 
-<div id="LayoutGrid4">
+                                       <div id="LayoutGrid4">
 
-<div class="row">
+                                          <div class="row">
 
-<div class="col-1">
-<div id="wb_Heading10" style="display:inline-block;width:100%;z-index:20;">
+                                             <div class="col-1">
+                                                <div id="wb_Heading10"
+                                                   style="display:inline-block;width:100%;z-index:20;">
 
-<h3 id="Heading10">Tratatamiento a personas con discapacidad Visual</h3>
+                                                   <h3 id="Heading10">Tratatamiento a personas con discapacidad Visual
+                                                   </h3>
 
-</div>
+                                                </div>
 
-<div id="wb_Shape1" style="display:inline-block;width:98px;height:30px;z-index:21;position:relative;">
+                                                <div id="wb_Shape1"
+                                                   style="display:inline-block;width:98px;height:30px;z-index:21;position:relative;">
 
-<a href="./Docs/ReglasdecortesiaparaDiscapacitadosVisuales.ppsx"><div id="Shape1"><div id="Shape1_text"><span style="color:#696969;font-family:Arial;font-size:13px;">Accede Aqui</span></div></div></a>
+                                                   <a href="./Docs/ReglasdecortesiaparaDiscapacitadosVisuales.ppsx">
+                                                      <div id="Shape1">
+                                                         <div id="Shape1_text"><span
+                                                               style="color:#696969;font-family:Arial;font-size:13px;">Accede
+                                                               Aqui</span></div>
+                                                      </div>
+                                                   </a>
 
-</div>
-</div>
+                                                </div>
+                                             </div>
 
-<div class="col-2">
+                                             <div class="col-2">
 
-<div id="wb_Heading10" style="display:inline-block;width:100%;z-index:20;">
+                                                <div id="wb_Heading10"
+                                                   style="display:inline-block;width:100%;z-index:20;">
 
-<h3 id="Heading10">Discapacidad Visual los que debemos de saber</h3>
-<iframe width="150" height="150" src="https://www.youtube.com/embed/5gNc-Zi3ecA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	
-</div>
+                                                   <h3 id="Heading10">Discapacidad Visual los que debemos de saber</h3>
+                                                   <iframe width="150" height="150"
+                                                      src="https://www.youtube.com/embed/5gNc-Zi3ecA"
+                                                      title="YouTube video player" frameborder="0"
+                                                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                      allowfullscreen></iframe>
 
-</div>
+                                                </div>
 
-<div class="col-3">
+                                             </div>
 
-<div id="wb_Heading10" style="display:inline-block;width:100%;z-index:20;">
+                                             <div class="col-3">
 
-<h3 id="Heading10">Discapacidades Diferentes </h3>
+                                                <div id="wb_Heading10"
+                                                   style="display:inline-block;width:100%;z-index:20;">
 
-	<iframe width="150" height="150" src="https://www.youtube.com/embed/OchsPByVnz0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+                                                   <h3 id="Heading10">Discapacidades Diferentes </h3>
 
-</div>
+                                                   <iframe width="150" height="150"
+                                                      src="https://www.youtube.com/embed/OchsPByVnz0"
+                                                      title="YouTube video player" frameborder="0"
+                                                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                      allowfullscreen></iframe>
+                                                </div>
 
-</div>
+                                             </div>
 
-<div class="col-4">
+                                          </div>
 
-</div>
+                                          <div class="col-4">
 
-</div>
+                                          </div>
 
-</div>
+                                       </div>
 
-</div>
-	
-<div id="">
-	<br>
-</div>
-	
-<div id="wb_LayoutGrid5">
+                                    </div>
 
-<div id="LayoutGrid5">
+                                 </div>
 
-<div class="row">
+                                 <div id="">
+                                    <br>
+                                 </div>
 
-<div class="col-1">
+                                 <div id="wb_LayoutGrid5">
 
-<div id="wb_Heading12" style="display:inline-block;width:100%;z-index:18;">
+                                    <div id="LayoutGrid5">
 
-<h1 id="Heading12">Protocolos Covid-19</h1>
+                                       <div class="row">
 
-</div>
+                                          <div class="col-1">
 
-</div>
+                                             <div id="wb_Heading12" style="display:inline-block;width:100%;z-index:18;">
 
-</div>
+                                                <h1 id="Heading12">Protocolos Covid-19</h1>
 
-</div>
+                                             </div>
 
-</div>
+                                          </div>
 
-<div id="wb_LayoutGrid4">
+                                       </div>
 
-<div id="LayoutGrid4">
+                                    </div>
 
-<div class="row">
+                                 </div>
 
-<div class="col-1">
+                                 <div id="wb_LayoutGrid4">
 
-	
-<div id="wb_IconFont8" style="display:inline-block;width:43px;height:42px;text-align:center;z-index:19;">
+                                    <div id="LayoutGrid4">
 
-<div id="IconFont8"><i class="fa fa-medkit"></i></div>
+                                       <div class="row">
 
-</div>
+                                          <div class="col-1">
 
-<div id="wb_Heading10" style="display:inline-block;width:100%;z-index:20;">
 
-<h3 id="Heading10">Protocolo regreso a clase 2022</h3>
+                                             <div id="wb_IconFont8"
+                                                style="display:inline-block;width:43px;height:42px;text-align:center;z-index:19;">
 
-</div>
+                                                <div id="IconFont8"><i class="fa fa-medkit"></i></div>
 
-<div id="wb_Shape1" style="display:inline-block;width:98px;height:30px;z-index:21;position:relative;">
+                                             </div>
 
-<a href="./Docs/PAD/Protocolo Regreso a Clases 2021 enero 19.pdf"><div id="Shape1"><div id="Shape1_text"><span style="color:#696969;font-family:Arial;font-size:13px;">Accede Aqui</span></div></div></a>
+                                             <div id="wb_Heading10" style="display:inline-block;width:100%;z-index:20;">
 
-</div>
-	
-</div>
+                                                <h3 id="Heading10">Protocolo regreso a clase 2022</h3>
 
-<div class="col-2">
+                                             </div>
 
+                                             <div id="wb_Shape1"
+                                                style="display:inline-block;width:98px;height:30px;z-index:21;position:relative;">
 
-</div>
+                                                <a href="./Docs/PAD/Protocolo Regreso a Clases 2021 enero 19.pdf">
+                                                   <div id="Shape1">
+                                                      <div id="Shape1_text"><span
+                                                            style="color:#696969;font-family:Arial;font-size:13px;">Accede
+                                                            Aqui</span></div>
+                                                   </div>
+                                                </a>
 
-<div class="col-3">
+                                             </div>
 
-<div id="wb_IconFont9" style="display:inline-block;width:41px;height:43px;text-align:center;z-index:22;">
+                                          </div>
 
-<div id="IconFont9"><i class="fa fa-youtube-play"></i></div>
+                                          <div class="col-2">
 
-</div>
 
-<div id="wb_Heading11" style="display:inline-block;width:100%;z-index:23;">
+                                          </div>
 
-<h3 id="Heading11">Video protocolo regreso a clase 2022</h3>
+                                          <div class="col-3">
 
-</div>
+                                             <div id="wb_IconFont9"
+                                                style="display:inline-block;width:41px;height:43px;text-align:center;z-index:22;">
 
-<div id="wb_Shape4" style="display:inline-block;width:98px;height:30px;z-index:24;position:relative;">
+                                                <div id="IconFont9"><i class="fa fa-youtube-play"></i></div>
 
-<a href="https://www.youtube.com/watch?v=Fwqj33SlHk0"><div id="Shape4"><div id="Shape4_text"><span style="color:#696969;font-family:Arial;font-size:13px;">Accede Aqui</span></div></div></a>
+                                             </div>
 
-</div>
+                                             <div id="wb_Heading11" style="display:inline-block;width:100%;z-index:23;">
 
-</div>
+                                                <h3 id="Heading11">Video protocolo regreso a clase 2022</h3>
 
-<div class="col-4">
+                                             </div>
 
-</div>
+                                             <div id="wb_Shape4"
+                                                style="display:inline-block;width:98px;height:30px;z-index:24;position:relative;">
 
-</div>
+                                                <a href="https://www.youtube.com/watch?v=Fwqj33SlHk0">
+                                                   <div id="Shape4">
+                                                      <div id="Shape4_text"><span
+                                                            style="color:#696969;font-family:Arial;font-size:13px;">Accede
+                                                            Aqui</span></div>
+                                                   </div>
+                                                </a>
 
-</div>
+                                             </div>
 
-</div>
+                                          </div>
 
-<div id="wb_Divider2">
+                                          <div class="col-4">
 
-<div id="Divider2-overlay"></div>
+                                          </div>
 
-<div id="Divider2">
+                                       </div>
 
-<div class="row">
+                                    </div>
 
-<div class="col-1">
+                                 </div>
 
-</div>
+                                 <div id="wb_Divider2">
 
-</div>
+                                    <div id="Divider2-overlay"></div>
 
-</div>
+                                    <div id="Divider2">
 
-</div>
+                                       <div class="row">
 
-<div id="wb_waitopenClassTitle">
+                                          <div class="col-1">
 
-<div id="waitopenClassTitle">
+                                          </div>
 
-<div class="row">
+                                       </div>
 
-<div class="col-1">
+                                    </div>
 
-<div id="wb_Heading8" style="display:inline-block;width:100%;z-index:25;">
+                                 </div>
 
-<h1 id="Heading8">Inicio de clases presenciales será en</h1>
+                                 <div id="wb_waitopenClassTitle">
 
-</div>
+                                    <div id="waitopenClassTitle">
 
-</div>
+                                       <div class="row">
 
-</div>
+                                          <div class="col-1">
 
-</div>
+                                             <div id="wb_Heading8" style="display:inline-block;width:100%;z-index:25;">
 
-</div>
+                                                <h1 id="Heading8">Inicio de clases presenciales será en</h1>
 
-<div id="wb_waitopenClass">
+                                             </div>
 
-<div id="waitopenClass">
+                                          </div>
 
-<div class="row">
+                                       </div>
 
-<div class="col-1">
+                                    </div>
 
-</div>
+                                 </div>
 
-<div class="col-2">
+                                 <div id="wb_waitopenClass">
 
-<div id="wb_waitForItDays" style="display:inline-block;width:100%;z-index:26;">
+                                    <div id="waitopenClass">
 
-<h2 id="waitForItDays">0</h2>
+                                       <div class="row">
 
-</div>
+                                          <div class="col-1">
 
-<div id="wb_waitForItText1">
+                                          </div>
 
-<span style="color:#FFFFFF;font-family:Arial;font-size:16px;"><strong>DAYS</strong></span>
+                                          <div class="col-2">
 
-</div>
+                                             <div id="wb_waitForItDays"
+                                                style="display:inline-block;width:100%;z-index:26;">
 
-</div>
+                                                <h2 id="waitForItDays">0</h2>
 
-<div class="col-3">
+                                             </div>
 
-<div id="wb_waitForItHours" style="display:inline-block;width:100%;z-index:28;">
+                                             <div id="wb_waitForItText1">
 
-<h2 id="waitForItHours">0</h2>
+                                                <span
+                                                   style="color:#FFFFFF;font-family:Arial;font-size:16px;"><strong>DAYS</strong></span>
 
-</div>
+                                             </div>
 
-<div id="wb_waitForItText2">
+                                          </div>
 
-<span style="color:#FFFFFF;font-family:Arial;font-size:16px;"><strong>HOURS</strong></span>
+                                          <div class="col-3">
 
-</div>
+                                             <div id="wb_waitForItHours"
+                                                style="display:inline-block;width:100%;z-index:28;">
 
-</div>
+                                                <h2 id="waitForItHours">0</h2>
 
-<div class="col-4">
+                                             </div>
 
-<div id="wb_waitForItMinutes" style="display:inline-block;width:100%;z-index:30;">
+                                             <div id="wb_waitForItText2">
 
-<h2 id="waitForItMinutes">0</h2>
+                                                <span
+                                                   style="color:#FFFFFF;font-family:Arial;font-size:16px;"><strong>HOURS</strong></span>
 
-</div>
+                                             </div>
 
-<div id="wb_waitForItText3">
+                                          </div>
 
-<span style="color:#FFFFFF;font-family:Arial;font-size:16px;"><strong>MINUTES</strong></span>
+                                          <div class="col-4">
 
-</div>
+                                             <div id="wb_waitForItMinutes"
+                                                style="display:inline-block;width:100%;z-index:30;">
 
-</div>
+                                                <h2 id="waitForItMinutes">0</h2>
 
-<div class="col-5">
+                                             </div>
 
-<div id="wb_waitForItSeconds" style="display:inline-block;width:100%;z-index:32;">
+                                             <div id="wb_waitForItText3">
 
-<h2 id="waitForItSeconds">0</h2>
+                                                <span
+                                                   style="color:#FFFFFF;font-family:Arial;font-size:16px;"><strong>MINUTES</strong></span>
 
-</div>
+                                             </div>
 
-<div id="wb_waitForItText4">
+                                          </div>
 
-<span style="color:#FFFFFF;font-family:Arial;font-size:16px;"><strong>SECONDS</strong></span>
+                                          <div class="col-5">
 
-</div>
+                                             <div id="wb_waitForItSeconds"
+                                                style="display:inline-block;width:100%;z-index:32;">
 
-</div>
+                                                <h2 id="waitForItSeconds">0</h2>
 
-<div class="col-6">
+                                             </div>
 
+                                             <div id="wb_waitForItText4">
 
+                                                <span
+                                                   style="color:#FFFFFF;font-family:Arial;font-size:16px;"><strong>SECONDS</strong></span>
 
-</div>
+                                             </div>
 
-</div>
+                                          </div>
 
-</div>
+                                          <div class="col-6">
 
-</div>
 
-<div id="wb_LayoutGrid3">
 
-<div id="LayoutGrid3-overlay"></div>
+                                          </div>
 
-<div id="LayoutGrid3">
+                                       </div>
 
-<div class="row">
+                                    </div>
 
-<div class="col-1">
+                                 </div>
 
-</div>
+                                 <div id="wb_LayoutGrid3">
 
-</div>
+                                    <div id="LayoutGrid3-overlay"></div>
 
-</div>
+                                    <div id="LayoutGrid3">
 
-</div>
-	
-<div id="revisGrid">
-<div class="Revis" id="Card10-card-body" align="center">
-<span style="color:#2B579A;font-family:'Century Schoolbook';font-size:20px;"><strong>Anuario CEMB 2025</strong></span>
-<link rel="stylesheet" href="https://cdnc.heyzine.com/release/heyzine.3.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> 
-<div ontouchstart="this.classList.toggle('hover');" class="heyzine-flip" style="max-width: 400px;"><div class="container"><div class="front fp-w fp-fh fp-h" style="min-height: 350px; height: 350px;"><img src="images/anuariocemb/2025/coveranuario2025.jpg" class="img-front fp-thumb"> <div class="inner"><h5 class="fp-title"></h5></div></div> <div class="back fp-w fp-fh fp-h" style="min-height: 350px; height: 350px;"><img src="images/anuariocemb/2025/coveranuario2025.jpg" class="img-back fp-thumb"> <div class="inner"><p><span class="fp-subtitle"></span><br> <a href="https://manticaberio.edu.ni/Anuario2025/Anuario2025.html" target="_BLANK" class="fp-link">Anuario 2025</a></p></div></div></div>
-<br><br>
-</div>
-</div>	
-</div>	
-	
-<div id="wb_LayoutTP">
+                                       <div class="row">
 
-<div id="LayoutTP-overlay"></div>
+                                          <div class="col-1">
 
-<div id="LayoutTP">
+                                          </div>
 
-<div class="row">
+                                       </div>
 
-<div class="col-1">
+                                    </div>
 
-<div id="wb_Heading7" style="display:inline-block;width:100%;z-index:40;">
+                                 </div>
 
-<h1 id="Heading7">Plataformas Tecnológicas</h1>
+                                 <div id="revisGrid">
+                                    <div class="Revis" id="Card10-card-body" align="center">
+                                       <span
+                                          style="color:#2B579A;font-family:'Century Schoolbook';font-size:20px;"><strong>Anuario
+                                             CEMB 2025</strong></span>
+                                       <link rel="stylesheet" href="https://cdnc.heyzine.com/release/heyzine.3.css"
+                                          as="style" onload="this.onload=null;this.rel='stylesheet'">
+                                       <div ontouchstart="this.classList.toggle('hover');" class="heyzine-flip"
+                                          style="max-width: 400px;">
+                                          <div class="container">
+                                             <div class="front fp-w fp-fh fp-h"
+                                                style="min-height: 350px; height: 350px;"><img
+                                                   src="images/anuariocemb/2025/coveranuario2025.jpg"
+                                                   class="img-front fp-thumb">
+                                                <div class="inner">
+                                                   <h5 class="fp-title"></h5>
+                                                </div>
+                                             </div>
+                                             <div class="back fp-w fp-fh fp-h"
+                                                style="min-height: 350px; height: 350px;"><img
+                                                   src="images/anuariocemb/2025/coveranuario2025.jpg"
+                                                   class="img-back fp-thumb">
+                                                <div class="inner">
+                                                   <p><span class="fp-subtitle"></span><br> <a
+                                                         href="https://manticaberio.edu.ni/Anuario2025/Anuario2025.html"
+                                                         target="_BLANK" class="fp-link">Anuario 2025</a></p>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <br><br>
+                                       </div>
+                                    </div>
+                                 </div>
 
-</div>
+                                 <div id="wb_LayoutTP">
 
-<div id="wb_Carousel2" style="" class="owl-carousel owl-theme">
+                                    <div id="LayoutTP-overlay"></div>
 
-<div class="carousel-item">
+                                    <div id="LayoutTP">
 
-<!--<div class="carousel-innerframe">
+                                       <div class="row">
+
+                                          <div class="col-1">
+
+                                             <div id="wb_Heading7" style="display:inline-block;width:100%;z-index:40;">
+
+                                                <h1 id="Heading7">Plataformas Tecnológicas</h1>
+
+                                             </div>
+
+                                             <div id="wb_Carousel2" style="" class="owl-carousel owl-theme">
+
+                                                <div class="carousel-item">
+
+                                                   <!--<div class="carousel-innerframe">
 
 <div id="wb_Image2" style="display:inline-block;width:100%;height:auto;z-index:35;">
 
@@ -5352,51 +5514,54 @@ $(document).ready(function()
 
 </div>-->
 
-</div>
+                                                </div>
 
-<div class="carousel-item active">
+                                                <div class="carousel-item active">
 
-<div class="carousel-innerframe">
+                                                   <div class="carousel-innerframe">
 
-<div id="wb_Image3" style="display:inline-block;width:100%;height:auto;z-index:36;">
+                                                      <div id="wb_Image3"
+                                                         style="display:inline-block;width:100%;height:auto;z-index:36;">
 
-<img src="images/gsuite-logo.png" id="Image3" alt="">
+                                                         <img src="images/gsuite-logo.png" id="Image3" alt="">
 
-</div>
+                                                      </div>
 
-</div>
+                                                   </div>
 
-</div>
+                                                </div>
 
-<div class="carousel-item">
+                                                <div class="carousel-item">
 
-<div class="carousel-innerframe">
+                                                   <div class="carousel-innerframe">
 
-<div id="wb_Image4" style="display:inline-block;width:100%;height:auto;z-index:37;">
+                                                      <div id="wb_Image4"
+                                                         style="display:inline-block;width:100%;height:auto;z-index:37;">
 
-<img src="images/zoom-logo.png" id="Image4" alt="">
+                                                         <img src="images/zoom-logo.png" id="Image4" alt="">
 
-</div>
+                                                      </div>
 
-</div>
+                                                   </div>
 
-</div>
+                                                </div>
 
-<div class="carousel-item">
+                                                <div class="carousel-item">
 
-<div class="carousel-innerframe">
+                                                   <div class="carousel-innerframe">
 
-<div id="wb_Image5" style="display:inline-block;width:100%;height:auto;z-index:38;">
+                                                      <div id="wb_Image5"
+                                                         style="display:inline-block;width:100%;height:auto;z-index:38;">
 
-<img src="images/matific-logo.png" id="Image5" alt="">
+                                                         <img src="images/matific-logo.png" id="Image5" alt="">
 
-</div>
+                                                      </div>
 
-</div>
+                                                   </div>
 
-</div>
+                                                </div>
 
-<!--<div class="carousel-item">
+                                                <!--<div class="carousel-item">
 
 <div class="carousel-innerframe">
 
@@ -5410,103 +5575,124 @@ $(document).ready(function()
 
 </div>-->
 
-</div>
+                                             </div>
 
 
 
-</div>
+                                          </div>
 
-</div>
+                                       </div>
 
-</div>
+                                    </div>
 
-</div>
+                                 </div>
 
-<div id="wb_LayoutGrid2">
+                                 <div id="wb_LayoutGrid2">
 
-<div id="LayoutGrid2">
+                                    <div id="LayoutGrid2">
 
-<div class="row">
+                                       <div class="row">
 
-<div class="col-1">
-
-
+                                          <div class="col-1">
 
 
 
-</div>
 
-</div>
 
-</div>
+                                          </div>
 
-</div>
+                                       </div>
 
-<div id="wb_Footer">
+                                    </div>
 
-<div id="Footer">
+                                 </div>
 
-<div class="row">
+                                 <div id="wb_Footer">
 
-<div class="col-1">
+                                    <div id="Footer">
 
-	<div id="wb_FontAwesomeIcon4" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:44;">
+                                       <div class="row">
 
-<a href="https://www.instagram.com/mantica_berio_cemb/" target="_blank"><div id="FontAwesomeIcon4"><i class="fa fa-instagram"></i></div></a>
+                                          <div class="col-1">
 
-</div>
+                                             <div id="wb_FontAwesomeIcon4"
+                                                style="display:inline-block;width:40px;height:40px;text-align:center;z-index:44;">
 
-<div id="wb_FontAwesomeIcon3" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:44;">
+                                                <a href="https://www.instagram.com/mantica_berio_cemb/" target="_blank">
+                                                   <div id="FontAwesomeIcon4"><i class="fa fa-instagram"></i></div>
+                                                </a>
 
-<a href="https://www.facebook.com/cemanticaberio" target="_blank"><div id="FontAwesomeIcon3"><i class="fa fa-facebook"></i></div></a>
+                                             </div>
 
-</div>
+                                             <div id="wb_FontAwesomeIcon3"
+                                                style="display:inline-block;width:40px;height:40px;text-align:center;z-index:44;">
 
-<div id="wb_FontAwesomeIcon11" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:45;">
+                                                <a href="https://www.facebook.com/cemanticaberio" target="_blank">
+                                                   <div id="FontAwesomeIcon3"><i class="fa fa-facebook"></i></div>
+                                                </a>
 
-<a href="https://www.youtube.com/channel/UCAhJcrp_RsEv7Kz6uIQGPhg" target="_blank" title="Canal CEMB"><div id="FontAwesomeIcon11"><i class="fa fa-youtube"></i></div></a>
+                                             </div>
 
-</div>
+                                             <div id="wb_FontAwesomeIcon11"
+                                                style="display:inline-block;width:40px;height:40px;text-align:center;z-index:45;">
 
-<div id="wb_IconFont1" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:46;">
+                                                <a href="https://www.youtube.com/channel/UCAhJcrp_RsEv7Kz6uIQGPhg"
+                                                   target="_blank" title="Canal CEMB">
+                                                   <div id="FontAwesomeIcon11"><i class="fa fa-youtube"></i></div>
+                                                </a>
 
-<a href="https://www.youtube.com/channel/UCwOuGJLlY5TBDs2xTcmWMPw" target="_blank" title="Canal Educacion Inicial"><div id="IconFont1"><i class="fa fa-youtube-play"></i></div></a>
+                                             </div>
 
-</div>
+                                             <div id="wb_IconFont1"
+                                                style="display:inline-block;width:40px;height:40px;text-align:center;z-index:46;">
 
-<div id="wb_Text17">
+                                                <a href="https://www.youtube.com/channel/UCwOuGJLlY5TBDs2xTcmWMPw"
+                                                   target="_blank" title="Canal Educacion Inicial">
+                                                   <div id="IconFont1"><i class="fa fa-youtube-play"></i></div>
+                                                </a>
 
-<span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:20px;">Dirección:<br></span><span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:15px;">Km 132 Carretera a Somotillo. Chinandega.<br></span><span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:20px;">Teléfono:<br>505-2340-1430<br>E-mail:<br></span><span style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:15px;">m.callejas@manticaberio.edu.ni</span>
+                                             </div>
 
-</div>
+                                             <div id="wb_Text17">
 
-</div>
+                                                <span
+                                                   style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:20px;">Dirección:<br></span><span
+                                                   style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:15px;">Km
+                                                   132 Carretera a Somotillo. Chinandega.<br></span><span
+                                                   style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:20px;">Teléfono:<br>505-2340-1430<br>E-mail:<br></span><span
+                                                   style="color:#FFFFFF;font-family:Arial;font-size:12px;line-height:15px;">m.callejas@manticaberio.edu.ni</span>
 
-</div>
+                                             </div>
 
-</div>
+                                          </div>
 
-</div>
+                                       </div>
 
-<div id="wb_copyright">
+                                    </div>
 
-<div id="copyright">
+                                 </div>
 
-<div class="row">
+                                 <div id="wb_copyright">
 
-<div class="col-1">
+                                    <div id="copyright">
 
-<div id="wb_Text12">
+                                       <div class="row">
 
-<span style="color:#FFFFFF;font-family:Arial;font-size:13px;">Copyright © CEMB 2021. All right reserved. </span>
+                                          <div class="col-1">
 
-</div>
+                                             <div id="wb_Text12">
 
-<!-- POPUP -->
- 
-<div id="Html2" style="display:inline-block;width:350px;height:290px;z-index:49">
+                                                <span style="color:#FFFFFF;font-family:Arial;font-size:13px;">Copyright
+                                                   © CEMB 2021. All right reserved. </span>
 
-<!--<div class="modal" id="window-notice">
+                                             </div>
+
+                                             <!-- POPUP -->
+
+                                             <div id="Html2"
+                                                style="display:inline-block;width:350px;height:290px;z-index:49">
+
+                                                <!--<div class="modal" id="window-notice">
 
     <div class="content">
 
@@ -5526,34 +5712,35 @@ $(document).ready(function()
 
 </div>-->
 
-<script>
+                                                <script>
 
-    $(document).ready(function(){
+                                                   $(document).ready(function () {
 
-	$(".modal").fadeIn();
+                                                      $(".modal").fadeIn();
 
-	$(".btncerrar").click(function(){
+                                                      $(".btncerrar").click(function () {
 
-		$(".modal").fadeOut(300);
+                                                         $(".modal").fadeOut(300);
 
-	});
+                                                      });
 
-});
+                                                   });
 
-</script></div>
+                                                </script>
+                                             </div>
 
-</div>
+                                          </div>
 
-</div>
+                                       </div>
 
-</div>
+                                    </div>
 
-</div>
+                                 </div>
 
 
-<!--
+                                 <!--
 /*video ads*/-->
-<!--<div id="Layer1" style="position:absolute;overflow:hidden;text-align:left;left:24px;top:2662px;width:161px;height:100px;z-index:82;">
+                                 <!--<div id="Layer1" style="position:absolute;overflow:hidden;text-align:left;left:24px;top:2662px;width:161px;height:100px;z-index:82;">
 
 <div id="wb_YouTube1" style="position:absolute;left:8px;top:8px;width:147px;height:82px;z-index:62;">
 
@@ -5563,7 +5750,7 @@ $(document).ready(function()
 
 </div>-->
 
-<!--<div id="Layerpesame" style="position:absolute;overflow:hidden;text-align:left;left:23px;top:2509px;width:162px;height:101px;z-index:83;">
+                                 <!--<div id="Layerpesame" style="position:absolute;overflow:hidden;text-align:left;left:23px;top:2509px;width:162px;height:101px;z-index:83;">
 
 <div id="wb_YouTube2" style="position:absolute;left:7px;top:10px;width:149px;height:83px;z-index:63;">
 
@@ -5573,7 +5760,7 @@ $(document).ready(function()
 
 </div>-->
 
-<!--<div id="Layer2" style="position:absolute;overflow:hidden;text-align:left;left:23px;top:2354px;width:162px;height:100px;z-index:84;">
+                                 <!--<div id="Layer2" style="position:absolute;overflow:hidden;text-align:left;left:23px;top:2354px;width:162px;height:100px;z-index:84;">
 
 <div id="wb_YouTube3" style="position:absolute;left:6px;top:8px;width:151px;height:84px;z-index:64;">
 
@@ -5582,8 +5769,8 @@ $(document).ready(function()
 </div>
 
 </div>-->
-	
-	
+
+
 
 </body>
 
