@@ -128,7 +128,7 @@ const menuHTML = `
 <li class="nav-item"><a href="./DanzaDeportes.html" class="nav-link">Danza y Deportes</a></li>
 <li class="nav-item"><a href="./PPFF.html" class="nav-link">PPFF</a></li>
 <li class="nav-item"><a href="./Teleton.html" class="nav-link">Teleton</a></li>
-<li class="nav-item"><a href="./Fisica.html" class="nav-link">Inglés</a></li>
+<li class="nav-item"><a href="./Fisica.html" class="nav-link">Física</a></li>
 </ul>
 </li>
 <li class="nav-item dropdown">
